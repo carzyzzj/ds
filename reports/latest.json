@@ -1,59 +1,44 @@
 {
-  "time": "2026-11-14T13:36:00.512418+00:00",
+  "time": "2026-11-14T16:12:10.755386+00:00",
   "status": "published",
   "sources": [
     {
-      "name": "jiandantv/IPTV2026",
+      "name": "jiandantv live_lite",
+      "parsed": 1525,
+      "sha256": "a67fba5746d4c0b82978cc687817c7288d8de85b3eb20ad611e709df2c612fc3"
+    },
+    {
+      "name": "jiandantv live",
       "parsed": 2182,
       "sha256": "08bcd7c6ba8e4a95ab19000b68b2ae6d4822beb13b31e23acde401526a6a90b5"
     },
     {
-      "name": "iptv-org/iptv",
+      "name": "iptv-org index",
       "parsed": 11457,
       "sha256": "61b6d53a880baca5bd356a01b09203abde2786d65516b3186919bb04682ea020"
     },
     {
-      "name": "iptv-org sports",
-      "parsed": 512,
-      "sha256": "12e63de3ce40dee522a4962a3c5a0bc66f3d20604abc3383ed300bc128a9f9c4"
-    },
-    {
-      "name": "iptv-org United States",
-      "parsed": 1494,
-      "sha256": "f616f557d987736ac3f91189bd38f350d4fc79064e387d85dc3c0c97e660f6ff"
-    },
-    {
-      "name": "DuckKota online",
-      "parsed": 8600,
-      "sha256": "4738e9ffc711e71a7696cb1b82be6d5eb11abbbf9d65d5413fc96a8ad4d58d22"
-    },
-    {
-      "name": "zyq1120/iptv-playlist",
-      "parsed": 1479,
-      "sha256": "c3a1ea8e73f961e6f3a166bb91b90884cd1280e503c655653842dfa57f4499c9"
+      "name": "iptv-org animation",
+      "parsed": 185,
+      "sha256": "1cd750b3c41a0c1c0598e49764bd3e5df39b7d666e8482eb26a465f81d3f9786"
     }
   ],
-  "total": 18683,
+  "total": 13604,
   "checked": 64,
   "reachable": 46,
   "uncertain": 18,
-  "unchecked": 18619,
+  "unchecked": 13540,
   "categories": {
-    "all": 18683,
-    "cctv": 636,
-    "satellite": 909,
-    "local": 1126,
-    "kids": 204,
-    "international": 15808,
-    "sports": 772,
-    "us": 3004,
-    "duckkota": 8600,
-    "hmt": 211
+    "all": 13604,
+    "cctv": 430,
+    "satellite": 740,
+    "local": 938,
+    "kids": 298,
+    "international": 11198,
+    "sports": 557,
+    "us": 2011,
+    "animation": 185,
+    "hmt": 177
   },
-  "hmt_unique_names": 124,
-  "hmt_recognition": {
-    "channel_id": 79,
-    "source_group": 13,
-    "channel_name": 119
-  }
+  "hmt_unique_names": 94
 }

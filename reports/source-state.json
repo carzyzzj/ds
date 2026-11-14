@@ -1,10 +1,8 @@
 {
-  "schema": "4-hmt",
-  "config": "14b9f6514a8ccf9ad61a5f20a5c86f3ac50b81afdcdf5528e73d8682e80d2ba5",
+  "schema": "5-four-sources-animation",
+  "config": "b3ab6477df513dc1dcadaf448085aa54b64449712cd50413fac9fbb8f6c6bba6",
+  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u": "a67fba5746d4c0b82978cc687817c7288d8de85b3eb20ad611e709df2c612fc3",
   "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u": "08bcd7c6ba8e4a95ab19000b68b2ae6d4822beb13b31e23acde401526a6a90b5",
   "https://iptv-org.github.io/iptv/index.m3u": "61b6d53a880baca5bd356a01b09203abde2786d65516b3186919bb04682ea020",
-  "https://iptv-org.github.io/iptv/categories/sports.m3u": "12e63de3ce40dee522a4962a3c5a0bc66f3d20604abc3383ed300bc128a9f9c4",
-  "https://iptv-org.github.io/iptv/countries/us.m3u": "f616f557d987736ac3f91189bd38f350d4fc79064e387d85dc3c0c97e660f6ff",
-  "https://DuckKota.github.io/iptv/playlists/online.m3u": "4738e9ffc711e71a7696cb1b82be6d5eb11abbbf9d65d5413fc96a8ad4d58d22",
-  "https://raw.githubusercontent.com/zyq1120/iptv-playlist/main/iptv.m3u": "c3a1ea8e73f961e6f3a166bb91b90884cd1280e503c655653842dfa57f4499c9"
+  "https://iptv-org.github.io/iptv/categories/animation.m3u": "1cd750b3c41a0c1c0598e49764bd3e5df39b7d666e8482eb26a465f81d3f9786"
 }

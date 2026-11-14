@@ -3,50 +3,32 @@
   "purpose": "Noncommercial playlist-link aggregation only; no video hosting or retransmission",
   "sources": [
     {
-      "name": "jiandantv/IPTV2026",
+      "name": "jiandantv live_lite",
+      "url": "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u",
+      "enabled": true,
+      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
+    },
+    {
+      "name": "jiandantv live",
       "url": "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u",
       "enabled": true,
-      "rights_status": "unverified; respect upstream noncommercial restriction"
+      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
     },
     {
-      "name": "iptv-org/iptv",
+      "name": "iptv-org index",
       "url": "https://iptv-org.github.io/iptv/index.m3u",
       "enabled": true,
-      "rights_status": "Unlicense for repository; broadcast content rights not certified"
+      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
     },
     {
-      "name": "iptv-org sports",
-      "url": "https://iptv-org.github.io/iptv/categories/sports.m3u",
+      "name": "iptv-org animation",
+      "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
+      "enabled": true,
       "tags": [
-        "sports"
+        "animation"
       ],
-      "enabled": true,
-      "rights_status": "Public link indexing; stream rights not certified"
-    },
-    {
-      "name": "iptv-org United States",
-      "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
-      "tags": [
-        "us"
-      ],
-      "enabled": true,
-      "rights_status": "Public link indexing; stream rights not certified"
-    },
-    {
-      "name": "DuckKota online",
-      "url": "https://DuckKota.github.io/iptv/playlists/online.m3u",
-      "tags": [
-        "duckkota"
-      ],
-      "enabled": true,
-      "rights_status": "Public link indexing; stream rights not certified"
-    },
-    {
-      "name": "zyq1120/iptv-playlist",
-      "url": "https://raw.githubusercontent.com/zyq1120/iptv-playlist/main/iptv.m3u",
-      "enabled": true,
-      "rights_status": "Public link indexing; no repository license found; stream rights not certified"
+      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
     }
   ],
-  "schema_version": 3
+  "schema_version": 4
 }

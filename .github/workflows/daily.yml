@@ -36,14 +36,21 @@ jobs:
                       config['sources'].append(dict(s,enabled=True,rights_status='Public link indexing; stream rights not certified'))
               config['schema_version']=2
               cp.write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          if config.get('schema_version',0)<3:
+              url='https://raw.githubusercontent.com/zyq1120/iptv-playlist/main/iptv.m3u'
+              if not any(s['url']==url for s in config['sources']):
+                  config['sources'].append({'name':'zyq1120/iptv-playlist','url':url,'enabled':True,'rights_status':'Public link indexing; no repository license found; stream rights not certified'})
+              config['schema_version']=3
+              cp.write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           groups=['cctv','satellite','local','kids','international','sports','us','duckkota']
           report={'time':datetime.now(timezone.utc).isoformat(),'status':'retained','sources':[]}
           def fetch(url,limit=12000001,timeout=15):
               with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'my-tv-sources/2.0'}),timeout=timeout) as r: return r.read(limit)
-          def classify(name):
+          def classify(name,hint=''):
               if re.search('CCTV|央视',name,re.I): return 'cctv'
-              if re.search('少儿|动漫|卡通|动画|kids|cartoon',name,re.I): return 'kids'
+              if re.search('少儿|动漫|卡通|动画|kids|cartoon',name+' '+hint,re.I): return 'kids'
               if '卫视' in name: return 'satellite'
+              if hint and '-' in hint and not hint.startswith('中国-'): return 'international'
               if re.search('[一-龥]',name): return 'local'
               return 'international'
           def probe(item):
@@ -53,7 +60,7 @@ jobs:
           try:
               sources=[s for s in config['sources'] if s.get('enabled')]
               if not sources: raise ValueError('No enabled sources')
-              entries={}; hashes={'schema':'2','config':hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()}
+              entries={}; hashes={'schema':'3','config':hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()}
               for source in sources:
                   body=fetch(source['url'])
                   if len(body)>12000000: raise ValueError('Playlist exceeds 12MB: '+source['name'])
@@ -68,11 +75,13 @@ jobs:
                           if pending and ',' in pending and re.fullmatch(r'https?://[^\s]+',line):
                               name=pending.rsplit(',',1)[1].strip()
                               if name:
+                                  match=re.search(r'group-title="([^"]*)"',pending,re.I)
+                                  hint=match.group(1) if match else ''
                                   key=(re.sub(r'\s+','',name).casefold(),line)
-                                  e=entries.setdefault(key,{'name':name,'url':line,'tags':set()})
+                                  e=entries.setdefault(key,{'name':name,'url':line,'tags':set(),'category':classify(name,hint if source['name']=='zyq1120/iptv-playlist' else '')})
                                   e['tags'].update(source.get('tags',[]))
                                   if re.search('sports|体育|體育',pending,re.I): e['tags'].add('sports')
-                                  if re.search(r'tvg-id="[^" ]+\.us(?:@[^" ]*)?"',pending,re.I): e['tags'].add('us')
+                                  if hint.startswith('美国-') or re.search(r'tvg-id="[^" ]+\.us(?:@[^" ]*)?"',pending,re.I): e['tags'].add('us')
                                   count+=1
                           pending=None
                   report['sources'].append({'name':source['name'],'parsed':count,'sha256':hashes[source['url']]})
@@ -90,10 +99,10 @@ jobs:
                   labels={'cctv':'央视','satellite':'卫视','local':'地方','kids':'少儿动漫','international':'国际','sports':'体育','us':'美国','duckkota':'DuckKota在线'}
                   rendered={}; counts={}
                   for key in ['all']+groups:
-                      selected=[e for e in items if key=='all' or (key in e['tags'] if key in ['sports','us','duckkota'] else classify(e['name'])==key)]
+                      selected=[e for e in items if key=='all' or (key in e['tags'] if key in ['sports','us','duckkota'] else e['category']==key)]
                       counts[key]=len(selected)
                       def label(e):
-                          k=key if key!='all' else ('sports' if 'sports' in e['tags'] else 'us' if 'us' in e['tags'] else classify(e['name']))
+                          k=key if key!='all' else ('sports' if 'sports' in e['tags'] else 'us' if 'us' in e['tags'] else e['category'])
                           return labels[k]
                       rendered[key]='#EXTM3U\n'+''.join('#EXTINF:-1 group-title="'+label(e)+'",'+e['name']+'\n'+e['url']+'\n' for e in selected)
                   for key,text in rendered.items(): Path('playlists/'+key+'.m3u').write_text(text,encoding='utf-8')

@@ -42,7 +42,7 @@ jobs:
                   config['sources'].append({'name':'zyq1120/iptv-playlist','url':url,'enabled':True,'rights_status':'Public link indexing; no repository license found; stream rights not certified'})
               config['schema_version']=3
               cp.write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          groups=['cctv','satellite','local','kids','international','sports','us','duckkota']
+          groups=['cctv','satellite','local','kids','international','sports','us','duckkota','hmt']
           report={'time':datetime.now(timezone.utc).isoformat(),'status':'retained','sources':[]}
           def fetch(url,limit=12000001,timeout=15):
               with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'my-tv-sources/2.0'}),timeout=timeout) as r: return r.read(limit)
@@ -53,6 +53,13 @@ jobs:
               if hint and '-' in hint and not hint.startswith('中国-'): return 'international'
               if re.search('[一-龥]',name): return 'local'
               return 'international'
+          def hmt_reason(name,metadata):
+              if re.search(r'tvg-id="[^" ]+\.(?:hk|mo|tw)(?:@[^" ]*)?"',metadata,re.I): return 'channel_id'
+              group=re.search(r'group-title="([^"]*)"',metadata,re.I)
+              if group and re.search(r'^(?:香港|澳門|澳门|台灣|台湾|Hong Kong|Macao|Macau|Taiwan|HK|MO|TW)(?:$|[- /|])',group.group(1).strip(),re.I): return 'source_group'
+              if re.search(r'tvg-id="[^" ]+\.vn(?:@[^" ]*)?"',metadata,re.I): return ''
+              if re.search(r'^(?:香港|澳門|澳门|台灣|台湾|翡翠台|翡翠|明珠台|鳳凰|凤凰|三立|東森|东森|中天|民視|民视|台視|台视|華視|华视|中視|中视|八大|緯來|纬来|龍華|龙华|靖天|壹電視|壹电视|澳視|澳视|有線新聞|有线新闻|TVBS|RTHK|ViuTV|HOY(?: TV| Infotainment)|TDM(?: |$)|TVB(?:[\u4e00-\u9fff]|[ -](?:Jade|Pearl|News|J2|Plus|Finance)))',name,re.I): return 'channel_name'
+              return ''
           def probe(item):
               try: return bool(fetch(item['url'],512,5))
               except Exception: return False
@@ -60,7 +67,7 @@ jobs:
           try:
               sources=[s for s in config['sources'] if s.get('enabled')]
               if not sources: raise ValueError('No enabled sources')
-              entries={}; hashes={'schema':'3','config':hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()}
+              entries={}; hashes={'schema':'4-hmt','config':hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()}
               for source in sources:
                   body=fetch(source['url'])
                   if len(body)>12000000: raise ValueError('Playlist exceeds 12MB: '+source['name'])
@@ -82,6 +89,8 @@ jobs:
                                   e['tags'].update(source.get('tags',[]))
                                   if re.search('sports|体育|體育',pending,re.I): e['tags'].add('sports')
                                   if hint.startswith('美国-') or re.search(r'tvg-id="[^" ]+\.us(?:@[^" ]*)?"',pending,re.I): e['tags'].add('us')
+                                  reason=hmt_reason(name,pending)
+                                  if reason: e['tags'].add('hmt'); e.setdefault('hmt_reasons',set()).add(reason)
                                   count+=1
                           pending=None
                   report['sources'].append({'name':source['name'],'parsed':count,'sha256':hashes[source['url']]})
@@ -96,18 +105,19 @@ jobs:
                   with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: results=list(pool.map(probe,sample))
                   report.update(total=len(items),checked=len(sample),reachable=sum(results),uncertain=len(results)-sum(results),unchecked=len(items)-len(sample))
                   if not any(results): raise ValueError('All sampled probes uncertain; retaining old version')
-                  labels={'cctv':'央视','satellite':'卫视','local':'地方','kids':'少儿动漫','international':'国际','sports':'体育','us':'美国','duckkota':'DuckKota在线'}
+                  labels={'cctv':'央视','satellite':'卫视','local':'地方','kids':'少儿动漫','international':'国际','sports':'体育','us':'美国','duckkota':'DuckKota在线','hmt':'港澳台'}
                   rendered={}; counts={}
                   for key in ['all']+groups:
-                      selected=[e for e in items if key=='all' or (key in e['tags'] if key in ['sports','us','duckkota'] else e['category']==key)]
+                      selected=[e for e in items if key=='all' or (key in e['tags'] if key in ['sports','us','duckkota','hmt'] else e['category']==key)]
                       counts[key]=len(selected)
                       def label(e):
-                          k=key if key!='all' else ('sports' if 'sports' in e['tags'] else 'us' if 'us' in e['tags'] else e['category'])
+                          k=key if key!='all' else ('hmt' if 'hmt' in e['tags'] else 'sports' if 'sports' in e['tags'] else 'us' if 'us' in e['tags'] else e['category'])
                           return labels[k]
                       rendered[key]='#EXTM3U\n'+''.join('#EXTINF:-1 group-title="'+label(e)+'",'+e['name']+'\n'+e['url']+'\n' for e in selected)
                   for key,text in rendered.items(): Path('playlists/'+key+'.m3u').write_text(text,encoding='utf-8')
                   sp.write_text(json.dumps(hashes,indent=2)+'\n')
-                  report.update(status='published',categories=counts)
+                  report.update(status='published',categories=counts,hmt_unique_names=len({e['name'] for e in items if 'hmt' in e['tags']}))
+                  report['hmt_recognition']={reason:sum('hmt' in e['tags'] and reason in e.get('hmt_reasons',set()) for e in items) for reason in ['channel_id','source_group','channel_name']}
           except Exception as error:
               report['reason']=str(error); failed=True
           Path('reports/latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

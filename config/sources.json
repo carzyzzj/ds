@@ -40,7 +40,13 @@
       ],
       "enabled": true,
       "rights_status": "Public link indexing; stream rights not certified"
+    },
+    {
+      "name": "zyq1120/iptv-playlist",
+      "url": "https://raw.githubusercontent.com/zyq1120/iptv-playlist/main/iptv.m3u",
+      "enabled": true,
+      "rights_status": "Public link indexing; no repository license found; stream rights not certified"
     }
   ],
-  "schema_version": 2
+  "schema_version": 3
 }

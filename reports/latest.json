@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-14T13:15:47.834877+00:00",
+  "time": "2026-11-14T13:36:00.512418+00:00",
   "status": "published",
   "sources": [
     {
@@ -35,8 +35,8 @@
   ],
   "total": 18683,
   "checked": 64,
-  "reachable": 45,
-  "uncertain": 19,
+  "reachable": 46,
+  "uncertain": 18,
   "unchecked": 18619,
   "categories": {
     "all": 18683,
@@ -47,6 +47,13 @@
     "international": 15808,
     "sports": 772,
     "us": 3004,
-    "duckkota": 8600
+    "duckkota": 8600,
+    "hmt": 211
+  },
+  "hmt_unique_names": 124,
+  "hmt_recognition": {
+    "channel_id": 79,
+    "source_group": 13,
+    "channel_name": 119
   }
 }

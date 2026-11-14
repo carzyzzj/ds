@@ -1117,7 +1117,7 @@ http://87.238.211.217:2209/stream/104/index.m3u8
 http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 group-title="国际",AXN Asia Indonesia
 http://202.150.165.66:8088/play/301-AXN/index.m3u8
-#EXTINF:-1 group-title="国际",AXN Asia Taiwan
+#EXTINF:-1 group-title="港澳台",AXN Asia Taiwan
 http://125.227.210.55:4050/VideoInput/play.ts
 #EXTINF:-1 group-title="国际",AXN Asia Taiwan (1080p)
 http://125.227.210.55:4050/VideoInput/play.ts
@@ -2197,7 +2197,7 @@ https://pb-ioe9d0fpkd6pp.akamaized.net/playlist.m3u8
 https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8
 #EXTINF:-1 group-title="国际",Animax Asia India (1080p) [Geo-blocked]
 https://amg02159-kcglobal-amg02159c1-samsung-in-521.playouts.now.amagi.tv/playlist/amg02159-kcglobal-animax-samsungin/playlist.m3u8
-#EXTINF:-1 group-title="国际",Animax Asia Taiwan
+#EXTINF:-1 group-title="港澳台",Animax Asia Taiwan
 http://125.227.210.55:3056/VideoInput/play.ts
 #EXTINF:-1 group-title="国际",Anime Vision (1080p)
 https://d1ujfw1zyymzyd.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6fukwkbxmex8/live/fast-channel-animevision-64527ec0/fast-channel-animevision-64527ec0.m3u8
@@ -2535,7 +2535,7 @@ https://live77cdn2.antenaplay.ro/live2_sport05/live2_sport05.m3u8
 https://stream.asiatvnet.com/1/live/master.m3u8
 #EXTINF:-1 group-title="美国",Asian Culture TV (1080p)
 https://cdn.vegasplus.us/vegas/actv/playlist.m3u8
-#EXTINF:-1 group-title="国际",Asian Drama (1080p)
+#EXTINF:-1 group-title="港澳台",Asian Drama (1080p)
 http://103.172.187.30:12000/stream/mytv/null-11/master.m3u8
 #EXTINF:-1 group-title="国际",Asian Food Network (1080p)
 https://freem3u.xyz/api/live/play.m3u8?vid=215
@@ -3299,7 +3299,7 @@ http://bst.bratsk.ru/hls/bst2/index.m3u8
 https://bsttv.bonus-tv.ru/cdn/bst/playlist.m3u8
 #EXTINF:-1 group-title="国际",BSTV (720p)
 https://samitaorigin.tangotv.in/BSTV/SAMITAORIGIN/index.m3u8
-#EXTINF:-1 group-title="国际",BSTV (Hong Kong) (576p)
+#EXTINF:-1 group-title="港澳台",BSTV (Hong Kong) (576p)
 http://202.69.67.66:443/webcast/bshdlive-pc/playlist.m3u8
 #EXTINF:-1 group-title="国际",BSTV (India) (720p)
 https://samitaorigin.tangotv.in/BSTV/SAMITAORIGIN/index.m3u8
@@ -3617,9 +3617,9 @@ http://media4.tripsmarter.com:1935/LiveTV/BTVHD/playlist.m3u8
 https://5ed325193d4e1.streamlock.net:444/LiveTV/BTVHD/playlist.m3u8
 #EXTINF:-1 group-title="国际",Beats Radio (480p)
 https://videostream.shockmedia.com.ar:19360/beatsradio/beatsradio.m3u8
-#EXTINF:-1 group-title="国际",Beautiful Life TV
+#EXTINF:-1 group-title="港澳台",Beautiful Life TV
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
-#EXTINF:-1 group-title="国际",Beautiful Life TV (720p)
+#EXTINF:-1 group-title="港澳台",Beautiful Life TV (720p)
 https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/playlist.m3u8
 #EXTINF:-1 group-title="国际",Beavis and Butt-Head
 https://jmp2.uk/plu-6486e8984cfc2c0008b6844e.m3u8
@@ -5783,9 +5783,9 @@ http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225783/index.m3u8
 https://cdn3.wowza.com/5/djRwZmQvTEJidmZD/cityftmyers/G2083_002/playlist.m3u8
 #EXTINF:-1 group-title="国际",CG Entertainment (720p)
 https://cgentertainment-cgtv-1-it.samsung.wurl.tv/playlist.m3u8
-#EXTINF:-1 group-title="国际",CGNTV Chinese
+#EXTINF:-1 group-title="港澳台",CGNTV Chinese
 https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8
-#EXTINF:-1 group-title="国际",CGNTV Chinese (1080p)
+#EXTINF:-1 group-title="港澳台",CGNTV Chinese (1080p)
 https://d3e05csss9c272.cloudfront.net/out/v1/f0bf71c57581470fb9379f603e8f5d83/CGNWebLiveCN.m3u8
 #EXTINF:-1 group-title="国际",CGNTV Japan (1080p)
 https://d2p4mrcwl6ly4.cloudfront.net/out/v1/8d50f69fdbbf411a8d302743e4263716/CGNWebLiveJP.m3u8
@@ -6201,7 +6201,7 @@ https://d3k5y954fiztgy.cloudfront.net/FREECAST/CTN-2b0dd347-f7b0-e7ed-9096-68966
 https://live.happywatch99.com/ctnhdtv/c83cc584a878608f6b36a9717bd7a8ab.sdp/playlist.m3u8
 #EXTINF:-1 group-title="美国",CTN (United States) (720p)
 https://d3k5y954fiztgy.cloudfront.net/FREECAST/CTN-2b0dd347-f7b0-e7ed-9096-68966d29db50/index.m3u8
-#EXTINF:-1 group-title="国际",CTS News [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",CTS News [Geo-blocked]
 http://seb.sason.top/sc/hsxw_fhd.m3u8
 #EXTINF:-1 group-title="国际",CTT Canal 49 (1080p)
 https://cdnfox.hostlagarto.com/cct49/index.m3u8
@@ -6231,7 +6231,7 @@ http://185.246.209.113/ANIMALPLANETHD/index.m3u8
 https://ip.pdtvhd.com/Khmer/streams/CTV8HD.m3u8
 #EXTINF:-1 group-title="国际",CTVN AKD Plus (1080p)
 https://live.legitpro.co.in/ctvnakdplus/index.m3u8
-#EXTINF:-1 group-title="国际",CTi Variety (720p)
+#EXTINF:-1 group-title="港澳台",CTi Variety (720p)
 http://23.237.10.66:16372
 #EXTINF:-1 group-title="国际",CV Vision TV (288p) [Geo-blocked]
 https://eu1.servers10.com:8081/8128/index.m3u8
@@ -6865,7 +6865,7 @@ https://g4.vxral-hor.transport.edge-access.net/a11/ngrp:canal_luz01-100009_all/P
 https://5d8d85cf2c308.streamlock.net:1936/CanalLuz/enDirecto/playlist.m3u8
 #EXTINF:-1 group-title="国际",Canal Luz Television (720p)
 https://5f71743aa95e4.streamlock.net:1936/CanalLuz/enDirecto/playlist.m3u8
-#EXTINF:-1 group-title="国际",Canal Macau (720p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",Canal Macau (720p) [Not 24/7]
 https://live3.tdm.com.mo/ch2/ch2.live/playlist.m3u8
 #EXTINF:-1 group-title="国际",Canal Malaga RTV (720p)
 https://canalmalaga-tv-live.flumotion.com/playlist.m3u8
@@ -7353,7 +7353,7 @@ https://amg00353-amg00353c19-xumo-us-2608.playouts.now.amagi.tv/lionsgate-clbng/
 https://rpn.bozztv.com/gusa/gusa-celebrityscene/index.m3u8
 #EXTINF:-1 group-title="美国",Celebrity Scene TV (720p)
 https://rpn.bozztv.com/gusa/gusa-celebrityscene/index.m3u8
-#EXTINF:-1 group-title="国际",Celestial Movies (576i)
+#EXTINF:-1 group-title="港澳台",Celestial Movies (576i)
 http://103.58.160.157:8278/720-CELESTIALMOVIES/playlist.m3u8
 #EXTINF:-1 group-title="国际",Celta TV (240p)
 https://vivo.solumedia.com:19360/celta/celta.m3u8
@@ -8949,11 +8949,11 @@ http://stream.mcquack.net/238/index.m3u8
 https://vmttv.dpdns.org/tv360?id=davinci-hd
 #EXTINF:-1 group-title="国际",Da Vinci Asia Vietnam (1080p)
 https://vmttv.dpdns.org/tv360?id=davinci-hd
-#EXTINF:-1 group-title="国际",DaAi 1 (720p)
+#EXTINF:-1 group-title="港澳台",DaAi 1 (720p)
 https://pulltv1.wanfudaluye.com/live/tv1.m3u8
-#EXTINF:-1 group-title="国际",DaAi 2 (1080p)
+#EXTINF:-1 group-title="港澳台",DaAi 2 (1080p)
 http://nmk.ioapk.com:5050/4gtv-live106/index.m3u8
-#EXTINF:-1 group-title="国际",DaAi 2 (720p)
+#EXTINF:-1 group-title="港澳台",DaAi 2 (720p)
 https://pulltv2.wanfudaluye.com/live/tv2.m3u8
 #EXTINF:-1 group-title="国际",Dabanga TV (1080p)
 https://hls.dabangasudan.org/hls/stream.m3u8
@@ -8971,9 +8971,9 @@ https://stream.ottlive.co.in/dailypost/index.m3u8
 https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/103b8dd3-a888-4d1d-89a5-8a4bc25e48c1/index.m3u8
 #EXTINF:-1 group-title="国际",Dak Lak TV (720p)
 https://cdn.drt.vn/live/285a27750861b964c27af22091662a74f2f/chunklist.m3u8
-#EXTINF:-1 group-title="国际",Dali TV
+#EXTINF:-1 group-title="港澳台",Dali TV
 http://www.dalitv.com.tw:4568/live/dali/index.m3u8
-#EXTINF:-1 group-title="国际",Dali TV (720p)
+#EXTINF:-1 group-title="港澳台",Dali TV (720p)
 http://www.dalitv.com.tw:4568/live/dali/index.m3u8
 #EXTINF:-1 group-title="国际",Dallas Cowboys Cheerleaders
 https://jmp2.uk/plu-64e7715c4c5ed800081230e4.m3u8
@@ -9345,9 +9345,9 @@ http://92.114.85.87:8014/play/a007/index.m3u8
 https://livecdn.live247stream.com/discoverpakistan/web/playlist.m3u8
 #EXTINF:-1 group-title="国际",Discovering China (1080p)
 https://fastlive.cctvplus.com/out/v1/8442c3bfd4c64a3984389328f6087879/index.m3u8
-#EXTINF:-1 group-title="国际",Discovery Asia Taiwan
+#EXTINF:-1 group-title="港澳台",Discovery Asia Taiwan
 http://125.227.210.55:1004/VideoInput/play.ts
-#EXTINF:-1 group-title="国际",Discovery Asia Taiwan (1080p)
+#EXTINF:-1 group-title="港澳台",Discovery Asia Taiwan (1080p)
 http://125.227.210.55:1004/VideoInput/play.ts
 #EXTINF:-1 group-title="国际",Discovery Channel
 http://192.99.186.30/stream/68/index.m3u8
@@ -9843,15 +9843,15 @@ https://lb.iptvnetwork.net/ls28/10113/playlist.m3u8
 https://copacotf.desdeparaguay.net/e40tv/e40tv_py_alta/playlist.m3u8?admin=tvaccion
 #EXTINF:-1 group-title="国际",EAC News TV
 https://live.eac-news.com/LiveApp/streams/eacnews.m3u8
-#EXTINF:-1 group-title="国际",EBC Financial News (1080p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",EBC Financial News (1080p) [Not 24/7]
 http://seb.sason.top/sc/dscjxw_fhd.m3u8
-#EXTINF:-1 group-title="国际",EBC Foreign Movie
+#EXTINF:-1 group-title="港澳台",EBC Foreign Movie
 http://111.59.139.85:11888/tsfile/live/1217_1.m3u8?key=txiptv
 #EXTINF:-1 group-title="国际",EBC General Education (720p)
 https://iptv.ebc.edu.kh/iptv/channel/1.m3u8
 #EXTINF:-1 group-title="国际",EBC General Education (720p) [Not 24/7]
 https://iptv.ebc.edu.kh/iptv/channel/1.m3u8
-#EXTINF:-1 group-title="国际",EBC News (1080p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",EBC News (1080p) [Not 24/7]
 http://seb.sason.top/sc/dsxw_fhd.m3u8
 #EXTINF:-1 group-title="国际",EBN TV (720p) [Not 24/7]
 https://goliveafrica.media:9998/live/65d8475d1e6cb/index.m3u8
@@ -11033,13 +11033,13 @@ https://stream8.cinerama.uz/1018/playlist.m3u8
 https://master.tucableip.com/ftvhd/index.m3u8
 #EXTINF:-1 group-title="体育",FTV (Bolivia) (720p)
 https://master.tucableip.com/ftvhd/index.m3u8
-#EXTINF:-1 group-title="国际",FTV (Taiwan) (720p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",FTV (Taiwan) (720p) [Not 24/7]
 http://seb.sason.top/ptv/ftv.php?id=ms
 #EXTINF:-1 group-title="国际",FTV (Uzbekistan) (576p)
 https://stream8.cinerama.uz/1018/playlist.m3u8
-#EXTINF:-1 group-title="国际",FTV One (720p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",FTV One (720p) [Not 24/7]
 http://seb.sason.top/ptv/ftv.php?id=dy
-#EXTINF:-1 group-title="国际",FTV Taiwan (720p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",FTV Taiwan (720p) [Not 24/7]
 http://seb.sason.top/ptv/ftv.php?id=tw
 #EXTINF:-1 group-title="体育",FUEL TV (1080p)
 https://amg01074-fueltv-fueltvau-samsungau-g09kq.amagi.tv/playlist/amg01074-fueltv-fueltvau-samsungau/playlist.m3u8
@@ -12123,7 +12123,7 @@ http://15.204.196.147:22880/RECEPCION-GOLDEN_LAT-FHD/video.m3u8
 http://223.110.245.145/ott.js.chinamobile.com/PLTV/3/224/3221226303/index.m3u8
 #EXTINF:-1 group-title="国际",Golden Edge (1080p)
 http://15.204.196.147:22880/RECEPCION-GOLDEN_EDGE-LATAM-FHD/video.m3u8
-#EXTINF:-1 group-title="国际",Golden Jade (1080p)
+#EXTINF:-1 group-title="港澳台",Golden Jade (1080p)
 http://103.172.187.30:12000/stream/mytv/null-12/master.m3u8
 #EXTINF:-1 group-title="国际",Golden Plus (1080p)
 http://45.5.118.152:8000/play/a03p/index.m3u8
@@ -12175,9 +12175,9 @@ https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8
 https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8
 #EXTINF:-1 group-title="国际",Gongyoung Home Shopping (720p)
 https://etv.publichs.com/live5.stream/playlist.m3u8
-#EXTINF:-1 group-title="国际",Good 2 (1080p)
+#EXTINF:-1 group-title="港澳台",Good 2 (1080p)
 https://live.streamingfast.net/osmflivech2.m3u8
-#EXTINF:-1 group-title="国际",Good 2 (720p)
+#EXTINF:-1 group-title="港澳台",Good 2 (720p)
 https://live.streamingfast.net/osmflivech2.m3u8
 #EXTINF:-1 group-title="国际",Good Idea TV (1080p)
 http://stream1.ai-net.net:1935/gtv1/_definst_/smil:gtv.smil/playlist.m3u8
@@ -12187,13 +12187,13 @@ http://stream1.ai-net.net:1935/gtv1/_definst_/smil:gtv.smil/playlist.m3u8
 http://stream.mcquack.net/47/index.m3u8
 #EXTINF:-1 group-title="国际",Good News Today (1080p)
 https://d2lk5u59tns74c.cloudfront.net/out/v1/75f3183e143240a29fbddd502a6a3f8d/index.m3u8
-#EXTINF:-1 group-title="国际",Good TV
+#EXTINF:-1 group-title="港澳台",Good TV
 https://live.streamingfast.net/osmflivech1.m3u8
-#EXTINF:-1 group-title="国际",Good TV (1080p)
+#EXTINF:-1 group-title="港澳台",Good TV (1080p)
 https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 group-title="国际",Good TV (South Korea) (1080p)
 http://mobliestream.c3tv.com:1935/live/goodtv.sdp/playlist.m3u8
-#EXTINF:-1 group-title="国际",Good TV (Taiwan) (720p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",Good TV (Taiwan) (720p) [Not 24/7]
 https://live.streamingfast.net/osmflivech1.m3u8
 #EXTINF:-1 group-title="美国",GoodLife 45 (720p)
 https://2-fss-2.streamhoster.com/pl_118/201450-1248872-1/playlist.m3u8
@@ -12399,7 +12399,7 @@ http://125.227.210.55:1003/VideoInput/play.ts
 http://202.150.165.66:8088/play/100-HBO/index.m3u8
 #EXTINF:-1 group-title="国际",HBO Asia SD (720p) [Geo-blocked]
 https://tinyurl.com/yn3d3rmd
-#EXTINF:-1 group-title="国际",HBO Asia Taiwan
+#EXTINF:-1 group-title="港澳台",HBO Asia Taiwan
 http://125.227.210.55:1003/VideoInput/play.ts
 #EXTINF:-1 group-title="国际",HBO Asia Taiwan (1080p)
 http://125.227.210.55:1003/VideoInput/play.ts
@@ -12617,9 +12617,9 @@ https://hola-play-2108fd06-86d4-44e8-9867-c35b4895a1c1-es.fast.rakuten.tv/v1/mas
 http://stream.mcquack.net/381/index.m3u8
 #EXTINF:-1 group-title="国际",HOT Zone (1080p)
 http://stream.mcquack.net/379/index.m3u8
-#EXTINF:-1 group-title="国际",HOY Infotainment (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",HOY Infotainment (1080p) [Geo-blocked]
 https://hoytv-live-stream.hoy.tv/ch78/index.m3u8
-#EXTINF:-1 group-title="国际",HOY TV (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",HOY TV (1080p) [Geo-blocked]
 https://hoytv-live-stream.hoy.tv/ch77/index.m3u8
 #EXTINF:-1 group-title="国际",HRT 1 (720p)
 https://webtvstream.bhtelecom.ba/hrt1.m3u8
@@ -12727,7 +12727,7 @@ https://cdn.streamingcpanel.com:3447/live/hainavisionlive.m3u8
 https://cdn.haititivi.com/website/haitinews/index.m3u8
 #EXTINF:-1 group-title="国际",Haiti News Channel (720p)
 https://cdn.haititivi.com/website/haitinews/index.m3u8
-#EXTINF:-1 group-title="国际",Hakka TV
+#EXTINF:-1 group-title="港澳台",Hakka TV
 https://h5cul1yar48um3t.wcetv.com/hls/hakkatv.m3u8
 #EXTINF:-1 group-title="国际",Hala London (1080p)
 https://halalondon-live.ercdn.net/halalondon/halalondon.m3u8
@@ -13101,9 +13101,9 @@ https://all3media-homes-under-the-hammer-1-au.samsung.wurl.tv/playlist.m3u8
 https://all3media-homes-under-the-hammer-1-no.samsung.wurl.tv/playlist.m3u8
 #EXTINF:-1 group-title="美国",Homicide Hunter
 https://jmp2.uk/plu-619e21b213ef6b0007d8c17a.m3u8
-#EXTINF:-1 group-title="国际",Hong Kong International Business Channel (1080p)
+#EXTINF:-1 group-title="港澳台",Hong Kong International Business Channel (1080p)
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
-#EXTINF:-1 group-title="国际",Hong Kong International Business Channel (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",Hong Kong International Business Channel (1080p) [Geo-blocked]
 https://hoytv-live-stream.hoy.tv/ch76/index-fhd.m3u8
 #EXTINF:-1 group-title="国际",Hop! (1080p)
 http://stream.mcquack.net/44/index.m3u8
@@ -13633,7 +13633,7 @@ https://d2lk5u59tns74c.cloudfront.net/out/v1/d4435039c7d1433d9b9d0b6cdc9dd4ff/in
 https://d1msejlow1t3l4.cloudfront.net/fta/indiavoice/playlist.m3u8
 #EXTINF:-1 group-title="国际",India Voice (576p)
 https://fta.ektv.in/live/94/94_0.m3u8
-#EXTINF:-1 group-title="国际",Indigenous TV (720p)
+#EXTINF:-1 group-title="港澳台",Indigenous TV (720p)
 http://streamipcf.akamaized.net/live/_definst_/smil:liveabr.smil/playlist.m3u8
 #EXTINF:-1 group-title="国际",Indigenous Television (720p)
 https://np.truestreamz.com/broadcaster/INDIGENOUSmob.stream/playlist.m3u8
@@ -13973,11 +13973,11 @@ http://122.248.43.242:1935/JTVMADURA/_definst_/myStream/playlist.m3u8
 http://122.248.43.242:1935/JTVMALANG/_definst_/myStream/playlist.m3u8
 #EXTINF:-1 group-title="国际",Jacal Canal 5 (720p) [Not 24/7]
 https://stream.oursnetworktv.com/latin/jacaltv/playlist.m3u8
-#EXTINF:-1 group-title="国际",Jade
+#EXTINF:-1 group-title="港澳台",Jade
 http://122.152.202.33/s/81a8a44f/index.m3u8?id=53
-#EXTINF:-1 group-title="国际",Jade
+#EXTINF:-1 group-title="港澳台",Jade
 http://183.239.108.37:1698/hls/92/index.m3u8
-#EXTINF:-1 group-title="国际",Jade (1080p)
+#EXTINF:-1 group-title="港澳台",Jade (1080p)
 http://103.172.187.30:12000/stream/mytv/null-1/master.m3u8
 #EXTINF:-1 group-title="国际",Jahanbin TV
 https://ncdn.telewebion.ir/jahanbin/live/playlist.m3u8
@@ -14365,7 +14365,7 @@ http://livestream.usatv.com/hls/master-iUSATVLIVENET.m3u8
 https://streamer1.connectto.com/AABC_WEB_1201/index.m3u8
 #EXTINF:-1 group-title="国际",KIT-TV (720p)
 https://everest.pa-hosting.de:3591/live/joseflive.m3u8
-#EXTINF:-1 group-title="国际",KIX (1080p)
+#EXTINF:-1 group-title="港澳台",KIX (1080p)
 https://freem3u.xyz/api/live/play.m3u8?vid=9901
 #EXTINF:-1 group-title="美国",KJTV-CD 32.1 (720p)
 https://s7host4.localnow.api.cms.amdvids.com/v1/master/c189661feba961c19bc5fb60b57879ee9b84548a/config8/m2/localnow/895375dd86c496d884e490fd33e721121cbb74469a71f3fa5c55135073880102b22768a1db14/master.m3u8?ads.cdnhost=s7host4.localnow.api.cms.amdvids.com&ads.playbackid=011D22C5-FD97-44E6-A65A-BBF9830A7561&ads.n1=rule_id&ads.v1=E7BB7BA1-D932-4E65-BD9F-93731E6E87C5-1744054592&ads.n3=qp_content_id&ads.v3=011D22C5-FD97-44E6-A65A-BBF9830A7561&ads.n4=content_name&ads.v4=EPG%20%7C%20Apple%20Valley%20News%20Now%20KAPP%20KVEW&ads.n21=channel_rating&ads.v21=TV-PG&ads.n22=channel_brand_id&ads.v22=AMDB012941&ads.n23=device_type&ads.v23=&ads.n24=content_producer_name&ads.v24=Morgan%20Murphy%20Media&ads.n25=content_custom_1_param&ads.v25=011D22C5-FD97-44E6-A65A-BBF9830A7561&ads.n26=us_privacy&ads.v26=1YNY&ads.n27=dnt&ads.v27=&ads.n28=w&ads.v28=1920&ads.n29=channel_id&ads.v29=011D22C5-FD97-44E6-A65A-BBF9830A7561&ads.n30=channel_ext_id&ads.v30=6483929784fd0de50b045073&ads.n31=ip&ads.v31=185.217.168.164&ads.n32=channel_genre&ads.v32=News&ads.n33=app_store_url&ads.v33=&ads.n34=content_livestream&ads.v34=1&ads.n35=channel_language&ads.v35=en&ads.n36=app_name&ads.v36=&ads.n37=channel_corp&ads.v37=Morgan%20Murphy%20Media&ads.n38=app_bundle&ads.v38=&ads.n39=cust_devicename&ads.v39=desktop_web&ads.n40=content_type&ads.v40=channel&ads.n41=h&ads.v41=1080&ads.n42=gpp_sid&ads.v42=&ads.n43=url&ads.v43=https%25253A%25252F%25252Flocalnow.com%25252Fchannels%25252Fcbs-news-chicago-hyperlocal&ads.n44=gpp&ads.v44=&ads.n45=device_model&ads.v45=&ads.n46=device_make&ads.v46=&ads.n47=content_custom_2_param&ads.v47=AMDB012941&ads.n48=pos&ads.v48=midroll&ads.n49=network_name&ads.v49=kapp&ads.n50=channel_company_id&ads.v50=AMDP500435&ads.n51=content_provider&ads.v51=kapp&ads.n52=channel_title&ads.v52=EPG%20%20Apple%20Valley%20News%20Now%20KAPP%20KVEW&ads.n53=did&ads.v53=&ads.n54=content_custom_3_param&ads.v54=channel&ads.n55=app_version&ads.v55=0.0.0&ads.n56=ua&ads.v56=Mozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F122.0.0.0%20Safari%2F537.36&ads.n57=ifa_type&ads.v57=&ads.n58=channel_name&ads.v58=EPG%20%20Apple%20Valley%20News%20Now%20KAPP%20KVEW
@@ -15735,7 +15735,7 @@ https://pchlslivesw.lotteimall.com/live/livestream/lotteimalllive_mp4.m3u8
 https://onetvhlslive.lotteimall.com/lotteonetvlive/lotteonetvlive.mp4.m3u8
 #EXTINF:-1 group-title="国际",Lotte OneTV (720p)
 https://onetvhlslive.lotteimall.com/lotteonetvlive/lotteonetvlive.mp4.m3u8
-#EXTINF:-1 group-title="国际",Lotus TV (720p)
+#EXTINF:-1 group-title="港澳台",Lotus TV (720p)
 https://cdn4.skygo.mn/live/disk1/Lotus/HLSv3-FTA/Lotus.m3u8
 #EXTINF:-1 group-title="国际",Louga TV (480p)
 https://stream.sen-gt.com/Mbacke/myStream/playlist.m3u8
@@ -16129,7 +16129,7 @@ https://goliveafrica.media:9998/live/6425a6efa15c8/index.m3u8
 https://bk7l2r2nyx53-hls-live.5centscdn.com/ablazetv/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8
 #EXTINF:-1 group-title="国际",MOGPA TV Plus
 https://bk7l2r2nyx53-hls-live.5centscdn.com/mogpatvplus/2567a5ec9705eb7ac2c984033e06189d.sdp/playlist.m3u8
-#EXTINF:-1 group-title="国际",MOMO TV (1080p)
+#EXTINF:-1 group-title="港澳台",MOMO TV (1080p)
 http://nmk.ioapk.com:5050/4gtv-live107/index.m3u8
 #EXTINF:-1 group-title="国际",MONO 29
 https://lb1-live-mv.v2h-cdn.com/hls/ffbc/ffolvgdhk/ffolvgdhk.m3u8
@@ -17059,7 +17059,7 @@ https://mgvchannel21-ioriver-cdn.encoders.immergo.tv/master.m3u8
 https://ext.cdn.nashnet.tv/228.0.2.214/index.m3u8
 #EXTINF:-1 group-title="国际",Mehran TV (576p)
 http://103.250.28.74:8000/play/a00m/index.m3u8
-#EXTINF:-1 group-title="国际",Mei Ah Movie Channel (1080p)
+#EXTINF:-1 group-title="港澳台",Mei Ah Movie Channel (1080p)
 http://103.172.187.30:12000/stream/mytv/null-2/master.m3u8
 #EXTINF:-1 group-title="国际",Mei Alai TV (576p)
 https://meialai.iptelevishion.com/meialai/2/index.m3u8
@@ -18161,7 +18161,7 @@ https://api.visionip.tv/live/ASHTTP/visiontvuk-entertainment-ntai-hsslive-25f-4x
 https://galaxyott.live/hls/ntv.m3u8
 #EXTINF:-1 group-title="美国",NTD TV (1080p)
 https://ntd02.akamaized.net/HD-NY/index.m3u8
-#EXTINF:-1 group-title="美国",NTD TV Asia-Pacific
+#EXTINF:-1 group-title="港澳台",NTD TV Asia-Pacific
 https://live.ntdtv.com/aplive200/playlist.m3u8
 #EXTINF:-1 group-title="美国",NTD TV Canada
 https://live.ntdtv.com/mllive860/playlist.m3u8
@@ -18925,7 +18925,7 @@ https://skynewsau-live-premium.akamaized.net/hls/live/2105306/skynewsextra/live_
 https://amg01106-amg01106c3-amgplt0844.playout.now3.amagi.tv/ts-ap-s1-n1/playlist/amg01106-amg01106c3-amgplt0844/playlist.m3u8
 #EXTINF:-1 group-title="国际",NewsWorld
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-newsworld-rakutenjp/playlist.m3u8
-#EXTINF:-1 group-title="国际",NewsWorld (1080p)
+#EXTINF:-1 group-title="港澳台",NewsWorld (1080p)
 https://amg01076-lightning-amg01076c5-rakuten-us-1788.playouts.now.amagi.tv/playlist/amg01076-lightning-newsworld-rakutenus/playlist.m3u8
 #EXTINF:-1 group-title="国际",NewsX (576p)
 https://cdn.pishow.tv/ott/live/1765/master.m3u8
@@ -20311,7 +20311,7 @@ https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3e22a9c278db4e3eb779afd42e41b0a6/in
 https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/3bc92ffb55814535801f929a1ac96c57/index.m3u8
 #EXTINF:-1 group-title="美国",PTL TV Network (1080p)
 https://storage.sardius.media/archives/-KyMV-J0vDqnClcSXs8p/events/site_1a4721d3BA/playlist.m3u8
-#EXTINF:-1 group-title="国际",PTS 3
+#EXTINF:-1 group-title="港澳台",PTS 3
 http://111.59.139.85:11888/tsfile/live/1222_1.m3u8?key=txiptv
 #EXTINF:-1 group-title="国际",PTV (576p)
 https://cdn15.live-tv.cloud/ua_infinitas_tv/hrpl-abr/playlist.m3u8
@@ -20689,7 +20689,7 @@ https://cdn-dvr.ntv.ru/Pes/index.m3u8
 https://cdn-dvr.ntv.ru/Pes/index.m3u8
 #EXTINF:-1 group-title="国际",Pesca e Caccia (720p)
 http://102.129.186.182:81/pescacaccia/index.m3u8
-#EXTINF:-1 group-title="国际",Pet Club TV (1080p)
+#EXTINF:-1 group-title="港澳台",Pet Club TV (1080p)
 https://petclub-samsungaus.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="国际",Petlovers TV
 https://video04.logicahost.com.br/petloverstv/petloverstv/playlist.m3u8
@@ -20701,9 +20701,9 @@ https://a-cdn.klowdtv.com/live2/petstv_720p/playlist.m3u8
 https://5be80bd118c27.streamlock.net:433/phenomenaltv/phenomenal/playlist.m3u8
 #EXTINF:-1 group-title="美国",PhillyCAM (720p)
 https://livestream.telvue.com/phillycam1/f7b44cfafd5c52223d5498196c8a2e7b.sdp/playlist.m3u8
-#EXTINF:-1 group-title="国际",Phoenix Chinese Channel (720p)
+#EXTINF:-1 group-title="港澳台",Phoenix Chinese Channel (720p)
 http://223.110.245.139/ott.js.chinamobile.com/PLTV/3/224/3221226922/index.m3u8
-#EXTINF:-1 group-title="国际",Phoenix InfoNews Channel (720p)
+#EXTINF:-1 group-title="港澳台",Phoenix InfoNews Channel (720p)
 http://223.110.245.167/ott.js.chinamobile.com/PLTV/3/224/3221226923/index.m3u8
 #EXTINF:-1 group-title="国际",Pichilemu TV (1080p)
 https://5ff3d9babae13.streamlock.net/8028/8028/playlist.m3u8
@@ -22641,29 +22641,29 @@ https://2-fss-2.streamhoster.com/pl_120/amlst:206708-4203440/playlist.m3u8
 https://2-fss-2.streamhoster.com/pl_120/amlst:206708-4203440/playlist.m3u8
 #EXTINF:-1 group-title="美国",RTH-TV2 Gospel (720p)
 https://2-fss-2.streamhoster.com/pl_120/amlst:206708-4202592/playlist.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 31 (1080p)
+#EXTINF:-1 group-title="港澳台",RTHK TV 31 (1080p)
 https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 31 (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",RTHK TV 31 (1080p) [Geo-blocked]
 https://rthktv31-live.akamaized.net/hls/live/2036818/RTHKTV31/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 32 (1080p)
+#EXTINF:-1 group-title="港澳台",RTHK TV 32 (1080p)
 https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 32 (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",RTHK TV 32 (1080p) [Geo-blocked]
 https://rthktv32-live.akamaized.net/hls/live/2036819/RTHKTV32/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 33 (1080p)
+#EXTINF:-1 group-title="港澳台",RTHK TV 33 (1080p)
 https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 33 (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",RTHK TV 33 (1080p) [Geo-blocked]
 https://rthktv33-live.akamaized.net/hls/live/2101641/RTHKTV33/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 34 (1080p)
+#EXTINF:-1 group-title="港澳台",RTHK TV 34 (1080p)
 https://rthktv34-live.akamaized.net/hls/live/2101642/RTHKTV34/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 34 (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",RTHK TV 34 (1080p) [Geo-blocked]
 https://rthktv34-live.akamaized.net/hls/live/2101642/RTHKTV34/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 35 (1080p)
+#EXTINF:-1 group-title="港澳台",RTHK TV 35 (1080p)
 https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK TV 35 (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",RTHK TV 35 (1080p) [Geo-blocked]
 https://rthktv35-live.akamaized.net/hls/live/2101643/RTHKTV35/master.m3u8
-#EXTINF:-1 group-title="国际",RTHK32
+#EXTINF:-1 group-title="港澳台",RTHK32
 http://php.jdshipin.com/TVOD/iptv.php?id=rthk32
-#EXTINF:-1 group-title="国际",RTHK32
+#EXTINF:-1 group-title="港澳台",RTHK32
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=rthk32
 #EXTINF:-1 group-title="国际",RTI 1 (1080p)
 https://video1.getstreamhosting.com:1936/8336/8336/playlist.m3u8
@@ -24483,7 +24483,7 @@ http://23.237.104.106:8080/USA_SEC_NETWORK/index.m3u8
 https://slbps-ml-sambatech.akamaized.net/samba-live/2472/7424/8a00fe7cc36ac263b2c3e9324497d5ff/video/93a9920d-1b24-4c5e-a7d2-63d5489f59b5_index.m3u8
 #EXTINF:-1 group-title="国际",SESC TV (720p)
 http://170.83.49.66:8083/SESCTVHD/index.m3u8
-#EXTINF:-1 group-title="国际",SET News (1080p) [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",SET News (1080p) [Geo-blocked]
 http://seb.sason.top/sc/sllive_fhd.m3u8
 #EXTINF:-1 group-title="美国",SF Commons 29 (480p)
 https://reflect-bayarea.cablecast.tv/live-5/live/live.m3u8
@@ -24541,7 +24541,7 @@ https://webprod.sipse.com.mx:8080/show/tvcun.m3u8
 https://www.schannels.in/SITI24X7_1/index.m3u8
 #EXTINF:-1 group-title="国际",SIXO TV (360p)
 https://cloudfront44.lexanetwork.com:1344/relay01/HDE038.sdp/playlist.m3u8
-#EXTINF:-1 group-title="国际",SJTV
+#EXTINF:-1 group-title="港澳台",SJTV
 http://111.59.139.85:11888/tsfile/live/1220_1.m3u8?key=txiptv
 #EXTINF:-1 group-title="国际",SK 1 (720p)
 http://cdn10.live-tv.od.ua:8081/sk1zt/sk1zt720p/playlist.m3u8
@@ -26777,9 +26777,9 @@ https://video1.getstreamhosting.com:1936/8398/8398/playlist.m3u8
 https://sy.wns.live/hls/stream.m3u8
 #EXTINF:-1 group-title="国际",Supremateve (720p) [Not 24/7]
 https://ss2.tvrdomi.com:1936/supremateve/supremateve/playlist.m3u8
-#EXTINF:-1 group-title="国际",Supreme Master TV
+#EXTINF:-1 group-title="港澳台",Supreme Master TV
 https://lbs-us1.suprememastertv.com/720p.m3u8
-#EXTINF:-1 group-title="国际",Supreme Master TV (720p)
+#EXTINF:-1 group-title="港澳台",Supreme Master TV (720p)
 https://lbs-us1.suprememastertv.com/720p.m3u8
 #EXTINF:-1 group-title="国际",Sur TV (576p)
 https://ss2.tvrdomi.com:1936/eradiofonicas/eradiofonicas/playlist.m3u8
@@ -27047,15 +27047,15 @@ https://peer2.tdiradio.com/static/streaming-playlists/hls/8f5d84ce-e8ac-4109-997
 https://live-tdk42kz.cdnvideo.ru/tdk42kz/tdk42kz_720.smil/playlist.m3u8
 #EXTINF:-1 group-title="国际",TDK 42 (720p)
 https://live-tdk42kz.cdnvideo.ru/tdk42kz/tdk42kz_720.smil/playlist.m3u8
-#EXTINF:-1 group-title="国际",TDM Entertainment (720p)
+#EXTINF:-1 group-title="港澳台",TDM Entertainment (720p)
 https://live3.tdm.com.mo/ch6/hd_ch6.live/playlist.m3u8
-#EXTINF:-1 group-title="国际",TDM Information (720p) [Not 24/7]
+#EXTINF:-1 group-title="港澳台",TDM Information (720p) [Not 24/7]
 https://live3.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8
-#EXTINF:-1 group-title="国际",TDM Ou Mun (720p)
+#EXTINF:-1 group-title="港澳台",TDM Ou Mun (720p)
 http://61.244.22.4/ch1/ch1.live/playlist.m3u8
-#EXTINF:-1 group-title="体育",TDM Sports (720p)
+#EXTINF:-1 group-title="港澳台",TDM Sports (720p)
 https://live3.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8
-#EXTINF:-1 group-title="国际",TDM-Macau Satellite (720p)
+#EXTINF:-1 group-title="港澳台",TDM-Macau Satellite (720p)
 https://live3.tdm.com.mo/ch3/ch3.live/playlist.m3u8
 #EXTINF:-1 group-title="国际",TDN Medios (720p)
 https://castv10.plugstreaming.com:19360/tdntv/tdntv.m3u8
@@ -27415,9 +27415,9 @@ http://181.114.57.246:4000/play/9w2G3HTtuTmrtgPZ/index.m3u8
 https://mdstrm.com/live-stream-playlist/6287fdc9303e3008289ab711.m3u8
 #EXTINF:-1 group-title="国际",TTN24 (720p)
 https://stream.joytvindia.com/stream/hls/ttn24/index.m3u8
-#EXTINF:-1 group-title="国际",TTV (720p)
+#EXTINF:-1 group-title="港澳台",TTV (720p)
 http://162.19.247.76:22222/live/taishi/index.m3u8
-#EXTINF:-1 group-title="国际",TTV News
+#EXTINF:-1 group-title="港澳台",TTV News
 https://live.wcetv.com/hls/master-ttvnews.m3u8
 #EXTINF:-1 group-title="美国",TUDN (1080p)
 https://streaming-live-fcdn.api.prd.univisionnow.com/tudn/tudn.isml/hls/tudn.m3u8
@@ -28551,73 +28551,73 @@ http://fms.tvavicenza.it:1935/live/diretta_1/playlist.m3u8
 http://190.61.47.54:8000/play/a01k/index.m3u8
 #EXTINF:-1 group-title="国际",TVB Vietnam (1080p)
 https://amg01868-amg01868c3-tvbanywhere-us-4491.playouts.now.amagi.tv/playlist/amg01868-tvbusa-tvbvietnam-tvbanywhereus/playlist.m3u8
-#EXTINF:-1 group-title="国际",TVBS News [Geo-blocked]
+#EXTINF:-1 group-title="港澳台",TVBS News [Geo-blocked]
 http://seb.sason.top/sc/tvbsxw_fhd.m3u8
-#EXTINF:-1 group-title="国际",TVBS-Asia
+#EXTINF:-1 group-title="港澳台",TVBS-Asia
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 group-title="国际",TVBS-Asia (1080p)
+#EXTINF:-1 group-title="港澳台",TVBS-Asia (1080p)
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 group-title="地方",TVBS亚洲
+#EXTINF:-1 group-title="港澳台",TVBS亚洲
 http://38.64.72.148/hls/modn/list/4005/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",TVBS亚洲
+#EXTINF:-1 group-title="港澳台",TVBS亚洲
 http://38.64.72.148/hls/modn/list/4005/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",TVBS亚洲
+#EXTINF:-1 group-title="港澳台",TVBS亚洲
 http://38.64.72.148/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 group-title="地方",TVBS亚洲
+#EXTINF:-1 group-title="港澳台",TVBS亚洲
 http://38.64.72.148:80/hls/modn/list/4005/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",TVBS亚洲
+#EXTINF:-1 group-title="港澳台",TVBS亚洲
 http://38.64.72.148:80/hls/modn/list/4005/playlist.m3u8
-#EXTINF:-1 group-title="地方",TVBS亚洲
+#EXTINF:-1 group-title="港澳台",TVBS亚洲
 http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8?zshijd
-#EXTINF:-1 group-title="地方",TVBS新闻
+#EXTINF:-1 group-title="港澳台",TVBS新闻
 http://61.221.215.25:8800/hls/9/index.m3u8
-#EXTINF:-1 group-title="地方",TVB娱乐新闻
+#EXTINF:-1 group-title="港澳台",TVB娱乐新闻
 http://php.jdshipin.com/TVOD/iptv.php?id=tvbylxw
-#EXTINF:-1 group-title="地方",TVB无线新闻
+#EXTINF:-1 group-title="港澳台",TVB无线新闻
 http://122.152.202.33/s/81a8a44f/index.m3u8?id=21
-#EXTINF:-1 group-title="地方",TVB无线新闻
+#EXTINF:-1 group-title="港澳台",TVB无线新闻
 http://php.jdshipin.com/TVOD/iptv.php?id=tvbxw
-#EXTINF:-1 group-title="地方",TVB无线新闻
+#EXTINF:-1 group-title="港澳台",TVB无线新闻
 http://php.jdshipin.com/TVOD/iptv.php?id=wxxw
-#EXTINF:-1 group-title="地方",TVB无线新闻
+#EXTINF:-1 group-title="港澳台",TVB无线新闻
 http://r.jdshipin.com/CkuBd
-#EXTINF:-1 group-title="地方",TVB无线新闻
+#EXTINF:-1 group-title="港澳台",TVB无线新闻
 https://h5cdn3.kylintv.tv/live/tvbnews_iphone.m3u8
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://122.152.202.33/s/81a8a44f/index.m3u8?id=23
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://cdn9.163189.xyz/smt1.1.php?id=pearl_twn
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://php.jdshipin.com/TVOD/iptv.php?id=mzt
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://php.jdshipin.com/TVOD/iptv.php?id=mzt2
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=mzt
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://r.jdshipin.com/ZQ4kN
-#EXTINF:-1 group-title="地方",TVB明珠
+#EXTINF:-1 group-title="港澳台",TVB明珠
 http://r.jdshipin.com/jUx8K
-#EXTINF:-1 group-title="地方",TVB星河
+#EXTINF:-1 group-title="港澳台",TVB星河
 http://php.jdshipin.com/TVOD/iptv.php?id=xinghe
-#EXTINF:-1 group-title="地方",TVB星河
+#EXTINF:-1 group-title="港澳台",TVB星河
 http://php.jdshipin.com:8880/PLTV/iptv.php?id=xinghe
-#EXTINF:-1 group-title="地方",TVB星河
+#EXTINF:-1 group-title="港澳台",TVB星河
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=xinghe
-#EXTINF:-1 group-title="地方",TVB星河
+#EXTINF:-1 group-title="港澳台",TVB星河
 http://r.jdshipin.com/Voac4
-#EXTINF:-1 group-title="地方",TVB星河
+#EXTINF:-1 group-title="港澳台",TVB星河
 http://r.jdshipin.com/sXuuD
-#EXTINF:-1 group-title="地方",TVB星河
+#EXTINF:-1 group-title="港澳台",TVB星河
 https://10.fast.hidns.vip/163189/xinghe/
-#EXTINF:-1 group-title="地方",TVB翡翠
+#EXTINF:-1 group-title="港澳台",TVB翡翠
 http://cdn.163189.xyz/live/fct4k/stream.m3u8
-#EXTINF:-1 group-title="地方",TVB翡翠
+#EXTINF:-1 group-title="港澳台",TVB翡翠
 http://php.jdshipin.com/TVOD/iptv.php?id=fct
-#EXTINF:-1 group-title="地方",TVB翡翠
+#EXTINF:-1 group-title="港澳台",TVB翡翠
 http://php.jdshipin.com/TVOD/iptv.php?id=fct2
-#EXTINF:-1 group-title="地方",TVB翡翠
+#EXTINF:-1 group-title="港澳台",TVB翡翠
 http://php.jdshipin.com/TVOD/iptv.php?id=fct3
-#EXTINF:-1 group-title="地方",TVB翡翠
+#EXTINF:-1 group-title="港澳台",TVB翡翠
 http://php.jdshipin.com/TVOD/iptv.php?id=fct4
 #EXTINF:-1 group-title="国际",TVC (1080p)
 http://212.5.144.156:8080/tvc/index.m3u8
@@ -29209,11 +29209,11 @@ https://stream.starmenajo.com/hls/app/live/ts:fhd.m3u8
 https://vod.tv7.fi/tv7-fi/smil:tv7-fi.smil/playlist.m3u8
 #EXTINF:-1 group-title="国际",Taivas TV7 (720p)
 https://vod.tv7.fi/tv7-fi/smil:tv7-fi.smil/playlist.m3u8
-#EXTINF:-1 group-title="国际",Taiwan Indigenous TV
+#EXTINF:-1 group-title="港澳台",Taiwan Indigenous TV
 https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
-#EXTINF:-1 group-title="国际",Taiwan Indigenous TV (720p)
+#EXTINF:-1 group-title="港澳台",Taiwan Indigenous TV (720p)
 https://streamipcfapp.akamaized.net/live/_definst_/live_720/key_b1500.m3u8
-#EXTINF:-1 group-title="美国",Taiwan Plus TV (1080p)
+#EXTINF:-1 group-title="港澳台",Taiwan Plus TV (1080p)
 https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/6282251407001/playlist.m3u8
 #EXTINF:-1 group-title="国际",Takbeer TV (1080p)
 https://cd198.anystream.uk:9092/iqapp/t5kb86tv/playlist.m3u8
@@ -30413,7 +30413,7 @@ https://jmp2.uk/plu-5ef3977e5d773400077de284.m3u8
 https://jmp2.uk/plu-64ca723a2bc49300081a8966.m3u8
 #EXTINF:-1 group-title="美国",Three's Company CA (720p)
 https://jmp2.uk/plu-64ca723a2bc49300081a8966.m3u8
-#EXTINF:-1 group-title="国际",Thrill (540p)
+#EXTINF:-1 group-title="港澳台",Thrill (540p)
 https://cdn10jtedge.indihometv.com/atm/DASH/thrill/manifest.mpd
 #EXTINF:-1 group-title="国际",TiJi (576p)
 http://flussonic.linkintel.ru/tiji/index.m3u8
@@ -31431,11 +31431,11 @@ https://live.vipnews24x7.co.in/vipnews24x7/d0dbe915091d400bd8ee7f27f0791303.sdp/
 https://vs20.live.opencaster.com/viptvaruba_01e417ae/index.m3u8
 #EXTINF:-1 group-title="国际",VIP TV (720p)
 https://ed5ov1.live.opencaster.com/bkyqeDgfaukC/index.m3u8
-#EXTINF:-1 group-title="国际",VIUTV
+#EXTINF:-1 group-title="港澳台",VIUTV
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
-#EXTINF:-1 group-title="国际",VIUTV
+#EXTINF:-1 group-title="港澳台",VIUTV
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv2
-#EXTINF:-1 group-title="国际",VIUTV
+#EXTINF:-1 group-title="港澳台",VIUTV
 http://php.jdshipin.com:8880/PLTV/iptv.php?id=viutv
 #EXTINF:-1 group-title="国际",VIVA Russia
 https://live20.bozztv.com/akamaissh101/ssh101/vivarussia/playlist.m3u8
@@ -31995,9 +31995,9 @@ http://iptv.vitotvo.video.makrodigital.com:8081/vitotvo/iptv/playlist.m3u8
 https://live-11cinema.cdnvideo.ru/11cinema/11cinema/playlist.m3u8
 #EXTINF:-1 group-title="国际",Vitrina TV (720p)
 https://live-11cinema.cdnvideo.ru/11cinema/11cinema/playlist.m3u8
-#EXTINF:-1 group-title="国际",ViuTV (1080i)
+#EXTINF:-1 group-title="港澳台",ViuTV (1080i)
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
-#EXTINF:-1 group-title="国际",ViuTV (1080p)
+#EXTINF:-1 group-title="港澳台",ViuTV (1080p)
 http://php.jdshipin.com/TVOD/iptv.php?id=viutv
 #EXTINF:-1 group-title="国际",Viva Nicaragua Canal 13 (720p)
 https://cdn.vivamediosni.com/viva_720p/index.m3u8
@@ -32271,9 +32271,9 @@ https://2-fss-2.streamhoster.com/pl_138/amlst:207282-6094500/playlist.m3u8
 https://2-fss-2.streamhoster.com/pl_138/amlst:207282-6094500/playlist.m3u8
 #EXTINF:-1 group-title="美国",WWON-TV Channel 48
 https://tv2.fastcast4u.com:3943/stream/play.m3u8
-#EXTINF:-1 group-title="国际",WXTV
+#EXTINF:-1 group-title="港澳台",WXTV
 https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8
-#EXTINF:-1 group-title="国际",WXTV (480p)
+#EXTINF:-1 group-title="港澳台",WXTV (480p)
 https://mobile.ccdntech.com/transcoder/_definst_/vod164_Live/live/chunklist_w1177047531.m3u8
 #EXTINF:-1 group-title="国际",WXWZ-LD 23.1 (720p)
 https://5bf8041cb3fed.streamlock.net/mastvpr/mastvpr/playlist.m3u8
@@ -33505,11 +33505,11 @@ http://kkk.888.3116598.xyz/api.php?n=tttt&id=NcDMNc&tk=FgM0vQMejxvG
 http://nn.7x9d.cn/地方台8563/海南.php?id=ssws
 #EXTINF:-1 group-title="卫视",三沙卫视
 http://nn.7x9d.cn/地方台8563/海南.php?id=ssws#http://61.138.128.226:19901/tsfile/live/1020_1.m3u8#http://qjrhc.jydjd.top:2911/udp/224.1.100.148:11111
-#EXTINF:-1 group-title="地方",三立戏剧
+#EXTINF:-1 group-title="港澳台",三立戏剧
 http://61.221.215.25:8800/hls/41/index.m3u8
-#EXTINF:-1 group-title="地方",三立新闻
+#EXTINF:-1 group-title="港澳台",三立新闻
 https://epg.pw/stream/6b49e3faa38adda85abab446f032dc1e686baa0760a9cfa66e2df8fd6fe3b445.m3u8
-#EXTINF:-1 group-title="地方",三立新闻
+#EXTINF:-1 group-title="港澳台",三立新闻
 https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV32.m3u8
 #EXTINF:-1 group-title="地方",上海ICS外语
 http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001128/index.m3u8
@@ -33673,21 +33673,21 @@ http://8.138.7.223/tv/migu.php?id=dfys
 http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001016/index.m3u8
 #EXTINF:-1 group-title="地方",东方财经
 http://[2409:8087:1e03:21::2]:6060/cms001/ch00000090990000001318/index.m3u8
-#EXTINF:-1 group-title="地方",东森美洲
+#EXTINF:-1 group-title="港澳台",东森美洲
 http://38.64.72.148/hls/modn/list/2016/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",东森美洲
+#EXTINF:-1 group-title="港澳台",东森美洲
 http://38.64.72.148/hls/modn/list/2016/playlist.m3u8
-#EXTINF:-1 group-title="地方",东森美洲
+#EXTINF:-1 group-title="港澳台",东森美洲
 http://38.64.72.148:80/hls/modn/list/2016/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",东森美洲
+#EXTINF:-1 group-title="港澳台",东森美洲
 http://38.64.72.148:80/hls/modn/list/2016/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",东森美洲
+#EXTINF:-1 group-title="港澳台",东森美洲
 http://ysift55.xyz/live/44659DC712A881F/z1QCJdKfa4/269923.ts
-#EXTINF:-1 group-title="卫视",东森美洲卫视
+#EXTINF:-1 group-title="港澳台",东森美洲卫视
 http://38.64.72.148:80/hls/modn/list/2015/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",东森超视
+#EXTINF:-1 group-title="港澳台",东森超视
 http://38.64.72.148:80/hls/modn/list/2013/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",东森超视
+#EXTINF:-1 group-title="港澳台",东森超视
 http://38.64.72.148:80/hls/modn/list/2013/chunklist1.m3u8
 #EXTINF:-1 group-title="地方",东阳影视生活
 http://l.cztvcloud.com/channels/lantian/SXdongyang1/720p.m3u8
@@ -33717,13 +33717,13 @@ http://newcntv.qcloudcdn.com/asp/hls/4000/0303000a/3/default/93fc12dbf14241c18c2
 http://ali-m-l.cztv.com/channels/lantian/channel009/1080p.m3u8
 #EXTINF:-1 group-title="地方",中国蓝新闻
 https://ali-m-l.cztv.com/channels/lantian/channel009/1080p.m3u8?
-#EXTINF:-1 group-title="地方",中天娱乐
+#EXTINF:-1 group-title="港澳台",中天娱乐
 http://61.221.215.25:8800/hls/47/index.m3u8
-#EXTINF:-1 group-title="地方",中天新闻
+#EXTINF:-1 group-title="港澳台",中天新闻
 http://flv3948069e.live.126.net/live/dabadqdszbtest78612.flv
-#EXTINF:-1 group-title="地方",中视新闻
+#EXTINF:-1 group-title="港澳台",中视新闻
 http://74.91.26.218:82/live/ctvnews.m3u8
-#EXTINF:-1 group-title="地方",中视新闻
+#EXTINF:-1 group-title="港澳台",中视新闻
 https://raw.githubusercontent.com/ChiSheng9/iptv/master/TV09.m3u8
 #EXTINF:-1 group-title="地方",之江纪录
 http://ali-m-l.cztv.com/channels/lantian/channel012/1080p.m3u8
@@ -33883,11 +33883,11 @@ http://l.cztvcloud.com/channels/lantian/SXyuhang1/720p.m3u8?zzhed
 https://live.metshop.top/huya/23734246
 #EXTINF:-1 group-title="地方",倚天屠龙记
 https://live.ottiptv.cc/huya/11342403
-#EXTINF:-1 group-title="地方",八大戏剧
+#EXTINF:-1 group-title="港澳台",八大戏剧
 http://61.221.215.25:8800/hls/39/index.m3u8
-#EXTINF:-1 group-title="地方",八大第一
+#EXTINF:-1 group-title="港澳台",八大第一
 http://61.221.215.25:8800/hls/55/index.m3u8
-#EXTINF:-1 group-title="地方",八大综合
+#EXTINF:-1 group-title="港澳台",八大综合
 http://61.221.215.25:8800/hls/56/index.m3u8
 #EXTINF:-1 group-title="地方",六安公共
 http://ls.qingting.fm/live/1794199.m3u8
@@ -34005,79 +34005,79 @@ https://live.264788.xyz/channel/neimengguweishi?streamid=81a015dbecf3031d7d847b7
 http://116.52.173.150:1234/956904896
 #EXTINF:-1 group-title="卫视",农林卫视
 http://120.76.248.139/live/bfgd/4200000122.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://122.152.202.33/s/81a8a44f/index.m3u8?id=15
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://173.208.234.146/live/fhzw.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://183.237.95.108:9901/tsfile/live/1103_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://218.206.193.218:8888/hls/66/index.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://218.206.193.218:8888/hls/67/index.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://221.7.175.154:8445/tsfile/live/1020_1.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://31.43.191.125:8080/restream/restream/34629
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://43.152.224.209/qctv.fengshows.cn/live/0701pcc72.flv
-#EXTINF:-1 group-title="国际",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://[2409:8087:2001:20:2800:0:df6e:eb24]:80/wh7f454c46tw3553140416_-2021535160/ott.mobaibox.com/PLTV/3/224/3221228527/index.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://aktv.top/AKTV/live/aktv/null-3/AKTV.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://cdn.163189.xyz/live/fhzw/stream.m3u8
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://php.jdshipin.com/TVOD/iptv.php?id=fhzw
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzw
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://r.jdshipin.com/cCCzW
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://xiangxiws.vip:6777/qlw.php?key=qq%E7%BE%A4746405779&id=fhzw
-#EXTINF:-1 group-title="地方",凤凰中文
+#EXTINF:-1 group-title="港澳台",凤凰中文
 http://zmgd.zyrnet.com:8888/hls/110/index.m3u8
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://173.208.234.146/live/fhzx.m3u8
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://43.152.224.209/qctv.fengshows.cn/live/0701pin72.flv
-#EXTINF:-1 group-title="国际",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://[2409:8087:2001:20:2800:0:df6e:eb27]:80/wh7f454c46tw3352677969_1732462333/ott.mobaibox.com/PLTV/3/224/3221228524/index.m3u8
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://aktv.top/AKTV/live/aktv/null-4/AKTV.m3u8
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://php.jdshipin.com/TVOD/iptv.php?id=fhzx
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhzx
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://playtv-live.ifeng.com:80/live/06OLEEWQKN4.m3u8
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://r.jdshipin.com/0Rp07
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://xiangxiws.vip:6777/qlw.php?key=qq%E7%BE%A4746405779&id=fhzx
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://ysift55.xyz/live/44659DC712A881F/z1QCJdKfa4/269823.ts
-#EXTINF:-1 group-title="地方",凤凰资讯
+#EXTINF:-1 group-title="港澳台",凤凰资讯
 http://zmgd.zyrnet.com:8888/hls/109/index.m3u8
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://122.152.202.33/s/81a8a44f/index.m3u8?id=fhhk
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://43.152.224.209/qctv.fengshows.cn/live/0701phk72.flv
-#EXTINF:-1 group-title="国际",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://[2409:8087:2001:20:2800:0:df6e:eb1d]:80/ott.mobaibox.com/PLTV/1/224/3221228530/1.m3u8
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://aktv.top/AKTV/live/aktv/null-5/AKTV.m3u8
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://php.jdshipin.com/TVOD/iptv.php?id=fhhk
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://php.jdshipin.com:8880/TVOD/iptv.php?id=fhhk
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://r.jdshipin.com/NfC0f
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 http://r.jdshipin.com/yDoTN
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 https://epg.pw/stream/5f16dc7fc8aaaed3205516c63e4a8c24bca9dbba1181684244729cf574505b0e.m3u8
-#EXTINF:-1 group-title="地方",凤凰香港
+#EXTINF:-1 group-title="港澳台",凤凰香港
 https://epg.pw/stream/8770e89223a086eb1b8a0c931e42296d772a8069ad3eb72540e0c434e7cb3e93.m3u8
 #EXTINF:-1 group-title="地方",刀刀影院
 http://www.goodiptv.club/douyu/747764
@@ -34257,19 +34257,19 @@ http://pili-live-hls.ybcxjd.com/jdh-live/2108111201035597.m3u8?zsicd
 http://jrlive.jrntv.com/live/_definst_/dangjians/playlist.m3u8
 #EXTINF:-1 group-title="地方",句容新闻综合
 http://jrlive.jrntv.com/live/_definst_/jrxwzhs/playlist.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 http://38.64.72.148/hls/modn/list/4012/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 http://38.64.72.148/hls/modn/list/4013/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 http://38.64.72.148/hls/modn/list/4013/playlist.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 http://38.64.72.148:80/hls/modn/list/4013/chunklist0.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 http://38.64.72.148:80/hls/modn/list/4013/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 http://74.91.26.218:82/live/ttvnews.m3u8
-#EXTINF:-1 group-title="地方",台视新闻
+#EXTINF:-1 group-title="港澳台",台视新闻
 https://live.wcetv.com/hls/master-ttvnews.m3u8
 #EXTINF:-1 group-title="地方",吉林乡村
 https://satellitepull.cnr.cn/live/wxjlxcgb/playlist.m3u8
@@ -35325,9 +35325,9 @@ http://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8?zzhed
 http://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
 #EXTINF:-1 group-title="地方",普陀电视台
 https://l.cztvcloud.com/channels/lantian/SXputuo1/720p.m3u8
-#EXTINF:-1 group-title="地方",有线新闻
+#EXTINF:-1 group-title="港澳台",有线新闻
 http://61.10.2.141/live_freedirect/freehd209_h.live/playlist.m3u8
-#EXTINF:-1 group-title="地方",有线新闻
+#EXTINF:-1 group-title="港澳台",有线新闻
 http://61.10.2.141:80/live_freedirect/freehd209_h.live/chunklist.m3u8
 #EXTINF:-1 group-title="地方",朝阳新闻综合
 http://120.76.248.139/live/bfgd/4200000282.m3u8
@@ -35409,19 +35409,19 @@ https://ls.qingting.fm/live/20198/64k.m3u8
 https://live.wjyanghu.com/live/CH1.m3u8?zjiangsd
 #EXTINF:-1 group-title="地方",武进生活频道
 https://live.wjyanghu.com/live/CH2.m3u8?zjiangsd
-#EXTINF:-1 group-title="地方",民视
+#EXTINF:-1 group-title="港澳台",民视
 http://74.91.26.218:82/live/ftv.m3u8
-#EXTINF:-1 group-title="地方",民视台湾
+#EXTINF:-1 group-title="港澳台",民视台湾
 http://74.91.26.218:82/live/ftvtw.m3u8
-#EXTINF:-1 group-title="地方",民视新闻
+#EXTINF:-1 group-title="港澳台",民视新闻
 http://38.64.72.148/hls/modn/list/4012/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",民视新闻
+#EXTINF:-1 group-title="港澳台",民视新闻
 http://38.64.72.148/hls/modn/list/4012/playlist.m3u8
-#EXTINF:-1 group-title="地方",民视新闻
+#EXTINF:-1 group-title="港澳台",民视新闻
 http://38.64.72.148:80/hls/modn/list/4012/chunklist1.m3u8
-#EXTINF:-1 group-title="地方",民视新闻
+#EXTINF:-1 group-title="港澳台",民视新闻
 http://74.91.26.218:82/live/ftvnews.m3u8
-#EXTINF:-1 group-title="地方",民视第一
+#EXTINF:-1 group-title="港澳台",民视第一
 http://74.91.26.218:82/live/ftvdy.m3u8
 #EXTINF:-1 group-title="地方",永嘉新闻综合
 http://l.cztvcloud.com/channels/lantian/SXyongjia1/720p.m3u8
@@ -36219,19 +36219,19 @@ http://1.94.31.214/php/qilu.php?id=wfbhxw
 http://traffic.jbh.tjbh.com/live/bhtv10/playlist.m3u8
 #EXTINF:-1 group-title="地方",漫画解说
 https://www.goodiptv.club/douyu/5907076
-#EXTINF:-1 group-title="国际",澳视澳门
+#EXTINF:-1 group-title="港澳台",澳视澳门
 https://globallive.tdm.com.mo/ch1/ch1.live/playlist.m3u8
-#EXTINF:-1 group-title="国际",澳视葡文
+#EXTINF:-1 group-title="港澳台",澳视葡文
 https://globallive.tdm.com.mo/ch2/ch2.live/playlist.m3u8
-#EXTINF:-1 group-title="体育",澳门体育
+#EXTINF:-1 group-title="港澳台",澳门体育
 https://globallive.tdm.com.mo/ch4/sport_ch4.live/playlist.m3u8
-#EXTINF:-1 group-title="国际",澳门卫星
+#EXTINF:-1 group-title="港澳台",澳门卫星
 https://globallive.tdm.com.mo/ch3/ch3.live/playlist.m3u8
-#EXTINF:-1 group-title="国际",澳门综艺
+#EXTINF:-1 group-title="港澳台",澳门综艺
 https://globallive.tdm.com.mo/ch6/hd_ch6.live/playlist.m3u8
-#EXTINF:-1 group-title="地方",澳门莲花
+#EXTINF:-1 group-title="港澳台",澳门莲花
 http://anren.live/HK/BiIOU11uLA.m3u8?zgangd
-#EXTINF:-1 group-title="国际",澳门资讯
+#EXTINF:-1 group-title="港澳台",澳门资讯
 https://globallive.tdm.com.mo/ch5/info_ch5.live/playlist.m3u8
 #EXTINF:-1 group-title="地方",灌篮高手
 https://live.ottiptv.cc/yy/1382735626
@@ -36485,13 +36485,13 @@ http://alist.xicp.fun:35455/yy/1382781415#https://live.metshop.top/yy/1382781415
 https://live.metshop.top/huya/11342396
 #EXTINF:-1 group-title="地方",纪晓岚
 https://live.metshop.top/yy/1382781415
-#EXTINF:-1 group-title="体育",纬来体育
+#EXTINF:-1 group-title="港澳台",纬来体育
 http://8.138.7.223/【公众号：榴芒电视】/wlty.m3u8
-#EXTINF:-1 group-title="体育",纬来体育
+#EXTINF:-1 group-title="港澳台",纬来体育
 https://epg.pw/stream/4f18dfe0593db5c686eb64ae8edaf2a9202d4d46bdc9bbde2cee27708e12ea01.m3u8
-#EXTINF:-1 group-title="体育",纬来体育
+#EXTINF:-1 group-title="港澳台",纬来体育
 https://epg.pw/stream/8855a9936e37e608a0ec8a014cce1673dee9c5d68d560da376cc92e5edef2b25.m3u8
-#EXTINF:-1 group-title="体育",纬来体育
+#EXTINF:-1 group-title="港澳台",纬来体育
 https://epg.pw/stream/ab6df63b64d0cc44a1f4f029ed847a26fa54a7aebd455578fb05a63f02c22f4b.m3u8
 #EXTINF:-1 group-title="地方",经典电影
 http://kkk.888.3116598.xyz/api.php?n=tttt&id=BZITeT&tk=FgM0vQMejxvG
@@ -37223,15 +37223,15 @@ https://hls.cntv.lxdns.com/asp/hls/2000/0303000a/3/default/f0a47e155d32450daa1d3
 https://newcntv.qcloudcdn.com/asp/hls/2000/0303000a/3/default/d2454bbb542d4613a9db478dab2addfd/2000.m3u8
 #EXTINF:-1 group-title="地方",飞虎之潜行极战
 https://live.metshop.top/yy/1354932420
-#EXTINF:-1 group-title="地方",香港佛陀
+#EXTINF:-1 group-title="港澳台",香港佛陀
 http://js1.amtb.cn/liveedge/_definst_/livetv/chunklist.m3u8
-#EXTINF:-1 group-title="地方",香港佛陀
+#EXTINF:-1 group-title="港澳台",香港佛陀
 https://js1.amtb.cn/liveedge/_definst_/livetv/playlist.m3u8
-#EXTINF:-1 group-title="卫视",香港卫视
+#EXTINF:-1 group-title="港澳台",香港卫视
 http://anren.live/HK/BSJDUFpB.m3u8
-#EXTINF:-1 group-title="卫视",香港卫视
+#EXTINF:-1 group-title="港澳台",香港卫视
 http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8
-#EXTINF:-1 group-title="卫视",香港卫视
+#EXTINF:-1 group-title="港澳台",香港卫视
 http://zhibo.hkstv.tv/livestream/mutfysrq/playlist.m3u8#http://zhibo.hkstv.tv/livestream/mutfysrq.flv
 #EXTINF:-1 group-title="体育",魅力足球
 http://8.138.7.223/tv/migu.php?id=mlzq
@@ -37329,15 +37329,15 @@ http://stream8.jlntv.cn/ljtv/sd/live.m3u8?zjild
 http://stream8.jlntv.cn/ljtv/sd/live.m3u8?zjild
 #EXTINF:-1 group-title="地方",龙井综合
 http://stream9.jlntv.cn:80/aac_longjinggb/playlist.m3u8
-#EXTINF:-1 group-title="少儿动漫",龙华卡通
+#EXTINF:-1 group-title="港澳台",龙华卡通
 http://8.fast.hidns.vip/163189/lhkt
-#EXTINF:-1 group-title="少儿动漫",龙华卡通
+#EXTINF:-1 group-title="港澳台",龙华卡通
 https://8.fast.hidns.vip/163189/lhkt
-#EXTINF:-1 group-title="地方",龙华戏剧
+#EXTINF:-1 group-title="港澳台",龙华戏剧
 https://8.fast.hidns.vip/163189/lhxj
-#EXTINF:-1 group-title="地方",龙华戏剧
+#EXTINF:-1 group-title="港澳台",龙华戏剧
 https://cdn8.163189.xyz/live/lhxj/stream.m3u8
-#EXTINF:-1 group-title="地方",龙华电影
+#EXTINF:-1 group-title="港澳台",龙华电影
 https://8.fast.hidns.vip/163189/lhdy
 #EXTINF:-1 group-title="地方",龙泉新闻
 http://l.cztvcloud.com/channels/lantian/SXlongquan1/720p.m3u8?zzhed?

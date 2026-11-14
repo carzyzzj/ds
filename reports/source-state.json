@@ -1,5 +1,5 @@
 {
-  "schema": "3",
+  "schema": "4-hmt",
   "config": "14b9f6514a8ccf9ad61a5f20a5c86f3ac50b81afdcdf5528e73d8682e80d2ba5",
   "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u": "08bcd7c6ba8e4a95ab19000b68b2ae6d4822beb13b31e23acde401526a6a90b5",
   "https://iptv-org.github.io/iptv/index.m3u": "61b6d53a880baca5bd356a01b09203abde2786d65516b3186919bb04682ea020",

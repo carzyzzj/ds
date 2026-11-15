@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-15T08:20:42.429727+00:00",
+  "time": "2026-11-15T08:44:47.352537+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
@@ -15,25 +15,83 @@
       "CGTN阿语"
     ]
   },
+  "guovin": {
+    "url": "https://guovin.github.io/iptv-api/ipv4.m3u",
+    "entries": 277,
+    "added": 58,
+    "duplicates": 145,
+    "matched_channels": 75,
+    "unmatched": [
+      "2026-10-12 11:25:50",
+      "广东珠江",
+      "广东新闻",
+      "广州综合",
+      "浙江经济",
+      "之江纪录",
+      "湖州公共",
+      "湖州新闻综合",
+      "浙江经视",
+      "浙江休闲台",
+      "象山综合",
+      "萧山新闻综合",
+      "海宁新闻综合",
+      "普陀电视台",
+      "上海第一财经",
+      "新闻综合",
+      "欢笑剧场",
+      "法治天地",
+      "第一财经",
+      "都市剧场",
+      "重庆新闻",
+      "苏州4k",
+      "苏州文化生活",
+      "苏州生活资讯",
+      "苏州社会经济",
+      "广西新闻",
+      "广西国际",
+      "南宁影视娱乐",
+      "青川综合",
+      "福建新闻",
+      "福建经济",
+      "福建公共",
+      "福建旅游",
+      "海南文旅",
+      "海南公共",
+      "梨园",
+      "甘肃经济",
+      "甘肃都市",
+      "安徽国际",
+      "吉林乡村",
+      "云南都市",
+      "云南娱乐",
+      "七台河新闻综合",
+      "经典电影",
+      "天津体育",
+      "音乐现场",
+      "西游记",
+      "水浒传",
+      "闯关东"
+    ]
+  },
   "source_entries": 4594,
   "requested_channels": 198,
   "matched_channels": 198,
-  "total_lines": 2187,
+  "total_lines": 2245,
   "categories": {
     "cctv": {
       "requested": 35,
       "matched": 35,
-      "lines": 645
+      "lines": 668
     },
     "local": {
       "requested": 68,
       "matched": 68,
-      "lines": 956
+      "lines": 985
     },
     "hmt": {
       "requested": 80,
       "matched": 80,
-      "lines": 410
+      "lines": 412
     },
     "international": {
       "requested": 0,
@@ -43,7 +101,7 @@
     "other": {
       "requested": 15,
       "matched": 15,
-      "lines": 176
+      "lines": 180
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "sources": [
     {
       "name": "CCSH/IPTV",
@@ -12,6 +12,12 @@
       "path": "config/supplemental.m3u",
       "enabled": true,
       "rights_status": "User supplied; broadcast rights not certified"
+    },
+    {
+      "name": "Guovin IPv4",
+      "url": "https://guovin.github.io/iptv-api/ipv4.m3u",
+      "enabled": true,
+      "rights_status": "Public playlist; stream redistribution rights not certified"
     }
   ]
 }

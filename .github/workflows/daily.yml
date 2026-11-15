@@ -35,7 +35,7 @@ jobs:
           if not order_path.exists():
               order_path.write_text(json.dumps([{'file':k,'name':g,'channels':names.split('|') if names else []} for k,g,names in defaults],ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           groups=json.loads(order_path.read_text(encoding='utf-8'))
-          Path('config/sources.json').write_text(json.dumps({'schema_version':5,'sources':[{'name':'CCSH/IPTV','url':source,'enabled':True,'rights_status':'Public links; personal noncommercial use; broadcast rights not certified'}]},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          Path('config/sources.json').write_text(json.dumps({'schema_version':5,'sources':[{'name':'CCSH/IPTV','url':source,'enabled':True,'rights_status':'Public links; personal noncommercial use; broadcast rights not certified'},{'name':'User IPv4 supplement','path':'config/supplemental.m3u','enabled':True,'rights_status':'User supplied; broadcast rights not certified'}]},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           report={'time':datetime.now(timezone.utc).isoformat(),'source':source,'status':'retained','missing':[]}
           failed=False
           try:
@@ -59,6 +59,27 @@ jobs:
                               found[name].append((meta,line))
                       pending=None
               if not parsed: raise ValueError('No valid source entries')
+              supplemental=Path('config/supplemental.m3u').read_text(encoding='utf-8-sig').splitlines()
+              if not supplemental or not supplemental[0].startswith('#EXTM3U'): raise ValueError('Invalid supplemental M3U header')
+              extra={'entries':0,'added':0,'duplicates':0,'unmatched':[]}; pending=None
+              for line in supplemental[1:]:
+                  line=line.strip()
+                  if line.startswith('#EXTINF:'): pending=line
+                  elif line and not line.startswith('#'):
+                      if pending and ',' in pending and re.fullmatch(r'https?://[^\s]+',line):
+                          original=pending.rsplit(',',1)[1].strip(); name=original
+                          match=re.fullmatch(r'CCTV-?(\d+)(\+)?(?:\s+.*)?',original,re.I)
+                          if match: name='CCTV'+match[1]+(match[2] or '')
+                          extra['entries']+=1
+                          if name not in wanted:
+                              if original not in extra['unmatched']: extra['unmatched'].append(original)
+                          elif line in seen[name]: extra['duplicates']+=1
+                          else:
+                              seen[name].add(line)
+                              meta=re.sub(r'\s+group-title="[^"]*"','',pending.rsplit(',',1)[0])
+                              found[name].append((meta,line)); extra['added']+=1
+                      pending=None
+              report['supplemental']=extra
               rendered={}; combined=[]; counts={}; matched=0
               for group in groups:
                   records=[]
@@ -92,3 +113,4 @@ jobs:
             git push
           fi
           test "$(cat reports/outcome.txt)" = success
+

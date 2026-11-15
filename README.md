@@ -1,45 +1,38 @@
 # 我的电视直播源
 
-每天北京时间06:23运行（UTC前一天22:23，cron：23 22 * * *）。GitHub可能排队延迟。Actions → Daily IPTV → Run workflow 可手动运行。
+每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）仅从 [CCSH/IPTV live.m3u](https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u) 提取频道。已替换此前所有采集来源和整理逻辑。
 
-## 仅采集以下四个来源
+## 频道和顺序
 
-- https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u
-- https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u
-- https://iptv-org.github.io/iptv/index.m3u
-- https://iptv-org.github.io/iptv/categories/animation.m3u
+依据用户提供的《清单1.xlsx》各分类明细页，共198个频道：央视35、地方台68、港澳台频道80、其它15。国际频道页没有频道，故保留空列表。汇总页数字与明细不一致，以明细为准。地方台中包含卫视频道，少儿、体育等也按照附件原分类。
 
-已替换旧来源配置，不再单独采集sports、us、DuckKota和zyq1120来源。index全量列表仍可能包含与旧来源重合的频道，这是当前四来源本身提供的内容。只从本轮四来源重建，不合并旧发布文件。live_lite和live可能重复，同频道同URL去重，不同URL保留多线路。animation子列表提供动漫归属。
+分类顺序及频道行顺序原样保存于 [config/channel-order.json](config/channel-order.json)。每天按完全相同的频道名匹配来源，保持清单顺序，同频道不同URL保留多线路，同频道相同URL去重，线路保持来源顺序。未匹配频道记录在 reports/latest.json，不擅自补入其它频道。
 
-## 订阅直链
+## APK 订阅直链
 
-通常只需订阅全部列表，APK刷新直播源即可读取新版。
+在“我要看电视”中添加以下原始文件链接；建议只订阅总表，避免重复。
 
-- [全部 all.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/all.m3u)
-- [央视 cctv.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/cctv.m3u)
-- [卫视 satellite.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/satellite.m3u)
-- [地方 local.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/local.m3u)
-- [少儿动漫 kids.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/kids.m3u)
-- [动漫 animation.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/animation.m3u)
-- [港澳台 hmt.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/hmt.m3u)
-- [国际 international.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/international.m3u)
-- [体育 sports.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/sports.m3u)
-- [美国 us.m3u](https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/us.m3u)
+|列表|订阅直链|
+|---|---|
+|全部|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/all.m3u|
+|央视|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/cctv.m3u|
+|地方台|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/local.m3u|
+|港澳台|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/hmt.m3u|
+|国际频道（当前为空）|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/international.m3u|
+|其它|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/other.m3u|
 
-动漫子列表同时纳入kids。体育从频道元数据或名称识别；美国从频道编号.us等标记识别。港澳台使用.hk/.mo/.tw频道编号、上游地区分组和明确频道名称识别，排除杭州明珠、TVB Vietnam等混淆项。分类文件可以重叠；all中优先显示港澳台、动漫、体育、美国，再按央视/卫视/地方/少儿/国际名称规则分组。自动识别可能遗漏或误分。已停用的duckkota.m3u在成功发布后删除。
+旧的 satellite/kids/sports/us/animation 分类文件在新列表成功生成后移除，请改订阅总表或上面的新分类。仓库更新后，在 APK 中刷新订阅即可获取新内容，具体取决于 APK 的缓存机制；已有 all.m3u 链接无需更改。
 
-## 配置及失败处理
+## 运行、配置与失败处理
 
-config/sources.json保存来源，schema_version保持4；此版本首次运行会将旧配置替换成上面四项，此后按配置读取，不会自动补回旧来源。enabled控制启用，tags可设animation/sports/us/hmt。rights_status仅记录来源情况，不代表节目授权。
+进入 Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。工作流只在定时或手动运行时触发，不因自动提交循环运行；GITHUB_TOKEN 仅申请 contents: write。若出现写入权限错误，检查 Settings → Actions → General 的工作流权限及仓库规则。
 
-reports/latest.json记录来源解析数和结果：published为已发布，unchanged为来源和配置未变化，retained为失败保留前一次有效列表。reports/source-state.json保存来源及配置摘要，分类版本变化也会重建。任一来源下载失败、格式错误、为空或所有抽查均不确定时保留旧版并记录失败。因此失败时旧版可能仍有旧来源线路，成功发布后才完成替换。
+唯一来源在 .github/workflows/daily.yml 的 source 中指定，config/sources.json 每次同步记录该来源；更改频道和顺序可编辑 config/channel-order.json。输出为UTF-8标准M3U，保留来源 EXTINF 中的频道标识、台标等信息，替换为清单分类。
 
-## 检测局限
+抓取超时30秒，最大12MB。检查M3U头、频道元信息及HTTP(S)地址格式。抓取失败、无有效条目或一个清单频道也未找到时，保留之前播放列表，并提交简短失败报告、将运行标记失败。部分频道缺失时发布其余匹配频道并列出缺失名单。报告见 [reports/latest.json](reports/latest.json)。
 
-要求EXTM3U头及EXTINF/HTTP(S)地址对。每来源15秒超时、12MB上限；最多抽查64条，4路并发、5秒超时、读取512字节。未逐条验证音视频，不确定和未抽查线路不删除；能收到数据不保证可持续播放，也不代表国内无代理网络可播。本任务没有新增本地网络筛选功能。暂不保留台标、EPG和特殊播放请求头。
+这里不逐个播放视频验证，不保证每条线路在国内无代理网络可播放。地域限制、鉴权、时效、防盗链、运营商及播放器差异都可能影响播放；HTTP地址存在也不代表视频能正常播放。
 
-仅schedule和workflow_dispatch触发，不监听push，自动提交不会循环。GITHUB_TOKEN仅contents: write，无个人令牌；串行运行，最多20分钟。公开仓库长期无活动可能被GitHub停用定时任务，可到Actions恢复。
+## 来源与使用限制
 
-## 来源与使用范围
-
-仅作个人非商业公开链接整理，不保存或转播视频。来源：[jiandantv/IPTV2026](https://github.com/jiandantv/IPTV2026)、[iptv-org/iptv](https://github.com/iptv-org/iptv)。遵守各来源许可和非商业限制。仓库或软件许可不等于节目版权授权；本仓库没有逐条直播流授权证明，不绕过登录、付费或访问限制。收到有效权利通知应及时移除链接。
+CCSH 项目说明这些链接采集自互联网，并限制为个人技术学习、非商业用途。公开仓库及项目代码许可证不等于逐个直播流的播放、复制或再分发授权；没有逐流版权保证。请遵守 [上游说明](https://github.com/CCSH/IPTV) 和权利人限制，仅在获得相应许可的范围内使用，不作商业用途。

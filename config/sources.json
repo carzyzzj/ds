@@ -1,34 +1,11 @@
 {
-  "initialized": true,
-  "purpose": "Noncommercial playlist-link aggregation only; no video hosting or retransmission",
+  "schema_version": 5,
   "sources": [
     {
-      "name": "jiandantv live_lite",
-      "url": "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u",
+      "name": "CCSH/IPTV",
+      "url": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
       "enabled": true,
-      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
-    },
-    {
-      "name": "jiandantv live",
-      "url": "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u",
-      "enabled": true,
-      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
-    },
-    {
-      "name": "iptv-org index",
-      "url": "https://iptv-org.github.io/iptv/index.m3u",
-      "enabled": true,
-      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
-    },
-    {
-      "name": "iptv-org animation",
-      "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
-      "enabled": true,
-      "tags": [
-        "animation"
-      ],
-      "rights_status": "Public link indexing; stream rights not certified; respect upstream noncommercial restrictions"
+      "rights_status": "Public links; personal noncommercial use; broadcast rights not certified"
     }
-  ],
-  "schema_version": 4
+  ]
 }

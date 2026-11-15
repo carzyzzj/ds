@@ -1,44 +1,37 @@
 {
-  "time": "2026-11-15T01:59:29.957817+00:00",
+  "time": "2026-11-15T05:35:47.118248+00:00",
+  "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
-  "sources": [
-    {
-      "name": "jiandantv live_lite",
-      "parsed": 1544,
-      "sha256": "28fc794242793099255643dd91dfb94eae851d19ab821f62a65db5db3d1fe844"
-    },
-    {
-      "name": "jiandantv live",
-      "parsed": 2200,
-      "sha256": "03c02a24da894783707a3adc1956e2037b6155e83b130d3adc39adfe91702592"
-    },
-    {
-      "name": "iptv-org index",
-      "parsed": 11487,
-      "sha256": "62ccab457d5f28e193ffc2764c83e9e63ea3c8cf7e4a47923bb4672f61363d76"
-    },
-    {
-      "name": "iptv-org animation",
-      "parsed": 185,
-      "sha256": "79e9f0006902f7a8d69d525b76d0064a9a65d917df4a6b4ca548715b12af49cc"
-    }
-  ],
-  "total": 13653,
-  "checked": 64,
-  "reachable": 44,
-  "uncertain": 20,
-  "unchecked": 13589,
+  "missing": [],
+  "source_entries": 4594,
+  "requested_channels": 198,
+  "matched_channels": 198,
+  "total_lines": 2143,
   "categories": {
-    "all": 13653,
-    "cctv": 434,
-    "satellite": 744,
-    "local": 943,
-    "kids": 298,
-    "international": 11234,
-    "sports": 569,
-    "us": 2014,
-    "animation": 185,
-    "hmt": 181
-  },
-  "hmt_unique_names": 95
+    "cctv": {
+      "requested": 35,
+      "matched": 35,
+      "lines": 634
+    },
+    "local": {
+      "requested": 68,
+      "matched": 68,
+      "lines": 923
+    },
+    "hmt": {
+      "requested": 80,
+      "matched": 80,
+      "lines": 410
+    },
+    "international": {
+      "requested": 0,
+      "matched": 0,
+      "lines": 0
+    },
+    "other": {
+      "requested": 15,
+      "matched": 15,
+      "lines": 176
+    }
+  }
 }

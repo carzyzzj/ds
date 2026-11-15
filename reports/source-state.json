@@ -1,8 +1,4 @@
 {
-  "schema": "5-four-sources-animation",
-  "config": "b3ab6477df513dc1dcadaf448085aa54b64449712cd50413fac9fbb8f6c6bba6",
-  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u": "28fc794242793099255643dd91dfb94eae851d19ab821f62a65db5db3d1fe844",
-  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u": "03c02a24da894783707a3adc1956e2037b6155e83b130d3adc39adfe91702592",
-  "https://iptv-org.github.io/iptv/index.m3u": "62ccab457d5f28e193ffc2764c83e9e63ea3c8cf7e4a47923bb4672f61363d76",
-  "https://iptv-org.github.io/iptv/categories/animation.m3u": "79e9f0006902f7a8d69d525b76d0064a9a65d917df4a6b4ca548715b12af49cc"
+  "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
+  "sha256": "773d995c7afc8938bd474b2012f22cb61c4a65e7f9b5989d8915b6d9f02a62cf"
 }

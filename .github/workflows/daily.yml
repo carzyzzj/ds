@@ -11,108 +11,73 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Merge and classify public links
+      - name: Extract ordered CCSH channels
         shell: python
         run: |
-          import json, re, urllib.request, concurrent.futures, hashlib
+          import json,re,urllib.request,hashlib
           from pathlib import Path
-          from datetime import datetime, timezone
+          from datetime import datetime,timezone
           for d in ['config','playlists','reports']: Path(d).mkdir(exist_ok=True)
-          cp=Path('config/sources.json')
-          config=json.loads(cp.read_text(encoding='utf-8'))
-          if config.get('schema_version',0)<4:
-              config['sources']=[
-                  {'name':'jiandantv live_lite','url':'https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u','enabled':True},
-                  {'name':'jiandantv live','url':'https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u','enabled':True},
-                  {'name':'iptv-org index','url':'https://iptv-org.github.io/iptv/index.m3u','enabled':True},
-                  {'name':'iptv-org animation','url':'https://iptv-org.github.io/iptv/categories/animation.m3u','enabled':True,'tags':['animation']}]
-              for s in config['sources']: s['rights_status']='Public link indexing; stream rights not certified; respect upstream noncommercial restrictions'
-              config['schema_version']=4
-              cp.write_text(json.dumps(config,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-          groups=['cctv','satellite','local','kids','international','sports','us','animation','hmt']
-          report={'time':datetime.now(timezone.utc).isoformat(),'status':'retained','sources':[]}
-          def fetch(url,limit=12000001,timeout=15):
-              with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'my-tv-sources/2.0'}),timeout=timeout) as r: return r.read(limit)
-          def classify(name):
-              if re.search('CCTV|央视',name,re.I): return 'cctv'
-              if re.search('少儿|动漫|卡通|动画|kids|cartoon',name,re.I): return 'kids'
-              if '卫视' in name: return 'satellite'
-              if re.search('[一-龥]',name): return 'local'
-              return 'international'
-          def hmt_reason(name,metadata):
-              if re.search(r'tvg-id="[^" ]+\.(?:hk|mo|tw)(?:@[^" ]*)?"',metadata,re.I): return 'channel_id'
-              group=re.search(r'group-title="([^"]*)"',metadata,re.I)
-              if group and re.search(r'^(?:香港|澳門|澳门|台灣|台湾|Hong Kong|Macao|Macau|Taiwan|HK|MO|TW)(?:$|[- /|])',group.group(1).strip(),re.I): return 'source_group'
-              if re.search(r'tvg-id="[^" ]+\.vn(?:@[^" ]*)?"',metadata,re.I): return ''
-              if re.search(r'^(?:香港|澳門|澳门|台灣|台湾|翡翠台|翡翠|明珠台|鳳凰|凤凰|三立|東森|东森|中天|民視|民视|台視|台视|華視|华视|中視|中视|八大|緯來|纬来|龍華|龙华|靖天|壹電視|壹电视|澳視|澳视|有線新聞|有线新闻|TVBS|RTHK|ViuTV|HOY(?: TV| Infotainment)|TDM(?: |$)|TVB(?:[一-鿿]|[ -](?:Jade|Pearl|News|J2|Plus|Finance)))',name,re.I): return 'channel_name'
-              return ''
-          def probe(item):
-              try: return bool(fetch(item['url'],512,5))
-              except Exception: return False
+          source='https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u'
+          defaults=[
+              ('cctv','央视','CCTV1|CCTV2|CCTV3|CCTV4|CCTV4K|CCTV5|CCTV5+|CCTV6|CCTV7|CCTV8|CCTV8K|CCTV9|CCTV10|CCTV11|CCTV12|CCTV13|CCTV14|CCTV15|CCTV16|CCTV17|兵器科技|第一剧场|电视指南|发现之旅|风云剧场|风云音乐|风云足球|高尔夫网球|怀旧剧场|老故事|女性时尚|世界地理|卫生健康|央视台球|央视文化精品'),
+              ('local','地方台','安徽卫视|北京卫视|东方影视|中国蓝新闻|兵团卫视|全纪实|大湾区卫视|内蒙农牧|东方卫视|内蒙少儿|内蒙文体|内蒙经济|东南卫视|北京体育休闲|福建海峡卫视|北京新闻|北京生活|北京科教|北京财经|北京青年|甘肃卫视|广东卫视|广西卫视|贵州卫视|海南卫视|天津|海峡卫视|天津文艺|天津新闻|天津都市|河北卫视|河南卫视|黑龙江卫视|湖北卫视|湖南卫视|吉林卫视|江苏卫视|江西卫视|康巴卫视|辽宁卫视|南方卫视|内蒙古卫视|宁夏卫视|农林卫视|青海卫视|浙江国际|浙江少儿|浙江影视|浙江教科|浙江教科影视|浙江教科影院|浙江教育|浙江数码时代|浙江新闻|三沙卫视|厦门卫视|山东卫视|山西卫视|陕西卫视|深圳卫视|四川卫视|天津卫视|西藏卫视|新疆卫视|延边卫视|云南卫视|浙江卫视|重庆卫视'),
+              ('hmt','港澳台频道','HBO|TVBJ2|TVBPearl|TVBPlus|TVBS|TVBS亚洲|TVBS新闻台|TVB星河|TVB翡翠台|ViuTV|三立台湾台|三立戏剧|三立新闻台|三立综合台|三立都会台|东森幼幼台|东森戏剧台|东森新闻台|东森洋片台|东森电影台|东森综合台|东森美洲卫视|东森财经新闻台|东森超视|中天亚洲台|中天娱乐台|中天新闻台|中天综合台|中视|中视新闻|中视经典|中视经典综艺|中视菁采台|八大娱乐台|八大戏剧台|八大第一台|八大精彩台|八大综合台|八大综艺台|公视|公视台语台|公视戏剧|凤凰中文|凤凰资讯|凤凰香港|华视|华视新闻|台视|台视新闻台|无线新闻|星空卫视|民视|民视台湾台|民视影剧台|民视新闻台|民视旅游台|民视第一台|民视综艺台|纬来体育台|纬来戏剧台|纬来日本台|纬来电影台|纬来精彩台|纬来综合台|靖天卡通台|靖天戏剧台|靖天日本台|靖天映画|靖天电影台|靖天综合台|靖天育乐台|靖天资讯台|靖洋戏剧台|香港卫视|龙华偶像|龙华卡通|龙华戏剧|龙华洋片|龙华电影|龙华经典'),
+              ('international','国际频道',''),
+              ('other','其它','CETV1|CETV2|CETV3|CETV4|CHC动作电影|CHC家庭影院|CHC影迷电影|CN卡通|五星体育|人与自然|动物世界|动物星球|劲爆体育|卡酷少儿|广东体育')]
+          order_path=Path('config/channel-order.json')
+          if not order_path.exists():
+              order_path.write_text(json.dumps([{'file':k,'name':g,'channels':names.split('|') if names else []} for k,g,names in defaults],ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          groups=json.loads(order_path.read_text(encoding='utf-8'))
+          Path('config/sources.json').write_text(json.dumps({'schema_version':5,'sources':[{'name':'CCSH/IPTV','url':source,'enabled':True,'rights_status':'Public links; personal noncommercial use; broadcast rights not certified'}]},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          report={'time':datetime.now(timezone.utc).isoformat(),'source':source,'status':'retained','missing':[]}
           failed=False
           try:
-              sources=[s for s in config['sources'] if s.get('enabled')]
-              if not sources: raise ValueError('No enabled sources')
-              entries={}; hashes={'schema':'5-four-sources-animation','config':hashlib.sha256(json.dumps(sources,sort_keys=True).encode()).hexdigest()}
-              for source in sources:
-                  body=fetch(source['url'])
-                  if len(body)>12000000: raise ValueError('Playlist exceeds 12MB: '+source['name'])
-                  hashes[source['url']]=hashlib.sha256(body).hexdigest()
-                  lines=body.decode('utf-8-sig').splitlines()
-                  if not lines or not lines[0].startswith('#EXTM3U'): raise ValueError('Invalid M3U: '+source['name'])
-                  pending=None; count=0
-                  for line in lines[1:]:
-                      line=line.strip()
-                      if line.startswith('#EXTINF:'): pending=line
-                      elif line and not line.startswith('#'):
-                          if pending and ',' in pending and re.fullmatch(r'https?://[^\s]+',line):
-                              name=pending.rsplit(',',1)[1].strip()
-                              if name:
-                                  match=re.search(r'group-title="([^"]*)"',pending,re.I)
-                                  hint=match.group(1) if match else ''
-                                  key=(re.sub(r'\s+','',name).casefold(),line)
-                                  e=entries.setdefault(key,{'name':name,'url':line,'tags':set(),'category':classify(name)})
-                                  e['tags'].update(source.get('tags',[]))
-                                  if re.search('sports|体育|體育',pending,re.I): e['tags'].add('sports')
-                                  if hint.startswith('美国-') or re.search(r'tvg-id="[^" ]+\.us(?:@[^" ]*)?"',pending,re.I): e['tags'].add('us')
-                                  reason=hmt_reason(name,pending)
-                                  if reason: e['tags'].add('hmt'); e.setdefault('hmt_reasons',set()).add(reason)
-                                  if 'animation' in e['tags']: e['category']='kids'
-                                  count+=1
-                          pending=None
-                  report['sources'].append({'name':source['name'],'parsed':count,'sha256':hashes[source['url']]})
-                  if not count: raise ValueError('Empty source: '+source['name'])
-              sp=Path('reports/source-state.json')
-              old=json.loads(sp.read_text()) if sp.exists() else {}
-              if old==hashes and all(Path('playlists/'+k+'.m3u').exists() for k in ['all']+groups):
-                  report['status']='unchanged'
-              else:
-                  items=sorted(entries.values(),key=lambda e:(e['name'],e['url']))
-                  sample=items[::max(1,len(items)//64)][:64]
-                  with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: results=list(pool.map(probe,sample))
-                  report.update(total=len(items),checked=len(sample),reachable=sum(results),uncertain=len(results)-sum(results),unchecked=len(items)-len(sample))
-                  if not any(results): raise ValueError('All sampled probes uncertain; retaining old version')
-                  labels={'cctv':'央视','satellite':'卫视','local':'地方','kids':'少儿动漫','international':'国际','sports':'体育','us':'美国','animation':'动漫','hmt':'港澳台'}
-                  rendered={}; counts={}
-                  for key in ['all']+groups:
-                      selected=[e for e in items if key=='all' or (key in e['tags'] if key in ['sports','us','animation','hmt'] else e['category']==key)]
-                      counts[key]=len(selected)
-                      def label(e):
-                          k=key if key!='all' else ('hmt' if 'hmt' in e['tags'] else 'animation' if 'animation' in e['tags'] else 'sports' if 'sports' in e['tags'] else 'us' if 'us' in e['tags'] else e['category'])
-                          return labels[k]
-                      rendered[key]='#EXTM3U\n'+''.join('#EXTINF:-1 group-title="'+label(e)+'",'+e['name']+'\n'+e['url']+'\n' for e in selected)
-                  for key,text in rendered.items(): Path('playlists/'+key+'.m3u').write_text(text,encoding='utf-8')
-                  Path('playlists/duckkota.m3u').unlink(missing_ok=True)
-                  sp.write_text(json.dumps(hashes,indent=2)+'\n')
-                  report.update(status='published',categories=counts,hmt_unique_names=len({e['name'] for e in items if 'hmt' in e['tags']}))
+              request=urllib.request.Request(source,headers={'User-Agent':'my-tv-sources/3.0'})
+              with urllib.request.urlopen(request,timeout=30) as r: body=r.read(12000001)
+              if len(body)>12000000: raise ValueError('Source exceeds 12MB')
+              lines=body.decode('utf-8-sig').splitlines()
+              if not lines or not lines[0].startswith('#EXTM3U'): raise ValueError('Invalid M3U header')
+              wanted={n for g in groups for n in g['channels']}
+              found={n:[] for n in wanted}; seen={n:set() for n in wanted}
+              pending=None; parsed=0
+              for line in lines[1:]:
+                  line=line.strip()
+                  if line.startswith('#EXTINF:'): pending=line
+                  elif line and not line.startswith('#'):
+                      if pending and ',' in pending and re.fullmatch(r'https?://[^\s]+',line):
+                          name=pending.rsplit(',',1)[1].strip(); parsed+=1
+                          if name in wanted and line not in seen[name]:
+                              seen[name].add(line)
+                              meta=re.sub(r'\s+group-title="[^"]*"','',pending.rsplit(',',1)[0])
+                              found[name].append((meta,line))
+                      pending=None
+              if not parsed: raise ValueError('No valid source entries')
+              rendered={}; combined=[]; counts={}; matched=0
+              for group in groups:
+                  records=[]
+                  for name in group['channels']:
+                      if not found[name]: report['missing'].append({'category':group['name'],'channel':name})
+                      else: matched+=1
+                      for meta,url in found[name]: records.extend([meta+' group-title="'+group['name']+'",'+name,url])
+                  counts[group['file']]={'requested':len(group['channels']),'matched':sum(bool(found[n]) for n in group['channels']),'lines':len(records)//2}
+                  rendered[group['file']]='\n'.join(['#EXTM3U']+records)+'\n'
+                  combined.extend(records)
+              if not combined: raise ValueError('No requested channels found; retaining previous version')
+              rendered['all']='\n'.join(['#EXTM3U']+combined)+'\n'
+              for key,text in rendered.items(): Path('playlists/'+key+'.m3u').write_text(text,encoding='utf-8')
+              for p in Path('playlists').glob('*.m3u'):
+                  if p.stem not in rendered: p.unlink()
+              Path('reports/source-state.json').write_text(json.dumps({'source':source,'sha256':hashlib.sha256(body).hexdigest()},indent=2)+'\n')
+              report.update(status='published',source_entries=parsed,requested_channels=sum(len(g['channels']) for g in groups),matched_channels=matched,total_lines=len(combined)//2,categories=counts)
           except Exception as error:
-              report['reason']=str(error); failed=True
+              failed=True; report['reason']=str(error)
           Path('reports/latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           Path('reports/outcome.txt').write_text('failure' if failed else 'success')
           print(json.dumps(report,ensure_ascii=False))
@@ -121,10 +86,9 @@ jobs:
           cat reports/latest.json >> "$GITHUB_STEP_SUMMARY"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add config playlists reports/latest.json
-          if [ -f reports/source-state.json ]; then git add reports/source-state.json; fi
+          git add config playlists reports/latest.json reports/source-state.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update merged IPTV links [skip ci]'
+            git commit -m 'Update ordered CCSH channels [skip ci]'
             git push
           fi
           test "$(cat reports/outcome.txt)" = success

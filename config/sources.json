@@ -6,6 +6,12 @@
       "url": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
       "enabled": true,
       "rights_status": "Public links; personal noncommercial use; broadcast rights not certified"
+    },
+    {
+      "name": "User IPv4 supplement",
+      "path": "config/supplemental.m3u",
+      "enabled": true,
+      "rights_status": "User supplied; broadcast rights not certified"
     }
   ]
 }

@@ -1,22 +1,34 @@
 {
-  "time": "2026-11-15T05:35:47.118248+00:00",
+  "time": "2026-11-15T08:20:42.429727+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
+  "supplemental": {
+    "entries": 76,
+    "added": 44,
+    "duplicates": 22,
+    "unmatched": [
+      "CGTN英语",
+      "CGTN记录",
+      "CGTN法语",
+      "CGTN西语",
+      "CGTN阿语"
+    ]
+  },
   "source_entries": 4594,
   "requested_channels": 198,
   "matched_channels": 198,
-  "total_lines": 2143,
+  "total_lines": 2187,
   "categories": {
     "cctv": {
       "requested": 35,
       "matched": 35,
-      "lines": 634
+      "lines": 645
     },
     "local": {
       "requested": 68,
       "matched": 68,
-      "lines": 923
+      "lines": 956
     },
     "hmt": {
       "requested": 80,

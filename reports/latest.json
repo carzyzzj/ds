@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-15T08:44:47.352537+00:00",
+  "time": "2026-11-15T08:52:54.488592+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
@@ -19,8 +19,8 @@
     "url": "https://guovin.github.io/iptv-api/ipv4.m3u",
     "entries": 277,
     "added": 58,
-    "duplicates": 145,
-    "matched_channels": 75,
+    "duplicates": 144,
+    "matched_channels": 74,
     "unmatched": [
       "2026-10-12 11:25:50",
       "广东珠江",
@@ -65,6 +65,7 @@
       "云南都市",
       "云南娱乐",
       "七台河新闻综合",
+      "东森超视",
       "经典电影",
       "天津体育",
       "音乐现场",
@@ -74,9 +75,9 @@
     ]
   },
   "source_entries": 4594,
-  "requested_channels": 198,
-  "matched_channels": 198,
-  "total_lines": 2245,
+  "requested_channels": 135,
+  "matched_channels": 135,
+  "total_lines": 2056,
   "categories": {
     "cctv": {
       "requested": 35,
@@ -89,9 +90,9 @@
       "lines": 985
     },
     "hmt": {
-      "requested": 80,
-      "matched": 80,
-      "lines": 412
+      "requested": 17,
+      "matched": 17,
+      "lines": 223
     },
     "international": {
       "requested": 0,

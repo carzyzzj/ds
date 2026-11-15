@@ -1,8 +1,8 @@
 {
   "schema": "5-four-sources-animation",
   "config": "b3ab6477df513dc1dcadaf448085aa54b64449712cd50413fac9fbb8f6c6bba6",
-  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u": "a67fba5746d4c0b82978cc687817c7288d8de85b3eb20ad611e709df2c612fc3",
-  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u": "08bcd7c6ba8e4a95ab19000b68b2ae6d4822beb13b31e23acde401526a6a90b5",
-  "https://iptv-org.github.io/iptv/index.m3u": "61b6d53a880baca5bd356a01b09203abde2786d65516b3186919bb04682ea020",
-  "https://iptv-org.github.io/iptv/categories/animation.m3u": "1cd750b3c41a0c1c0598e49764bd3e5df39b7d666e8482eb26a465f81d3f9786"
+  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live_lite.m3u": "28fc794242793099255643dd91dfb94eae851d19ab821f62a65db5db3d1fe844",
+  "https://raw.githubusercontent.com/jiandantv/IPTV2026/main/live.m3u": "03c02a24da894783707a3adc1956e2037b6155e83b130d3adc39adfe91702592",
+  "https://iptv-org.github.io/iptv/index.m3u": "62ccab457d5f28e193ffc2764c83e9e63ea3c8cf7e4a47923bb4672f61363d76",
+  "https://iptv-org.github.io/iptv/categories/animation.m3u": "79e9f0006902f7a8d69d525b76d0064a9a65d917df4a6b4ca548715b12af49cc"
 }

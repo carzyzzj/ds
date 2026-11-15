@@ -1,6 +1,6 @@
 # 我的电视直播源
 
-每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）仅从 [CCSH/IPTV live.m3u](https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u) 提取频道。已替换此前所有采集来源和整理逻辑。
+每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）从 [CCSH/IPTV live.m3u](https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u) 提取频道。已替换此前所有采集来源和整理逻辑。
 
 ## 频道和顺序
 
@@ -36,3 +36,11 @@
 ## 来源与使用限制
 
 CCSH 项目说明这些链接采集自互联网，并限制为个人技术学习、非商业用途。公开仓库及项目代码许可证不等于逐个直播流的播放、复制或再分发授权；没有逐流版权保证。请遵守 [上游说明](https://github.com/CCSH/IPTV) 和权利人限制，仅在获得相应许可的范围内使用，不作商业用途。
+
+
+## 用户补充 IPv4 线路
+
+附件 `1.3.0-IPv4频道源.m3u` 已保存为 [config/supplemental.m3u](config/supplemental.m3u)。每日获取 CCSH 后自动合并此文件，不会被次日更新覆盖。央视名称如 `CCTV-1 综合` 对应 `CCTV1`；其它名称完全匹配。只补充原清单已有频道，分类、顺序保持不变；同频道相同URL去重，不同URL作为追加线路。
+
+附件共76条线路，其中66条属于原清单频道，CGTN英语、纪录、法语、西语、阿语共10条因原清单没有对应频道而跳过。实际新增及重复数量随上游变化，见 reports/latest.json 的 supplemental（added、duplicates、unmatched）。这是固定附件副本，之后电脑文件的修改不会自动上传；需要更新时替换仓库中的 supplemental.m3u 并手动运行工作流。附件线路同样没有逐流授权或可播放保证。
+

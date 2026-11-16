@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-15T08:52:54.488592+00:00",
+  "time": "2026-11-16T02:15:15.326289+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
@@ -74,20 +74,20 @@
       "闯关东"
     ]
   },
-  "source_entries": 4594,
+  "source_entries": 4641,
   "requested_channels": 135,
   "matched_channels": 135,
-  "total_lines": 2056,
+  "total_lines": 2065,
   "categories": {
     "cctv": {
       "requested": 35,
       "matched": 35,
-      "lines": 668
+      "lines": 670
     },
     "local": {
       "requested": 68,
       "matched": 68,
-      "lines": 985
+      "lines": 988
     },
     "hmt": {
       "requested": 17,
@@ -102,7 +102,7 @@
     "other": {
       "requested": 15,
       "matched": 15,
-      "lines": 180
+      "lines": 184
     }
   }
 }

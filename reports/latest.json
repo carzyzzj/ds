@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-16T02:15:15.326289+00:00",
+  "time": "2026-11-16T04:25:59.249694+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
@@ -74,20 +74,33 @@
       "闯关东"
     ]
   },
+  "best_fan": {
+    "url": "https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8",
+    "entries": 253,
+    "added": 185,
+    "duplicates": 64,
+    "matched_channels": 52,
+    "unmatched": [
+      "CCTV-4中文国际",
+      "CCTV-13新闻",
+      "CCTV-14少儿",
+      "金鹰卡通"
+    ]
+  },
   "source_entries": 4641,
   "requested_channels": 135,
   "matched_channels": 135,
-  "total_lines": 2065,
+  "total_lines": 2250,
   "categories": {
     "cctv": {
       "requested": 35,
       "matched": 35,
-      "lines": 670
+      "lines": 763
     },
     "local": {
       "requested": 68,
       "matched": 68,
-      "lines": 988
+      "lines": 1080
     },
     "hmt": {
       "requested": 17,

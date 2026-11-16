@@ -35,7 +35,7 @@ jobs:
           if not order_path.exists():
               order_path.write_text(json.dumps([{'file':k,'name':g,'channels':names.split('|') if names else []} for k,g,names in defaults],ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           groups=json.loads(order_path.read_text(encoding='utf-8'))
-          Path('config/sources.json').write_text(json.dumps({'schema_version':6,'sources':[{'name':'CCSH/IPTV','url':source,'enabled':True,'rights_status':'Public links; personal noncommercial use; broadcast rights not certified'},{'name':'User IPv4 supplement','path':'config/supplemental.m3u','enabled':True,'rights_status':'User supplied; broadcast rights not certified'},{'name':'Guovin IPv4','url':'https://guovin.github.io/iptv-api/ipv4.m3u','enabled':True,'rights_status':'Public playlist; stream redistribution rights not certified'}]},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          Path('config/sources.json').write_text(json.dumps({'schema_version':7,'sources':[{'name':'CCSH/IPTV','url':source,'enabled':True,'rights_status':'Public links; personal noncommercial use; broadcast rights not certified'},{'name':'User IPv4 supplement','path':'config/supplemental.m3u','enabled':True,'rights_status':'User supplied; broadcast rights not certified'},{'name':'Guovin IPv4','url':'https://guovin.github.io/iptv-api/ipv4.m3u','enabled':True,'rights_status':'Public playlist; stream redistribution rights not certified'},{'name':'Best-fan IPTV','url':'https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8','enabled':True,'rights_status':'Public playlist; broadcast rights not certified'}]},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           report={'time':datetime.now(timezone.utc).isoformat(),'source':source,'status':'retained','missing':[]}
           failed=False
           try:
@@ -110,6 +110,36 @@ jobs:
               if not remote['entries']: raise ValueError('No valid Guovin source entries')
               remote['matched_channels']=len(remote['matched_channels'])
               report['guovin']=remote
+              remote_url='https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8'
+              remote_request=urllib.request.Request(remote_url,headers={'User-Agent':'my-tv-sources/3.1'})
+              with urllib.request.urlopen(remote_request,timeout=30) as r: remote_body=r.read(12000001)
+              if len(remote_body)>12000000: raise ValueError('Best-fan source exceeds 12MB')
+              remote_lines=remote_body.decode('utf-8-sig').splitlines()
+              if not remote_lines or not remote_lines[0].startswith('#EXTM3U'): raise ValueError('Invalid Best-fan M3U header')
+              remote={'url':remote_url,'entries':0,'added':0,'duplicates':0,'matched_channels':[],'unmatched':[]}; pending=None
+              for line in remote_lines[1:]:
+                  line=line.strip()
+                  if line.startswith('#EXTINF:'): pending=line
+                  elif line and not line.startswith('#'):
+                      if pending and ',' in pending and re.fullmatch(r'https?://[^\s]+',line):
+                          original=pending.rsplit(',',1)[1].strip(); name=re.sub(r'\s*\((?:\d+[pi]|[248]K)\)\s*$','',original,flags=re.I).strip()
+                          match=re.fullmatch(r'(CCTV|CETV)-?(\d+)(\+)?(?:\s+.*)?',name,re.I)
+                          if match: name=match[1].upper()+match[2]+(match[3] or '')
+                          name={'文化精品':'央视文化精品'}.get(name,name)
+                          remote['entries']+=1
+                          if name not in wanted:
+                              if original not in remote['unmatched']: remote['unmatched'].append(original)
+                          else:
+                              if name not in remote['matched_channels']: remote['matched_channels'].append(name)
+                              if line in seen[name]: remote['duplicates']+=1
+                              else:
+                                  seen[name].add(line)
+                                  meta=re.sub(r'\s+group-title="[^"]*"','',pending.rsplit(',',1)[0])
+                                  found[name].append((meta,line)); remote['added']+=1
+                      pending=None
+              if not remote['entries']: raise ValueError('No valid Best-fan source entries')
+              remote['matched_channels']=len(remote['matched_channels'])
+              report['best_fan']=remote
               rendered={}; combined=[]; counts={}; matched=0
               for group in groups:
                   records=[]

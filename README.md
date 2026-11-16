@@ -54,3 +54,10 @@ Guovin 链接是每日远程读取；config/supplemental.m3u 仍为此前附件�
 
 来源说明：https://github.com/Guovin/iptv-api 。项目代码采用 AGPL-3.0，不能据此认定所有直播流都已授权再分发；其免责声明要求使用者确保内容授权，未提供逐条直播流授权证明。只在相应许可范围内使用这些链接。
 
+
+
+## Best-fan 每日补充来源
+
+新增每日读取 https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8 ，在 CCSH、用户附件和 Guovin 之后合并。只匹配当前135频道清单（港澳台按用户图片保留17台），保持分类、顺序和多线路，相同频道相同URL去重。识别 CCTV/CETV 连字符及末尾分辨率括号；未匹配频道不新增，见 reports/latest.json 的 best_fan 字段。沿用30秒抓取超时、12MB上限；新来源失败时保留上次完整列表并记录失败。订阅地址不变。
+
+上游项目：https://github.com/best-fan/iptv-sources 。其 README 声明 MIT、仅供学习研究，要求遵守相关网站条款；这不证明所有直播流均有再分发授权，也不保证在本地网络可播放。

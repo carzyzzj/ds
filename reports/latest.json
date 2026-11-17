@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-16T04:25:59.249694+00:00",
+  "time": "2026-11-17T04:38:21.484321+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
@@ -76,36 +76,33 @@
   },
   "best_fan": {
     "url": "https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8",
-    "entries": 253,
-    "added": 185,
-    "duplicates": 64,
-    "matched_channels": 52,
+    "entries": 340,
+    "added": 230,
+    "duplicates": 106,
+    "matched_channels": 53,
     "unmatched": [
-      "CCTV-4中文国际",
-      "CCTV-13新闻",
-      "CCTV-14少儿",
       "金鹰卡通"
     ]
   },
-  "source_entries": 4641,
+  "source_entries": 4639,
   "requested_channels": 135,
   "matched_channels": 135,
-  "total_lines": 2250,
+  "total_lines": 2293,
   "categories": {
     "cctv": {
       "requested": 35,
       "matched": 35,
-      "lines": 763
+      "lines": 793
     },
     "local": {
       "requested": 68,
       "matched": 68,
-      "lines": 1080
+      "lines": 1092
     },
     "hmt": {
       "requested": 17,
       "matched": 17,
-      "lines": 223
+      "lines": 224
     },
     "international": {
       "requested": 0,

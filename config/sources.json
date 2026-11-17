@@ -1,5 +1,5 @@
 {
-  "schema_version": 7,
+  "schema_version": 8,
   "sources": [
     {
       "name": "CCSH/IPTV",
@@ -24,6 +24,19 @@
       "url": "https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8",
       "enabled": true,
       "rights_status": "Public playlist; broadcast rights not certified"
+    },
+    {
+      "name": "bang359/dsj",
+      "urls": [
+        "https://raw.githubusercontent.com/bang359/dsj/main/dsj.txt",
+        "https://raw.githubusercontent.com/bang359/dsj/main/dsjcs.txt",
+        "https://raw.githubusercontent.com/bang359/dsj/main/dsjcs1.txt",
+        "https://raw.githubusercontent.com/bang359/dsj/main/iphone.txt",
+        "https://raw.githubusercontent.com/bang359/dsj/main/ku9.txt",
+        "https://raw.githubusercontent.com/bang359/dsj/main/yc.txt"
+      ],
+      "enabled": true,
+      "rights_status": "No explicit playlist license or per-stream authorization verified"
     }
   ]
 }

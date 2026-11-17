@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-17T04:38:21.484321+00:00",
+  "time": "2026-11-17T08:12:41.830635+00:00",
   "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
   "status": "published",
   "missing": [],
@@ -84,25 +84,56 @@
       "金鹰卡通"
     ]
   },
+  "dsj": {
+    "files": [
+      {
+        "file": "dsj.txt",
+        "entries": 653
+      },
+      {
+        "file": "dsjcs.txt",
+        "entries": 1243
+      },
+      {
+        "file": "dsjcs1.txt",
+        "entries": 1246
+      },
+      {
+        "file": "iphone.txt",
+        "entries": 105
+      },
+      {
+        "file": "ku9.txt",
+        "entries": 706
+      },
+      {
+        "file": "yc.txt",
+        "entries": 634
+      }
+    ],
+    "added": 753,
+    "duplicates": 593,
+    "matched_channels": 103
+  },
   "source_entries": 4639,
   "requested_channels": 135,
   "matched_channels": 135,
-  "total_lines": 2293,
+  "total_lines": 3046,
   "categories": {
     "cctv": {
       "requested": 35,
       "matched": 35,
-      "lines": 793
+      "lines": 1033
     },
     "local": {
       "requested": 68,
       "matched": 68,
-      "lines": 1092
+      "lines": 1545
     },
     "hmt": {
       "requested": 17,
       "matched": 17,
-      "lines": 224
+      "lines": 243
     },
     "international": {
       "requested": 0,
@@ -112,7 +143,7 @@
     "other": {
       "requested": 15,
       "matched": 15,
-      "lines": 184
+      "lines": 225
     }
   }
 }

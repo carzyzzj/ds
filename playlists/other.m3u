@@ -39,6 +39,16 @@ http://xch819.cn:7788/923287154
 http://hns.7159287.xyz:8767/cetv1.m3u8
 #EXTINF:-1  tvg-name="CETV1" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV1.png" group-title="其它",CETV1
 http://mt.itfree.cyb.wiki:20216/cetv1.m3u8
+#EXTINF:-1 group-title="其它",CETV1
+http://ahmaslt.sohu.blog:8000/hls/19/index.m3u8
+#EXTINF:-1 group-title="其它",CETV1
+http://zmgd.zyrnet.com:8888/hls/16/index.m3u8
+#EXTINF:-1 group-title="其它",CETV1
+http://120.237.39.10:9901/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 group-title="其它",CETV1
+http://fn.wsk-net.online:6008/relay/ysp-cetv1.m3u8
+#EXTINF:-1 group-title="其它",CETV1
+http://A/ku9/js/web.js?id=https://tv.gxtv.cn/channel/channelivePlay_ffa6b6e1b32b4a16a73eb3ef66f8bfc7.html
 #EXTINF:-1  tvg-name="CETV2" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV2.png" group-title="其它",CETV2
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226425/index.m3u8
 #EXTINF:-1  tvg-name="CETV2" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV2.png" group-title="其它",CETV2
@@ -71,12 +81,22 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn=20261116100304ed66e91b43aa46fe93bebec48c3cae40&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20261116100304&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=171.8.79.254&SecurityKey=20261116100304&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=c9e26afc91c99c8d4e26e20a97233df9
 #EXTINF:-1  tvg-name="CETV2" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV2.png" group-title="其它",CETV2
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv2/50/20240709/index.m3u8?msisdn=20261117092249986ec186de3b4364b5b82ba096d538bf&mdspid=&spid=699004&netType=0&sid=5910022152&pid=2028597139&timestamp=20261117092249&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287211&ParentNodeID=-99&assertID=5910022152&client_ip=2409:8a00:6031:3541:5160:a6db:8ee8:b11c&SecurityKey=20261117092249&promotionId=&mvid=5900006638&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=6619034da066c50253ac004b54ac0a6b&ddCalcu=b666ea11093c00a3445dba400606cca53052
+#EXTINF:-1 group-title="其它",CETV2
+http://120.76.248.139/live/bfgd/4200000492.m3u8
+#EXTINF:-1 group-title="其它",CETV2
+http://ahmaslt.sohu.blog:8000/hls/21/index.m3u8
+#EXTINF:-1 group-title="其它",CETV2
+http://zmgd.zyrnet.com:8888/hls/49/index.m3u8
+#EXTINF:-1 group-title="其它",CETV2
+http://A/ku9/js/web.js?id=https://tv.gxtv.cn/channel/channelivePlay_80d0ffb42c114eaf9663708629ff0a3e.html
 #EXTINF:-1  tvg-name="CETV3" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV3.png" group-title="其它",CETV3
 http://kkk.888.3116598.xyz/api.php?n=tttt&id=s067jF&tk=FgM0vQMejxvG
 #EXTINF:-1 tvg-id="CETV-3" tvg-name="CETV-3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CETV-3.png" group-title="其它",CETV3
 http://198.204.228.26/live/cetv3.m3u8
 #EXTINF:-1 tvg-id="CETV-3" tvg-name="CETV-3" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CETV-3.png" group-title="其它",CETV3
 http://107.150.60.122/live/cetv3.m3u8
+#EXTINF:-1 group-title="其它",CETV3
+http://183.222.15.202:4321/rtp/239.11.0.247:5140
 #EXTINF:-1  tvg-name="CETV4" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV4.png" group-title="其它",CETV4
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225783/index.m3u8
 #EXTINF:-1  tvg-name="CETV4" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV4.png" group-title="其它",CETV4
@@ -111,6 +131,12 @@ http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8?msisdn
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cetv4/50/20240709/index.m3u8?msisdn=20261116100304ca624e6e2656494da4549a16ecbbdb98&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20261116100304&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=171.8.79.254&SecurityKey=20261116100304&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=ceaccfe34e346d35da202ffa4d23bffa
 #EXTINF:-1  tvg-name="CETV4" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV4.png" group-title="其它",CETV4
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/50/20240709/index.m3u8?msisdn=202611170922499e9e68428c7141c9a7c7e6bc50438539&mdspid=&spid=699004&netType=0&sid=5910022154&pid=2028597139&timestamp=20261117092249&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287339&ParentNodeID=-99&assertID=5910022154&client_ip=2409:8a00:6031:3541:5160:a6db:8ee8:b11c&SecurityKey=20261117092249&promotionId=&mvid=5900006640&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=56497f3d878a17af1c15e2319ecf5729&ddCalcu=9526e741593f70cfe39d183728ea5117ca1f
+#EXTINF:-1 group-title="其它",CETV4
+http://ahmaslt.sohu.blog:8000/hls/22/index.m3u8
+#EXTINF:-1 group-title="其它",CETV4
+http://zmgd.zyrnet.com:8888/hls/70/index.m3u8
+#EXTINF:-1 group-title="其它",CETV4
+http://A/ku9/js/web.js?id=https://tv.gxtv.cn/channel/channelivePlay_67eace939278435bb4bca90800fb4225.html
 #EXTINF:-1  tvg-name="CHC动作电影" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC动作电影.png" group-title="其它",CHC动作电影
 http://38.75.136.137:98/gslb/dsdqpub/chcdz.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="CHC动作电影" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC动作电影.png" group-title="其它",CHC动作电影
@@ -153,6 +179,14 @@ http://112.85.93.3:7788/644368714
 http://my1nas.dpdns.org:1234/644368714
 #EXTINF:-1 tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://www.xn--rgv465a.top/tvlogo/CHC动作电影.png" group-title="其它",CHC动作电影
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=chcdz
+#EXTINF:-1 group-title="其它",CHC动作电影
+http://m.061899.xyz/mg/dzdy
+#EXTINF:-1 group-title="其它",CHC动作电影
+http://go.bkpcp.top/mg/dzdy
+#EXTINF:-1 group-title="其它",CHC动作电影
+http://k.061899.xyz/k.php?id=dzdy
+#EXTINF:-1 group-title="其它",CHC动作电影
+https://d.0j7.cn/pyDzWj
 #EXTINF:-1  tvg-name="CHC家庭影院" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC家庭影院.png" group-title="其它",CHC家庭影院
 http://38.75.136.137:98/gslb/dsdqpub/chcjt.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="CHC家庭影院" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC家庭影院.png" group-title="其它",CHC家庭影院
@@ -193,6 +227,16 @@ http://61.162.52.6:8088/newlive/live/hls/60/live.m3u8
 http://dassby.qqff.top:99/live/CHC家庭影院/index.m3u8
 #EXTINF:-1  tvg-name="CHC家庭影院" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC家庭影院.png" group-title="其它",CHC家庭影院
 http://121.199.48.54/live1/jsbv1.m3u8?id=chcjt&usign=E8a0pEkGBVPiQHXezgayYA
+#EXTINF:-1 group-title="其它",CHC家庭影院
+http://m.061899.xyz/mg/jtyy
+#EXTINF:-1 group-title="其它",CHC家庭影院
+http://go.bkpcp.top/mg/jtyy
+#EXTINF:-1 group-title="其它",CHC家庭影院
+http://k.061899.xyz/k.php?id=jtyy
+#EXTINF:-1 group-title="其它",CHC家庭影院
+http://120.238.84.45:9901/tsfile/live/1093_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="其它",CHC家庭影院
+https://d.0j7.cn/na6XQ
 #EXTINF:-1  tvg-name="CHC影迷电影" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC影迷电影.png" group-title="其它",CHC影迷电影
 http://69.30.245.50/live/chcym.m3u8
 #EXTINF:-1  tvg-name="CHC影迷电影" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC影迷电影.png" group-title="其它",CHC影迷电影
@@ -233,6 +277,20 @@ https://tv.zhuhongxuan.cn/952383261
 http://gslbmgsplive.miguvideo.com/migu/kailu/chcymdy/50/20250415/index.m3u8?msisdn=2026111305224505b902833f2847ab93320de076cea7ab&mdspid=&spid=699004&netType=0&sid=5910022176&pid=2028597139&timestamp=20261113052245&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=952383261&ParentNodeID=-99&assertID=5910022176&client_ip=2409:8a00:6040:4f61:b82a:52a:b373:b251&SecurityKey=20261113052245&promotionId=&mvid=5900006704&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9c17df7481318e96f40648d38a8152e8&ddCalcu=89ece2115721d08fa78438d18341680e49f6
 #EXTINF:-1  tvg-name="CHC影迷电影" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC影迷电影.png" group-title="其它",CHC影迷电影
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=chchd
+#EXTINF:-1 group-title="其它",CHC影迷电影
+http://m.061899.xyz/mg/ymdy
+#EXTINF:-1 group-title="其它",CHC影迷电影
+http://go.bkpcp.top/mg/ymdy
+#EXTINF:-1 group-title="其它",CHC影迷电影
+http://k.061899.xyz/k.php?id=ymdy
+#EXTINF:-1 group-title="其它",CHC影迷电影
+http://114.240.228.159:7788/952383261
+#EXTINF:-1 group-title="其它",CHC影迷电影
+http://112.27.5.218:9901/tsfile/live/faacts/1038_1.m3u8
+#EXTINF:-1 group-title="其它",CHC影迷电影
+https://d.0j7.cn/UXMDEu
+#EXTINF:-1 group-title="其它",CHC影迷电影
+http://mg.cttv.vip/952383261
 #EXTINF:-1  tvg-name="CN卡通" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CN卡通.png" group-title="其它",CN卡通
 https://cdn.iptv8k.top/dl/jrys.php?id=364&time=20240926215313&ip=111.229.253.40
 #EXTINF:-1  tvg-name="五星体育" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/五星体育.png" group-title="其它",五星体育
@@ -259,6 +317,12 @@ http://121.199.48.54/live1/jsbv2b.m3u8?id=wxtyhd&usign=daRc52IjjmSvuzYItmDGkA
 http://121.199.48.54/live1/jsbv1.m3u8?id=wxtyhd&usign=daRc52IjjmSvuzYItmDGkA
 #EXTINF:-1  tvg-name="五星体育" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/五星体育.png" group-title="其它",五星体育
 http://38.75.136.137:82/live2/shkk.m3u8?id=wxtyhd&usign=daRc52IjjmSvuzYItmDGkA
+#EXTINF:-1 group-title="其它",五星体育
+http://180.165.12.42:50001/tsfile/live/0001_41.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="其它",五星体育
+http://A/ku9/js/web.js?id=https://live.kankanews.com/huikan?id=10
+#EXTINF:-1 group-title="其它",五星体育
+http://139.227.21.22:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="人与自然" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/人与自然.png" group-title="其它",人与自然
 http://newcntv.qcloudcdn.com/asp/hls/1200/0303000a/3/default/1425e1d505654cb48ba82b807b221193/1200.m3u8
 #EXTINF:-1  tvg-name="动物世界" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/动物世界.png" group-title="其它",动物世界
@@ -285,6 +349,10 @@ http://183.237.95.108:9901/tsfile/live/1074_1.m3u8?key=txiptv&playlive=0&authid=
 http://121.199.48.54/live1/jsbv2b.m3u8?id=jbtyhd&usign=daRc52IjjmSvuzYItmDGkA
 #EXTINF:-1  tvg-name="劲爆体育" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/劲爆体育.png" group-title="其它",劲爆体育
 http://121.199.48.54/live1/jsbv1.m3u8?id=jbtyhd&usign=daRc52IjjmSvuzYItmDGkA
+#EXTINF:-1 group-title="其它",劲爆体育
+http://m.061899.xyz/mg/jbty
+#EXTINF:-1 group-title="其它",劲爆体育
+http://120.238.84.45:9901/tsfile/live/1105_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="卡酷少儿" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/卡酷少儿.png" group-title="其它",卡酷少儿
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225654/index.m3u8
 #EXTINF:-1  tvg-name="卡酷少儿" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/卡酷少儿.png" group-title="其它",卡酷少儿
@@ -325,6 +393,10 @@ http://120.87.19.109:80/PLTV/88888973/224/3221225698/100001000000000600000000003
 http://218.13.170.98:9901/tsfile/live/1021_1.m3u8#http://qjrhc.jydjd.top:2911/udp/224.1.100.146:11111
 #EXTINF:-1  tvg-name="卡酷少儿" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/卡酷少儿.png" group-title="其它",卡酷少儿
 http://38.75.136.137:82/live2/btv.m3u8?id=btvkk&usign=daRc52IjjmSvuzYItmDGkA
+#EXTINF:-1 group-title="其它",卡酷少儿
+http://k.061899.xyz/k.php?id=bjkk
+#EXTINF:-1 group-title="其它",卡酷少儿
+http://gslbserv.itv.cmvideo.cn:80/7589856436881630561/1.m3u8?channel-id=ystenlive&Contentid=7589856436881630561&livemode=1&stbId=toShengfen&mode=1
 #EXTINF:-1  tvg-name="广东体育" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东体育.png" group-title="其它",广东体育
 http://38.75.136.137:82/live2/gdtv.m3u8?id=gdty&usign=E8a0pEkGBVPiQHXezgayYA
 #EXTINF:-1  tvg-name="广东体育" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东体育.png" group-title="其它",广东体育
@@ -367,3 +439,13 @@ http://kkk.888.3116598.xyz/api.php?n=liujiahui&id=EFT0s4&tk=bknhp6JvJlqE
 http://120.198.95.220:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
 #EXTINF:-1 tvg-id="广东体育" tvg-name="广东体育" tvg-logo="https://www.xn--rgv465a.top/tvlogo/广东体育.png" group-title="其它",广东体育
 http://173.208.234.146/live/gdty.m3u8
+#EXTINF:-1 group-title="其它",广东体育
+http://go.bkpcp.top/mg/gdty
+#EXTINF:-1 group-title="其它",广东体育
+http://116.77.33.98:44330/tsfile/live/1004_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="其它",广东体育
+http://120.238.84.45:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="其它",广东体育
+http://120.237.39.10:9901/tsfile/live/1010_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 group-title="其它",广东体育
+http://A/ku9/js/web.js?id=https://www.gdtv.cn/tvChannelDetail/47

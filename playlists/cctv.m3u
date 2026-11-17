@@ -51,6 +51,48 @@ http://113.90.154.189:9901/tsfile/live/0001_1.m3u8?key=txiptv&playlive=1&authid=
 http://221.7.175.154:8445/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV1[480][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV1.png" response-time="120ms" group-title="央视",CCTV1
 http://120.237.39.10:9901/tsfile/live/1015_1.m3u8?key=txiptv&playlive=1&down=1
+#EXTINF:-1 group-title="央视",CCTV1
+http://120.76.248.139/live/bfgd/4200000484.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://120.76.248.139/live/bfgd/4200000488.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://120.76.248.139/live/bfgd/4200000489.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://120.76.248.139/live/bfgd/4200000201.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://38.75.136.137:98/gslb/dsdqpub/cctv1hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV1
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv1
+#EXTINF:-1 group-title="央视",CCTV1
+http://go.bkpcp.top/mg/cctv1
+#EXTINF:-1 group-title="央视",CCTV1
+http://m.061899.xyz/mg/cctv1
+#EXTINF:-1 group-title="央视",CCTV1
+http://107.150.60.122/live/cctv1hd.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://ahmaslt.sohu.blog:8000/hls/1/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://zmgd.zyrnet.com:8888/hls/1/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://121.57.88.206:898/hls/1/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV1
+http://120.238.84.45:9901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV1
+http://120.238.84.45:9901/tsfile/live/1013_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV1
+http://gslbserv.itv.cmvideo.cn:80/5068253659616166748/1.m3u8?channel-id=wasusyt&Contentid=5068253659616166748&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV1
+http://gslbserv.itv.cmvideo.cn:80/reallive-cctv1/1.m3u8?channel-id=ystenlive&Contentid=reallive-cctv1&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV1
+http://gslbserv.itv.cmvideo.cn:80/reallive-hdcctv1/1.m3u8?channel-id=ystenlive&Contentid=reallive-hdcctv1&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV1
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001859
+#EXTINF:-1 group-title="央视",CCTV1
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv1/
+#EXTINF:-1 group-title="央视",CCTV1
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=1
+#EXTINF:-1 group-title="央视",CCTV1
+http://A/ku9/js/web.js?id=https://m-live.cctvnews.cctv.com/live/landscape.html?liveRoomNumber=11200132825562653886%26toc_style_id=feeds_only_back%26share_to=copy_url%26track_id=c3e89ea6-77d8-4230-89a3-a492aa16ee4c
 #EXTINF:-1  tvg-name="CCTV2" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV2.png" group-title="央视",CCTV2
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225588/index.m3u8
 #EXTINF:-1  tvg-name="CCTV2" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV2.png" group-title="央视",CCTV2
@@ -105,6 +147,38 @@ http://36.136.38.87:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
 http://119.39.9.8:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=0&authid=0
 #EXTINF:-1 tvg-name="CCTV2[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV2.png" response-time="120ms" group-title="央视",CCTV2
 http://124.90.45.52:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV2
+http://120.76.248.139/live/bfgd/4200000061.m3u8
+#EXTINF:-1 group-title="央视",CCTV2
+http://38.75.136.137:98/gslb/dsdqpub/cctv2hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV2
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv2
+#EXTINF:-1 group-title="央视",CCTV2
+http://go.bkpcp.top/mg/cctv2
+#EXTINF:-1 group-title="央视",CCTV2
+http://m.061899.xyz/mg/cctv2
+#EXTINF:-1 group-title="央视",CCTV2
+http://ahmaslt.sohu.blog:8000/hls/2/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV2
+http://zmgd.zyrnet.com:8888/hls/2/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV2
+http://8.138.7.223/tv/cctv2.php
+#EXTINF:-1 group-title="央视",CCTV2
+https://iptv.catvod.com/douyin/nuanxinnengl
+#EXTINF:-1 group-title="央视",CCTV2
+http://120.238.84.45:9901/tsfile/live/1019_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV2
+http://121.57.88.206:898/hls/2/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV2
+http://gslbserv.itv.cmvideo.cn:80/8878432746825677699/1.m3u8?channel-id=wasusyt&Contentid=8878432746825677699&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV2
+http://gslbserv.itv.cmvideo.cn:80/5353323539453949720/1.m3u8?channel-id=ystenlive&Contentid=5353323539453949720&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV2
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001800
+#EXTINF:-1 group-title="央视",CCTV2
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv2/
+#EXTINF:-1 group-title="央视",CCTV2
+http://A/ku9/js/web.js?id=https://m-live.cctvnews.cctv.com/live/landscape.html?liveRoomNumber=12030532124776958103%26toc_style_id=feeds_only_back%26share_to=copy_url%26track_id=8ff44314-c7a7-4241-be6e-11a7b7224db4
 #EXTINF:-1  tvg-name="CCTV3" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV3.png" group-title="央视",CCTV3
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226021/index.m3u8
 #EXTINF:-1  tvg-name="CCTV3" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV3.png" group-title="央视",CCTV3
@@ -155,6 +229,32 @@ http://101.66.199.181:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=0&authid=
 http://113.57.140.161:10081/newlive/live/hls/3/live.m3u8
 #EXTINF:-1 tvg-name="CCTV3[1080][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV3.png" response-time="120ms" group-title="央视",CCTV3
 http://60.187.246.34:85/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV3
+http://120.76.248.139/live/bfgd/4200000062.m3u8
+#EXTINF:-1 group-title="央视",CCTV3
+http://38.75.136.137:98/gslb/dsdqpub/cctv3hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV3
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv3
+#EXTINF:-1 group-title="央视",CCTV3
+http://go.bkpcp.top/mg/cctv3
+#EXTINF:-1 group-title="央视",CCTV3
+http://m.061899.xyz/mg/cctv3
+#EXTINF:-1 group-title="央视",CCTV3
+http://ahmaslt.sohu.blog:8000/hls/3/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV3
+http://zmgd.zyrnet.com:8888/hls/3/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV3
+http://59.172.112.202:8000/hls/3/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV3
+http://120.238.84.45:9901/tsfile/live/1020_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV3
+http://121.57.88.206:898/hls/3/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV3
+http://gslbserv.itv.cmvideo.cn:80/8378175926191110263/1.m3u8?channel-id=ystenlive&Contentid=8378175926191110263&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV3
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv3/
+#EXTINF:-1 group-title="央视",CCTV3
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=2
 #EXTINF:-1  tvg-name="CCTV4" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4.png" group-title="央视",CCTV4
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226428/index.m3u8
 #EXTINF:-1  tvg-name="CCTV4" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4.png" group-title="央视",CCTV4
@@ -215,6 +315,32 @@ http://124.90.45.52:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0
 http://221.226.51.220:50081/newlive/live/hls/4/live.m3u8
 #EXTINF:-1 tvg-name="CCTV4[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV4.png" response-time="120ms" group-title="央视",CCTV4
 http://119.39.9.8:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="央视",CCTV4
+http://120.76.248.139/live/bfgd/4200000063.m3u8
+#EXTINF:-1 group-title="央视",CCTV4
+http://38.75.136.137:98/gslb/dsdqpub/cctv4hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV4
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv4
+#EXTINF:-1 group-title="央视",CCTV4
+http://go.bkpcp.top/mg/cctv4
+#EXTINF:-1 group-title="央视",CCTV4
+http://m.061899.xyz/mg/cctv4
+#EXTINF:-1 group-title="央视",CCTV4
+http://ahmaslt.sohu.blog:8000/hls/4/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV4
+http://zmgd.zyrnet.com:8888/hls/77/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV4
+http://121.57.88.206:898/hls/4/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV4
+http://120.238.84.45:9901/tsfile/live/1021_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV4
+http://gslbserv.itv.cmvideo.cn:80/8183388942203045169/1.m3u8?channel-id=ystenlive&Contentid=8183388942203045169&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV4
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001814
+#EXTINF:-1 group-title="央视",CCTV4
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv4/
+#EXTINF:-1 group-title="央视",CCTV4
+http://A/ku9/js/web.js?id=https://m-live.cctvnews.cctv.com/live/landscape.html?liveRoomNumber=10620168294224708952%26toc_style_id=feeds_only_back%26share_to=copy_url%26track_id=7f4e2027-e822-49f3-88b1-2ffe00919f92
 #EXTINF:-1  tvg-name="CCTV4K" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4K.png" group-title="央视",CCTV4K
 http://107.150.52.50:82/live/cctv4k.m3u8
 #EXTINF:-1  tvg-name="CCTV4K" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4K.png" group-title="央视",CCTV4K
@@ -229,6 +355,14 @@ http://104.152.209.49:8181/720p/cctv4k.m3u8
 https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1794837600-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-a52bbd3ca1ba6e33f4dc4a088d3f7131&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
 #EXTINF:-1  tvg-name="CCTV4K" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4K.png" group-title="央视",CCTV4K
 https://live-play-hls.cctvnews.cctv.com/CCTVChannel/channel_cctv4k_mbd.m3u8?auth_key=1794934800-1-b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c-db7aba929999ee94ae6deb4cfb7c94bc&yid=b59134a2ead43d7f783f943c8f535e7bb80c5169575b2e8efcd5b3ddea21b41c
+#EXTINF:-1 group-title="央视",CCTV4K
+http://38.75.136.137:98/gslb/dsdqpub/cctv4k.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV4K
+http://vip1.xinketongxun.fun:8082/tsfile/live/1026_1.m3u8
+#EXTINF:-1 group-title="央视",CCTV4K
+https://gongdian.top/tv/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600002264
+#EXTINF:-1 group-title="央视",CCTV4K
+http://192.151.150.154/live/cctv4k.m3u8
 #EXTINF:-1  tvg-name="CCTV5" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5.png" group-title="央视",CCTV5
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226019/index.m3u8
 #EXTINF:-1  tvg-name="CCTV5" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5.png" group-title="央视",CCTV5
@@ -279,6 +413,36 @@ http://113.57.140.161:10081/newlive/live/hls/5/live.m3u8
 http://221.226.51.220:50081/newlive/live/hls/6/live.m3u8
 #EXTINF:-1 tvg-name="CCTV5[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" response-time="120ms" group-title="央视",CCTV5
 http://221.226.51.220:50081/newlive/live/hls/5/live.m3u8
+#EXTINF:-1 group-title="央视",CCTV5
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv5
+#EXTINF:-1 group-title="央视",CCTV5
+http://go.bkpcp.top/mg/cctv5
+#EXTINF:-1 group-title="央视",CCTV5
+http://m.061899.xyz/mg/cctv5
+#EXTINF:-1 group-title="央视",CCTV5
+http://ahmaslt.sohu.blog:8000/hls/5/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV5
+http://zmgd.zyrnet.com:8888/hls/81/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV5
+http://59.172.112.202:8000/hls/5/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV5
+http://120.238.84.45:9901/tsfile/live/1022_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV5
+http://121.57.88.206:898/hls/5/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV5
+http://gslbserv.itv.cmvideo.cn:80/reallive-cctv5/1.m3u8?channel-id=ystenlive&Contentid=reallive-cctv5&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV5
+http://gslbserv.itv.cmvideo.cn:80/1000000004000007755/1.m3u8?channel-id=ystenlive&Contentid=1000000004000007755&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV5
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001818
+#EXTINF:-1 group-title="央视",CCTV5
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001817
+#EXTINF:-1 group-title="央视",CCTV5
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv5/
+#EXTINF:-1 group-title="央视",CCTV5
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv5plus/
+#EXTINF:-1 group-title="央视",CCTV5
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=3
 #EXTINF:-1  tvg-name="CCTV5+" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5+.png" group-title="央视",CCTV5+
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225603/index.m3u8
 #EXTINF:-1  tvg-name="CCTV5+" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5+.png" group-title="央视",CCTV5+
@@ -331,6 +495,20 @@ http://118.193.115.2:9901/tsfile/live/0141_1.m3u8?key=txiptv&playlive=1&authid=0
 http://fuxin.yunjifei.top:999/tsfile/live/0016_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-name="CCTV5[720][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV5.png" response-time="120ms" group-title="央视",CCTV5+
 http://124.228.160.40:9901/tsfile/live/0016_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV5+
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv5p
+#EXTINF:-1 group-title="央视",CCTV5+
+http://go.bkpcp.top/mg/cctv5p
+#EXTINF:-1 group-title="央视",CCTV5+
+http://m.061899.xyz/mg/cctv5p
+#EXTINF:-1 group-title="央视",CCTV5+
+http://ahmaslt.sohu.blog:8000/hls/18/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV5+
+http://121.57.88.206:898/hls/18/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV5+
+http://120.238.84.45:9901/tsfile/live/1023_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV5+
+http://gslbserv.itv.cmvideo.cn:80/reallive-cctv5plus/1.m3u8?channel-id=ystenlive&Contentid=reallive-cctv5plus&livemode=1&stbId=toShengfen&mode=1
 #EXTINF:-1  tvg-name="CCTV6" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV6.png" group-title="央视",CCTV6
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226010/index.m3u8
 #EXTINF:-1  tvg-name="CCTV6" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV6.png" group-title="央视",CCTV6
@@ -379,6 +557,30 @@ http://69.30.245.50/live/cctv6.m3u8
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv6hd
 #EXTINF:-1 tvg-name="CCTV6[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV6.png" response-time="120ms" group-title="央视",CCTV6
 http://124.90.45.52:9901/tsfile/live/1017_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV6
+http://38.75.136.137:98/gslb/dsdqpub/cctv6hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV6
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv6
+#EXTINF:-1 group-title="央视",CCTV6
+http://go.bkpcp.top/mg/cctv6
+#EXTINF:-1 group-title="央视",CCTV6
+http://m.061899.xyz/mg/cctv6
+#EXTINF:-1 group-title="央视",CCTV6
+http://ahmaslt.sohu.blog:8000/hls/6/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV6
+http://zmgd.zyrnet.com:8888/hls/6/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV6
+http://121.57.88.206:898/hls/6/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV6
+http://120.238.84.45:9901/tsfile/live/1024_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV6
+http://gslbserv.itv.cmvideo.cn:80/6117099895556651277/1.m3u8?channel-id=ystenlive&Contentid=6117099895556651277&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV6
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600108442
+#EXTINF:-1 group-title="央视",CCTV6
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv6/
+#EXTINF:-1 group-title="央视",CCTV6
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=4
 #EXTINF:-1  tvg-name="CCTV7" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV7.png" group-title="央视",CCTV7
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225733/index.m3u8
 #EXTINF:-1  tvg-name="CCTV7" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV7.png" group-title="央视",CCTV7
@@ -441,6 +643,28 @@ http://104.152.209.49:8181/720p/cctv7.m3u8
 http://124.90.45.52:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV7[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV7.png" response-time="120ms" group-title="央视",CCTV7
 http://124.228.160.40:9901/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV7
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv7
+#EXTINF:-1 group-title="央视",CCTV7
+http://go.bkpcp.top/mg/cctv7
+#EXTINF:-1 group-title="央视",CCTV7
+http://m.061899.xyz/mg/cctv7
+#EXTINF:-1 group-title="央视",CCTV7
+http://ahmaslt.sohu.blog:8000/hls/7/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV7
+http://zmgd.zyrnet.com:8888/hls/111/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV7
+http://121.57.88.206:898/hls/7/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV7
+http://120.238.84.45:9901/tsfile/live/1025_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV7
+http://gslbserv.itv.cmvideo.cn:80/7050628689018054317/1.m3u8?channel-id=ystenlive&Contentid=7050628689018054317&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV7
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600004092
+#EXTINF:-1 group-title="央视",CCTV7
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv7/
+#EXTINF:-1 group-title="央视",CCTV7
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=5
 #EXTINF:-1  tvg-name="CCTV8" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8.png" group-title="央视",CCTV8
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226008/index.m3u8
 #EXTINF:-1  tvg-name="CCTV8" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8.png" group-title="央视",CCTV8
@@ -503,6 +727,32 @@ http://104.152.209.49:8181/720p/cctv8.m3u8
 http://124.228.160.40:9901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV8[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV8.png" response-time="120ms" group-title="央视",CCTV8
 http://124.90.45.52:9901/tsfile/live/1018_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV8
+http://120.76.248.139/live/bfgd/4200000066.m3u8
+#EXTINF:-1 group-title="央视",CCTV8
+http://38.75.136.137:98/gslb/dsdqpub/cctv8hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV8
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv8
+#EXTINF:-1 group-title="央视",CCTV8
+http://go.bkpcp.top/mg/cctv8
+#EXTINF:-1 group-title="央视",CCTV8
+http://m.061899.xyz/mg/cctv8
+#EXTINF:-1 group-title="央视",CCTV8
+http://ahmaslt.sohu.blog:8000/hls/8/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV8
+http://zmgd.zyrnet.com:8888/hls/8/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV8
+http://59.172.112.202:8000/hls/8/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV8
+http://120.238.84.45:9901/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV8
+http://121.57.88.206:898/hls/8/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV8
+http://gslbserv.itv.cmvideo.cn:80/8871488051501921127/1.m3u8?channel-id=ystenlive&Contentid=8871488051501921127&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV8
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001803
+#EXTINF:-1 group-title="央视",CCTV8
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv8/
 #EXTINF:-1  tvg-name="CCTV8K" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8K.png" group-title="央视",CCTV8K
 http://107.150.52.50:82/live/cctv8k.m3u8
 #EXTINF:-1  tvg-name="CCTV8K" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8K.png" group-title="央视",CCTV8K
@@ -585,6 +835,34 @@ http://221.226.51.220:50081/newlive/live/hls/10/live.m3u8
 https://v4-702cae17a28d6e4f0c0002bba021d934.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=40e0365ee12acde026019378b3270eb0
 #EXTINF:-1 tvg-name="CCTV9[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV9.png" response-time="120ms" group-title="央视",CCTV9
 https://v4-e6b1c5baf4e240fe63adbf68dda23435.livehwc4.com/play.kankanlive.com/live/1698423397390920.m3u8?sub_m3u8=true&edge_slice=true&user_session_id=3c19e649cec922581b8014eeb18e1c1e
+#EXTINF:-1 group-title="央视",CCTV9
+http://120.76.248.139/live/bfgd/4200000128.m3u8
+#EXTINF:-1 group-title="央视",CCTV9
+http://38.75.136.137:98/gslb/dsdqpub/cctv9hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV9
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv9
+#EXTINF:-1 group-title="央视",CCTV9
+http://go.bkpcp.top/mg/cctv9
+#EXTINF:-1 group-title="央视",CCTV9
+http://m.061899.xyz/mg/cctv9
+#EXTINF:-1 group-title="央视",CCTV9
+http://ahmaslt.sohu.blog:8000/hls/9/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV9
+http://zmgd.zyrnet.com:8888/hls/9/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV9
+http://121.57.88.206:898/hls/9/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV9
+http://120.238.84.45:9901/tsfile/live/1027_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV9
+http://gslbserv.itv.cmvideo.cn:80/6350727550077620987/1.m3u8?channel-id=wasusyt&Contentid=6350727550077620987&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV9
+http://gslbserv.itv.cmvideo.cn:80/6275371742726901431/1.m3u8?channel-id=ystenlive&Contentid=6275371742726901431&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV9
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600004078
+#EXTINF:-1 group-title="央视",CCTV9
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctvjilu/
+#EXTINF:-1 group-title="央视",CCTV9
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=6
 #EXTINF:-1  tvg-name="CCTV10" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV10.png" group-title="央视",CCTV10
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225730/index.m3u8
 #EXTINF:-1  tvg-name="CCTV10" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV10.png" group-title="央视",CCTV10
@@ -645,6 +923,32 @@ http://219.147.245.238:25480/newlive/live/hls/11/live.m3u8
 http://124.90.45.52:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV10[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV10.png" response-time="120ms" group-title="央视",CCTV10
 http://124.228.160.40:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV10
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv10
+#EXTINF:-1 group-title="央视",CCTV10
+http://go.bkpcp.top/mg/cctv10
+#EXTINF:-1 group-title="央视",CCTV10
+http://m.061899.xyz/mg/cctv10
+#EXTINF:-1 group-title="央视",CCTV10
+http://ahmaslt.sohu.blog:8000/hls/10/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV10
+http://zmgd.zyrnet.com:8888/hls/10/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV10
+http://183.94.146.79:9901/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV10
+http://120.238.84.45:9901/tsfile/live/1028_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV10
+http://121.57.88.206:898/hls/10/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV10
+http://gslbserv.itv.cmvideo.cn:80/7019587760656900133/1.m3u8?channel-id=ystenlive&Contentid=7019587760656900133&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV10
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001805
+#EXTINF:-1 group-title="央视",CCTV10
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv10/
+#EXTINF:-1 group-title="央视",CCTV10
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=7
+#EXTINF:-1 group-title="央视",CCTV10
+http://111.8.224.6:9999/tsfile/live/1039_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="CCTV11" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV11.png" group-title="央视",CCTV11
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225597/index.m3u8
 #EXTINF:-1  tvg-name="CCTV11" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV11.png" group-title="央视",CCTV11
@@ -715,6 +1019,30 @@ http://101.66.199.96:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=0&authid=0
 http://59.39.89.130:60901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV11[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV11.png" response-time="120ms" group-title="央视",CCTV11
 http://101.66.199.181:9901/tsfile/live/0011_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="央视",CCTV11
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv11
+#EXTINF:-1 group-title="央视",CCTV11
+http://go.bkpcp.top/mg/cctv11
+#EXTINF:-1 group-title="央视",CCTV11
+http://m.061899.xyz/mg/cctv11
+#EXTINF:-1 group-title="央视",CCTV11
+http://ahmaslt.sohu.blog:8000/hls/11/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV11
+http://zmgd.zyrnet.com:8888/hls/11/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV11
+http://59.172.112.202:8000/hls/11/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV11
+http://120.238.84.45:9901/tsfile/live/1029_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV11
+http://121.57.88.206:898/hls/11/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV11
+http://gslbserv.itv.cmvideo.cn:80/6351457414282570521/1.m3u8?channel-id=ystenlive&Contentid=6351457414282570521&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV11
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001806
+#EXTINF:-1 group-title="央视",CCTV11
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv11/
+#EXTINF:-1 group-title="央视",CCTV11
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=8
 #EXTINF:-1  tvg-name="CCTV12" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV12.png" group-title="央视",CCTV12
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225731/index.m3u8
 #EXTINF:-1  tvg-name="CCTV12" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV12.png" group-title="央视",CCTV12
@@ -777,6 +1105,28 @@ http://60.187.246.34:85/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
 http://124.228.160.40:9901/tsfile/live/0012_2.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV12[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV12.png" response-time="120ms" group-title="央视",CCTV12
 http://124.90.45.52:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV12
+http://38.75.136.137:98/gslb/dsdqpub/cctv12hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV12
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv12
+#EXTINF:-1 group-title="央视",CCTV12
+http://go.bkpcp.top/mg/cctv12
+#EXTINF:-1 group-title="央视",CCTV12
+http://m.061899.xyz/mg/cctv12
+#EXTINF:-1 group-title="央视",CCTV12
+http://ahmaslt.sohu.blog:8000/hls/12/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV12
+http://zmgd.zyrnet.com:8888/hls/12/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV12
+http://gslbserv.itv.cmvideo.cn:80/5325631075193490169/1.m3u8?channel-id=ystenlive&Contentid=5325631075193490169&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV12
+http://120.238.84.45:9901/tsfile/live/1030_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV12
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001807
+#EXTINF:-1 group-title="央视",CCTV12
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv12/
+#EXTINF:-1 group-title="央视",CCTV12
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=9
 #EXTINF:-1  tvg-name="CCTV13" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV13.png" group-title="央视",CCTV13
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226537/index.m3u8
 #EXTINF:-1  tvg-name="CCTV13" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV13.png" group-title="央视",CCTV13
@@ -839,6 +1189,34 @@ http://120.40.39.246:352/newlive/live/hls/14/live.m3u8
 http://219.147.245.238:25480/newlive/live/hls/14/live.m3u8
 #EXTINF:-1 tvg-name="CCTV13[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV13.png" response-time="120ms" group-title="央视",CCTV13
 http://119.39.9.8:9901/tsfile/live/0013_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="央视",CCTV13
+http://38.75.136.137:98/gslb/dsdqpub/cctv13hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV13
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv13
+#EXTINF:-1 group-title="央视",CCTV13
+http://go.bkpcp.top/mg/cctv13
+#EXTINF:-1 group-title="央视",CCTV13
+http://m.061899.xyz/mg/cctv13
+#EXTINF:-1 group-title="央视",CCTV13
+http://ahmaslt.sohu.blog:8000/hls/13/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV13
+http://zmgd.zyrnet.com:8888/hls/13/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV13
+http://59.172.112.202:8000/hls/13/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV13
+http://120.238.84.45:9901/tsfile/live/1031_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV13
+http://gslbserv.itv.cmvideo.cn:80/6918130250570453526/1.m3u8?channel-id=ystenlive&Contentid=6918130250570453526&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV13
+https://iptv.catvod.com/douyin/CMG_yangshipin
+#EXTINF:-1 group-title="央视",CCTV13
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001811
+#EXTINF:-1 group-title="央视",CCTV13
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv13/
+#EXTINF:-1 group-title="央视",CCTV13
+http://A/ku9/js/web.js?id=https://www.hndyjyfw.gov.cn/livePlay.html?u=10
+#EXTINF:-1 group-title="央视",CCTV13
+http://A/ku9/js/web.js?id=https://m-live.cctvnews.cctv.com/live/landscape.html?liveRoomNumber=16265686808730585228%26toc_style_id=feeds_only_back%26share_to=copy_url%26track_id=ac0e1dc7-d2a2-403b-ad45-9ed44fe89895
 #EXTINF:-1  tvg-name="CCTV14" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV14.png" group-title="央视",CCTV14
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225732/index.m3u8
 #EXTINF:-1  tvg-name="CCTV14" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV14.png" group-title="央视",CCTV14
@@ -891,6 +1269,30 @@ http://219.147.245.238:25480/newlive/live/hls/15/live.m3u8
 http://45.192.97.170:8880/play/403.m3u8
 #EXTINF:-1 tvg-name="CCTV14[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV14.png" response-time="120ms" group-title="央视",CCTV14
 http://124.228.160.40:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV14
+http://120.76.248.139/live/bfgd/4200000132.m3u8
+#EXTINF:-1 group-title="央视",CCTV14
+http://38.75.136.137:98/gslb/dsdqpub/cctv14hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV14
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv14
+#EXTINF:-1 group-title="央视",CCTV14
+http://go.bkpcp.top/mg/cctv14
+#EXTINF:-1 group-title="央视",CCTV14
+http://m.061899.xyz/mg/cctv14
+#EXTINF:-1 group-title="央视",CCTV14
+http://ahmaslt.sohu.blog:8000/hls/14/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV14
+http://zmgd.zyrnet.com:8888/hls/14/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV14
+http://gslbserv.itv.cmvideo.cn:80/8203666801302077036/1.m3u8?channel-id=ystenlive&Contentid=8203666801302077036&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV14
+http://120.238.84.45:9901/tsfile/live/1032_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV14
+http://gslbserv.itv.cmvideo.cn:80/6113730085955692619/1.m3u8?channel-id=wasusyt&Contentid=6113730085955692619&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV14
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001809
+#EXTINF:-1 group-title="央视",CCTV14
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctvchild/
 #EXTINF:-1  tvg-name="CCTV15" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV15.png" group-title="央视",CCTV15
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225601/index.m3u8
 #EXTINF:-1  tvg-name="CCTV15" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV15.png" group-title="央视",CCTV15
@@ -949,6 +1351,28 @@ http://59.39.89.130:60901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
 http://124.90.45.52:9901/tsfile/live/1014_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="CCTV15[576][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV15.png" response-time="120ms" group-title="央视",CCTV15
 http://119.39.9.8:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="央视",CCTV15
+http://120.76.248.139/live/bfgd/4200000133.m3u8
+#EXTINF:-1 group-title="央视",CCTV15
+http://38.75.136.137:98/gslb/dsdqpub/cctv15hd.m3u8?auth=testpub
+#EXTINF:-1 group-title="央视",CCTV15
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv15
+#EXTINF:-1 group-title="央视",CCTV15
+http://go.bkpcp.top/mg/cctv15
+#EXTINF:-1 group-title="央视",CCTV15
+http://m.061899.xyz/mg/cctv15
+#EXTINF:-1 group-title="央视",CCTV15
+http://ahmaslt.sohu.blog:8000/hls/15/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV15
+http://zmgd.zyrnet.com:8888/hls/15/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV15
+http://59.172.112.202:8000/hls/15/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV15
+http://gslbserv.itv.cmvideo.cn:80/4832596595465032187/1.m3u8?channel-id=ystenlive&Contentid=4832596595465032187&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV15
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001815
+#EXTINF:-1 group-title="央视",CCTV15
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv15/
 #EXTINF:-1  tvg-name="CCTV16" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png" group-title="央视",CCTV16
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226100/index.m3u8
 #EXTINF:-1  tvg-name="CCTV16" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png" group-title="央视",CCTV16
@@ -997,6 +1421,24 @@ http://219.147.245.238:25480/newlive/live/hls/17/live.m3u8
 http://113.57.140.161:10081/newlive/live/hls/17/live.m3u8
 #EXTINF:-1 tvg-name="CCTV16[1080][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV16.png" response-time="120ms" group-title="央视",CCTV16
 http://58.56.162.102:4466/newlive/live/hls/17/live.m3u8
+#EXTINF:-1 group-title="央视",CCTV16
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv16
+#EXTINF:-1 group-title="央视",CCTV16
+http://go.bkpcp.top/mg/cctv16
+#EXTINF:-1 group-title="央视",CCTV16
+http://m.061899.xyz/mg/cctv16
+#EXTINF:-1 group-title="央视",CCTV16
+http://116.77.33.98:44330/tsfile/live/0017_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="央视",CCTV16
+http://112.27.5.218:9901/tsfile/live/faacts/1001_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV16
+http://121.57.88.206:898/hls/16/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV16
+http://fn.wsk-net.online:6008/relay/ysp-cctv164k.m3u8
+#EXTINF:-1 group-title="央视",CCTV16
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600098637
+#EXTINF:-1 group-title="央视",CCTV16
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv16/
 #EXTINF:-1  tvg-name="CCTV17" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png" group-title="央视",CCTV17
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225765/index.m3u8
 #EXTINF:-1  tvg-name="CCTV17" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png" group-title="央视",CCTV17
@@ -1051,6 +1493,28 @@ http://38.75.136.137:98/gslb/dsdqpub/cctv17hd.m3u8?auth=testpub
 http://45.192.97.170:8880/play/405.m3u8
 #EXTINF:-1 tvg-name="CCTV17[1080][S]" tvg-logo="https://gitee.com/mytv-android/myTVlogo/raw/main/img/CCTV17.png" response-time="120ms" group-title="央视",CCTV17
 http://218.104.239.114:9901/tsfile/live/0019_2.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV17
+http://120.76.248.139/live/bfgd/4200000204.m3u8
+#EXTINF:-1 group-title="央视",CCTV17
+http://cdn6.bkpcp.top/tl/tuiliu.php?id=cctv17
+#EXTINF:-1 group-title="央视",CCTV17
+http://go.bkpcp.top/mg/cctv17
+#EXTINF:-1 group-title="央视",CCTV17
+http://m.061899.xyz/mg/cctv17
+#EXTINF:-1 group-title="央视",CCTV17
+http://ahmaslt.sohu.blog:8000/hls/16/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV17
+http://zmgd.zyrnet.com:8888/hls/17/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV17
+http://121.57.88.206:898/hls/17/index.m3u8
+#EXTINF:-1 group-title="央视",CCTV17
+http://120.238.84.45:9901/tsfile/live/1048_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",CCTV17
+http://gslbserv.itv.cmvideo.cn:80/1000000005000056836/1.m3u8?channel-id=ystenlive&Contentid=1000000005000056836&livemode=1&stbId=toShengfen&mode=1
+#EXTINF:-1 group-title="央视",CCTV17
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600001810
+#EXTINF:-1 group-title="央视",CCTV17
+http://A/ku9/js/web.js?id=https://tv.cctv.com/live/cctv17/
 #EXTINF:-1  tvg-name="兵器科技" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/兵器科技.png" group-title="央视",兵器科技
 http://38.75.136.137:98/gslb/dsdqpub/bqkj.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="兵器科技" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/兵器科技.png" group-title="央视",兵器科技
@@ -1133,6 +1597,10 @@ http://120.87.19.109:80/PLTV/88888973/224/3221226619/100001000000000600000000016
 http://hns.7159287.xyz:8767/cctvdyjc.m3u8
 #EXTINF:-1  tvg-name="第一剧场" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/第一剧场.png" group-title="央视",第一剧场
 http://mt.itfree.cyb.wiki:20216/cctvdyjc.m3u8
+#EXTINF:-1 group-title="央视",第一剧场
+http://120.238.84.45:9901/tsfile/live/1086_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",第一剧场
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600099655
 #EXTINF:-1  tvg-name="电视指南" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/电视指南.png" group-title="央视",电视指南
 http://38.75.136.137:98/gslb/dsdqpub/dszn.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="电视指南" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/电视指南.png" group-title="央视",电视指南
@@ -1245,6 +1713,10 @@ http://hns.7159287.xyz:8767/cctvfyjc.m3u8
 http://mt.itfree.cyb.wiki:20216/cctvfyjc.m3u8
 #EXTINF:-1  tvg-name="风云剧场" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/风云剧场.png" group-title="央视",风云剧场
 http://feiniu-nas.xipinju.top:8767/cctvfyjc.m3u8
+#EXTINF:-1 group-title="央视",风云剧场
+http://120.238.84.45:9901/tsfile/live/1090_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",风云剧场
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600099658
 #EXTINF:-1  tvg-name="风云音乐" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/风云音乐.png" group-title="央视",风云音乐
 https://live.264788.xyz/channel/fengyunyinyue?streamid=1b41fb9153cba3ee19bd5d1b323da27e&livekey=01WgOR41rriMmMkzNsd0UoaxJRwetZdxIvtVk
 #EXTINF:-1  tvg-name="风云音乐" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/风云音乐.png" group-title="央视",风云音乐
@@ -1283,6 +1755,8 @@ http://120.87.19.109:80/PLTV/88888973/224/3221226627/100001000000000600000000016
 http://121.199.48.54/live1/jsbv2b.m3u8?id=fyyy&usign=daRc52IjjmSvuzYItmDGkA
 #EXTINF:-1  tvg-name="风云音乐" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/风云音乐.png" group-title="央视",风云音乐
 http://121.199.48.54/live1/jsbv1.m3u8?id=fyyy&usign=daRc52IjjmSvuzYItmDGkA
+#EXTINF:-1 group-title="央视",风云音乐
+http://120.238.84.45:9901/tsfile/live/1089_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="风云足球" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/风云足球.png" group-title="央视",风云足球
 http://38.75.136.137:98/gslb/dsdqpub/fyzq.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="风云足球" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/风云足球.png" group-title="央视",风云足球
@@ -1385,6 +1859,10 @@ http://120.87.4.10:80/PLTV/88888973/224/3221226614/10000100000000060000000001611
 http://120.87.19.109:80/PLTV/88888973/224/3221226614/10000100000000060000000001611743_0.smil/01.m3u8?fmt=ts2hls,244,01.m3u8&accountinfo=UoQbCSdhOfs+Fhzpjb+WON1faRQ9pU15SBx6EULzJM/q63EjPL5/UXSVfEKzDq3xIq7zJ+wiplwyxNJVSG5E6QWZ1F4+6A1eDkDeh5XZlpvpn23wIF+ldb6dnBPa8zHj,END&tenantId=8601
 #EXTINF:-1  tvg-name="怀旧剧场" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/怀旧剧场.png" group-title="央视",怀旧剧场
 http://hns.7159287.xyz:8767/cctvhjjc.m3u8
+#EXTINF:-1 group-title="央视",怀旧剧场
+http://120.238.84.45:9901/tsfile/live/1091_1.m3u8?key=txiptv&playlive=1&authid=0
+#EXTINF:-1 group-title="央视",怀旧剧场
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600099620
 #EXTINF:-1  tvg-name="老故事" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/老故事.png" group-title="央视",老故事
 http://38.75.136.137:98/gslb/dsdqpub/lgs.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="老故事" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/老故事.png" group-title="央视",老故事
@@ -1491,6 +1969,8 @@ http://45.192.97.170:8880/play/473.m3u8
 http://111.61.236.247:9081/hls/62/index.m3u8
 #EXTINF:-1  tvg-name="世界地理" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/世界地理.png" group-title="央视",世界地理
 http://47.97.252.137:8088/daili/sjdl.m3u8?line=0
+#EXTINF:-1 group-title="央视",世界地理
+http://120.238.84.45:9901/tsfile/live/1088_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1  tvg-name="卫生健康" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/卫生健康.png" group-title="央视",卫生健康
 http://38.75.136.137:98/gslb/dsdqpub/wsjk.m3u8?auth=testpub
 #EXTINF:-1  tvg-name="卫生健康" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/卫生健康.png" group-title="央视",卫生健康

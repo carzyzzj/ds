@@ -2,8 +2,6 @@
 #EXTINF:-1 group-title="国际频道",14
 https://stream.ads.ottera.tv/playlist.m3u8?network_id=14
 #EXTINF:-1 group-title="国际频道",4K
-http://A/ku9/js/web.js?id=https://www.gdtv.cn/tvChannelDetail/16
-#EXTINF:-1 group-title="国际频道",4K
 http://114.241.105.149:85/tsfile/live/21/1021_1.m3u8?key=txiptv
 #EXTINF:-1 group-title="国际频道",ABN TV
 https://vod2.abn.co.kr/IPHONE/abn.m3u8
@@ -25,8 +23,6 @@ https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/ch
 http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",Arirang Radio
 http://amdlive-ch03.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",babes
-http://A/ku9/js/web.js?id=http://oxax.tv/babes-tv.html
 #EXTINF:-1 group-title="国际频道",BBC Earth
 https://amg00793-amg00793c6-xumo-us-2669.playouts.now.amagi.tv/BBCStudios-BBCEarthA-hls/playlist540p.m3u8
 #EXTINF:-1 group-title="国际频道",BBS
@@ -153,8 +149,6 @@ https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8
 http://nonghyup.flive.skcdn.com/nonghyup/_definst_/nhlive/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",NowSports1
 http://iptv.4666888.xyz/iptv2A.php?id=11
-#EXTINF:-1 group-title="国际频道",playboy
-http://A/ku9/js/web.js?id=https://adult-tv-channels.com/playboy-tv-online/
 #EXTINF:-1 group-title="国际频道",RNA
 http://5ddfc48289114.streamlock.net/CHsoom/LIVE/playist.m3u8
 #EXTINF:-1 group-title="国际频道",ROCK_Action

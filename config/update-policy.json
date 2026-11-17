@@ -12,5 +12,6 @@
     "other": "其他"
   },
   "deduplicate": "normalized channel name + exact URL",
+  "promo_filter": "PROMO_BLOCK_HOSTS + PROMO_BLOCK_PATH_KEYWORDS in daily.yml",
   "on_source_failure": "retain previous complete playlists"
 }

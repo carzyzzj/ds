@@ -6,6 +6,8 @@
 
 仅 bang359/dsj 的六个频道TXT全量收录有效频道；CCSH、Guovin、Best-fan和用户附件仍只收录原清单中的频道（沿用Excel及之后用户调整后的135台清单）。DSJ可补入清单外频道，包括新增港澳台频道。频道名称做保守规范化（CCTV/CETV连字符、常见清晰度后缀及少量明确别名）；同频道相同URL去重，不同URL保留多线路。无法确认同名关系时保留独立频道，避免错合并。
 
+合并时额外按内置黑名单过滤推广/跳转包装源（host 黑名单 + 路径关键字，见 `daily.yml` 中 `PROMO_BLOCK_HOSTS` / `PROMO_BLOCK_PATH_KEYWORDS`），命中条目在 `reports/latest.json` 中记为 `promo_blocked`。如需新增推广域名，直接在 workflow 里加一行即可。
+
 `config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。只有匹配清单央视、地方台、港澳台名称的频道进入这三个分类，保持清单顺序。其余频道中，中国地区、港澳台地区或汉语（包括方言）频道归“其他”；其余归“国际频道”。新增港澳台频道归其他，不再加入港澳台分类。地区及语言根据名称、上游分组与可用元数据推断，可能误判；无法确认地区/语言的拉丁字母名称暂归国际频道。
 
 仅发布央视、地方台、港澳台、国际频道、其他五类及总表；旧satellite/kids/sports/movies分类文件停止发布，请改用总表或上述分类。
@@ -35,7 +37,7 @@
 
 ## 运行与失败处理
 
-Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。每个远程文件30秒超时、12MB上限，顺序抓取；检查格式和HTTP(S)/RTSP/RTMP/UDP/RTP地址，任一来源下载失败、解析失败或没有有效频道时，保留上一次完整播放列表并记录失败。全部解析、合并完成后才发布。报告见 `reports/latest.json`，列出每个来源的有效条目、新增、重复及无效条目，以及各分类频道数和线路数。
+Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。每个远程文件30秒超时、12MB上限，顺序抓取；检查格式和HTTP(S)/RTSP/RTMP/UDP/RTP地址，任一来源下载失败、解析失败或没有有效频道时，保留上一次完整播放列表并记录失败。全部解析、合并完成后才发布。报告见 `reports/latest.json`，列出每个来源的有效频道、新增、重复、无效条目、被推广过滤条目，以及各分类频道数和线路数。
 
 工作流只使用schedule和workflow_dispatch触发；GITHUB_TOKEN仅申请contents: write，自动提交使用[skip ci]，不会循环触发。若写入失败，请检查仓库Actions权限和分支规则。
 

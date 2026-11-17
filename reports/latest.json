@@ -1,16 +1,17 @@
 {
-  "time": "2026-11-17T09:49:19.812323+00:00",
+  "time": "2026-11-17T11:53:16.256934+00:00",
   "status": "published",
-  "policy": "dsj-all-other-sources-channel-list-five-categories",
+  "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter",
   "sources": [
     {
       "source": "CCSH/IPTV / live.m3u",
       "scope": "channel-list",
-      "entries": 4640,
-      "added": 1962,
-      "duplicates": 43,
+      "entries": 4447,
+      "added": 1869,
+      "duplicates": 41,
       "invalid": 28,
-      "filtered": 2635
+      "filtered": 2537,
+      "promo_blocked": 193
     },
     {
       "source": "User IPv4 supplement / supplemental.m3u",
@@ -19,7 +20,8 @@
       "added": 44,
       "duplicates": 22,
       "invalid": 0,
-      "filtered": 10
+      "filtered": 10,
+      "promo_blocked": 0
     },
     {
       "source": "Guovin IPv4 / ipv4.m3u",
@@ -28,7 +30,8 @@
       "added": 58,
       "duplicates": 144,
       "invalid": 0,
-      "filtered": 75
+      "filtered": 75,
+      "promo_blocked": 0
     },
     {
       "source": "Best-fan IPTV / cn_all_status.m3u8",
@@ -37,16 +40,18 @@
       "added": 230,
       "duplicates": 106,
       "invalid": 0,
-      "filtered": 4
+      "filtered": 4,
+      "promo_blocked": 0
     },
     {
       "source": "bang359/dsj / dsj.txt",
       "scope": "all",
-      "entries": 653,
-      "added": 510,
+      "entries": 492,
+      "added": 349,
       "duplicates": 143,
       "invalid": 1,
-      "filtered": 0
+      "filtered": 0,
+      "promo_blocked": 161
     },
     {
       "source": "bang359/dsj / dsjcs.txt",
@@ -55,7 +60,8 @@
       "added": 1152,
       "duplicates": 109,
       "invalid": 3,
-      "filtered": 0
+      "filtered": 0,
+      "promo_blocked": 0
     },
     {
       "source": "bang359/dsj / dsjcs1.txt",
@@ -64,7 +70,8 @@
       "added": 40,
       "duplicates": 1241,
       "invalid": 3,
-      "filtered": 0
+      "filtered": 0,
+      "promo_blocked": 0
     },
     {
       "source": "bang359/dsj / iphone.txt",
@@ -73,50 +80,53 @@
       "added": 97,
       "duplicates": 8,
       "invalid": 0,
-      "filtered": 0
+      "filtered": 0,
+      "promo_blocked": 0
     },
     {
       "source": "bang359/dsj / ku9.txt",
       "scope": "all",
-      "entries": 709,
-      "added": 705,
-      "duplicates": 4,
+      "entries": 53,
+      "added": 52,
+      "duplicates": 1,
       "invalid": 113,
-      "filtered": 0
+      "filtered": 0,
+      "promo_blocked": 656
     },
     {
       "source": "bang359/dsj / yc.txt",
       "scope": "all",
-      "entries": 643,
+      "entries": 640,
       "added": 219,
-      "duplicates": 424,
+      "duplicates": 421,
       "invalid": 2,
-      "filtered": 0
+      "filtered": 0,
+      "promo_blocked": 3
     }
   ],
-  "total_channels": 1545,
-  "new_channels": 1410,
-  "total_lines": 5017,
+  "total_channels": 1105,
+  "new_channels": 970,
+  "total_lines": 4110,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 1055
+      "lines": 921
     },
     "local": {
       "channels": 68,
-      "lines": 1550
+      "lines": 1395
     },
     "hmt": {
       "channels": 17,
-      "lines": 252
+      "lines": 224
     },
     "international": {
-      "channels": 115,
-      "lines": 134
+      "channels": 113,
+      "lines": 131
     },
     "other": {
-      "channels": 1310,
-      "lines": 2026
+      "channels": 872,
+      "lines": 1439
     }
   }
 }

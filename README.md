@@ -1,74 +1,48 @@
 # 我的电视直播源
 
-每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）从 [CCSH/IPTV live.m3u](https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u) 提取频道，并合并下文列出的补充来源。
+每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）读取下列配置来源。
 
-## 频道和顺序
+## 更新原则
 
-依据用户提供的《清单1.xlsx》各分类明细页，原为198个频道；港澳台按用户截图精简后，当前共135个频道：央视35、地方台68、港澳台17、其它15。国际频道页没有频道，故保留空列表。汇总页数字与明细不一致，以明细为准。地方台中包含卫视频道，少儿、体育等也按照附件原分类。
+仅 bang359/dsj 的六个频道TXT全量收录有效频道；CCSH、Guovin、Best-fan和用户附件仍只收录原清单中的频道（沿用Excel及之后用户调整后的135台清单）。DSJ可补入清单外频道，包括新增港澳台频道。频道名称做保守规范化（CCTV/CETV连字符、常见清晰度后缀及少量明确别名）；同频道相同URL去重，不同URL保留多线路。无法确认同名关系时保留独立频道，避免错合并。
 
-分类顺序及频道行顺序原样保存于 [config/channel-order.json](config/channel-order.json)。每天按完全相同的频道名匹配来源，保持清单顺序，同频道不同URL保留多线路，同频道相同URL去重，线路保持来源顺序。未匹配频道记录在 reports/latest.json，不擅自补入其它频道。
+`config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。新增频道根据名称和上游分组自动分类，并排在对应分类的原频道之后；原频道沿用原分类以兼容已有订阅。分类识别有局限，无法判断的频道归入其它；港澳台新增频道也会自动收录。
 
-## APK 订阅直链
+## 订阅直链
 
-在“我要看电视”中添加以下原始文件链接；建议只订阅总表，避免重复。
-
-|列表|订阅直链|
+|分类|原始文件链接|
 |---|---|
 |全部|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/all.m3u|
 |央视|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/cctv.m3u|
+|卫视|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/satellite.m3u|
 |地方台|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/local.m3u|
-|港澳台|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/hmt.m3u|
-|国际频道（当前为空）|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/international.m3u|
+|港澳台频道|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/hmt.m3u|
+|少儿动漫|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/kids.m3u|
+|体育|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/sports.m3u|
+|影视综艺|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/movies.m3u|
+|国际频道|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/international.m3u|
 |其它|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/other.m3u|
 
-旧的 satellite/kids/sports/us/animation 分类文件在新列表成功生成后移除，请改订阅总表或上面的新分类。仓库更新后，在 APK 中刷新订阅即可获取新内容，具体取决于 APK 的缓存机制；已有 all.m3u 链接无需更改。
+在“我要看电视”APK中刷新订阅即可获取仓库新内容，具体受APK缓存影响。总表已包含全部分类，建议只订阅总表避免重复。
 
-## 运行、配置与失败处理
+## 当前来源
 
-进入 Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。工作流只在定时或手动运行时触发，不因自动提交循环运行；GITHUB_TOKEN 仅申请 contents: write。若出现写入权限错误，检查 Settings → Actions → General 的工作流权限及仓库规则。
+- CCSH/IPTV: https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u
+- User IPv4 supplement: config/supplemental.m3u
+- Guovin IPv4: https://guovin.github.io/iptv-api/ipv4.m3u
+- Best-fan IPTV: https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8
+- bang359/dsj: https://raw.githubusercontent.com/bang359/dsj/main/dsj.txt, https://raw.githubusercontent.com/bang359/dsj/main/dsjcs.txt, https://raw.githubusercontent.com/bang359/dsj/main/dsjcs1.txt, https://raw.githubusercontent.com/bang359/dsj/main/iphone.txt, https://raw.githubusercontent.com/bang359/dsj/main/ku9.txt, https://raw.githubusercontent.com/bang359/dsj/main/yc.txt
 
-来源在 .github/workflows/daily.yml 中指定，config/sources.json 每次同步记录这些来源；更改频道和顺序可编辑 config/channel-order.json。输出为UTF-8标准M3U，保留来源 EXTINF 中的频道标识、台标等信息，替换为清单分类。
+来源配置在 `config/sources.json`，每日直接读取其中启用的url/urls/path；新增TXT文件需要加入配置。用户附件 `config/supplemental.m3u` 为固定副本。DSJ六个TXT按“频道名,地址”解析，跳过分组及公告，不追踪sources.txt中的二级来源。
 
-抓取超时30秒，最大12MB。检查M3U头、频道元信息及HTTP(S)地址格式。抓取失败、无有效条目或一个清单频道也未找到时，保留之前播放列表，并提交简短失败报告、将运行标记失败。部分频道缺失时发布其余匹配频道并列出缺失名单。报告见 [reports/latest.json](reports/latest.json)。
+## 运行与失败处理
 
-这里不逐个播放视频验证，不保证每条线路在国内无代理网络可播放。地域限制、鉴权、时效、防盗链、运营商及播放器差异都可能影响播放；HTTP地址存在也不代表视频能正常播放。
+Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。每个远程文件30秒超时、12MB上限，顺序抓取；检查格式和HTTP(S)/RTSP/RTMP/UDP/RTP地址，任一来源下载失败、解析失败或没有有效频道时，保留上一次完整播放列表并记录失败。全部解析、合并完成后才发布。报告见 `reports/latest.json`，列出每个来源的有效条目、新增、重复及无效条目，以及各分类频道数和线路数。
 
-## 来源与使用限制
+工作流只使用schedule和workflow_dispatch触发；GITHUB_TOKEN仅申请contents: write，自动提交使用[skip ci]，不会循环触发。若写入失败，请检查仓库Actions权限和分支规则。
 
-CCSH 项目说明这些链接采集自互联网，并限制为个人技术学习、非商业用途。公开仓库及项目代码许可证不等于逐个直播流的播放、复制或再分发授权；没有逐流版权保证。请遵守 [上游说明](https://github.com/CCSH/IPTV) 和权利人限制，仅在获得相应许可的范围内使用，不作商业用途。
+## 局限与来源限制
 
+合并成功不代表视频可播放；此任务不逐条播放探测，不依据GitHub服务器连接结果剔除线路。地域、运营商、鉴权、时效、防盗链及播放器差异可能影响国内无代理播放。
 
-## 用户补充 IPv4 线路
-
-附件 `1.3.0-IPv4频道源.m3u` 已保存为 [config/supplemental.m3u](config/supplemental.m3u)。每日获取 CCSH 后自动合并此文件，不会被次日更新覆盖。央视名称如 `CCTV-1 综合` 对应 `CCTV1`；其它名称完全匹配。只补充原清单已有频道，分类、顺序保持不变；同频道相同URL去重，不同URL作为追加线路。
-
-附件共76条线路，其中66条属于原清单频道，CGTN英语、纪录、法语、西语、阿语共10条因原清单没有对应频道而跳过。实际新增及重复数量随上游变化，见 reports/latest.json 的 supplemental（added、duplicates、unmatched）。这是固定附件副本，之后电脑文件的修改不会自动上传；需要更新时替换仓库中的 supplemental.m3u 并手动运行工作流。附件线路同样没有逐流授权或可播放保证。
-
-
-
-## Guovin IPv4 每日补充来源
-
-每日读取 https://guovin.github.io/iptv-api/ipv4.m3u ，在 CCSH 和用户附件线路之后合并。只加入现有频道清单中对应的频道，分类与频道顺序不变；同频道相同URL去重，不同URL保留。支持 CCTV/CETV 的连字符写法，文化精品对应央视文化精品，不能明确对应的频道写入报告 guovin.unmatched，不新增频道。各来源抓取有30秒超时、12MB上限，Guovin 抓取或格式校验失败时整次保留之前完整播放列表并记录失败，避免误丢补充线路。报告 guovin 字段显示匹配频道数、新增、重复及未匹配频道。
-
-Guovin 链接是每日远程读取；config/supplemental.m3u 仍为此前附件固定副本。原 all.m3u 及分类订阅链接不变。抓取与合并成功不代表每条线路可在本地网络播放。
-
-来源说明：https://github.com/Guovin/iptv-api 。项目代码采用 AGPL-3.0，不能据此认定所有直播流都已授权再分发；其免责声明要求使用者确保内容授权，未提供逐条直播流授权证明。只在相应许可范围内使用这些链接。
-
-
-
-## Best-fan 每日补充来源
-
-新增每日读取 https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8 ，在 CCSH、用户附件和 Guovin 之后合并。只匹配当前135频道清单（港澳台按用户图片保留17台），保持分类、顺序和多线路，相同频道相同URL去重。识别 CCTV/CETV 连字符及末尾分辨率括号；未匹配频道不新增，见 reports/latest.json 的 best_fan 字段。沿用30秒抓取超时、12MB上限；新来源失败时保留上次完整列表并记录失败。订阅地址不变。
-
-上游项目：https://github.com/best-fan/iptv-sources 。其 README 声明 MIT、仅供学习研究，要求遵守相关网站条款；这不证明所有直播流均有再分发授权，也不保证在本地网络可播放。
-
-
-## bang359/dsj 每日 TXT 补充来源
-
-每天读取 [bang359/dsj](https://github.com/bang359/dsj) 的 `dsj.txt`、`dsjcs.txt`、`dsjcs1.txt`、`iphone.txt`、`ku9.txt`、`yc.txt`，在已有来源之后合并。`sources.txt` 仅记录来源网址，不作为频道清单读取，也不会继续抓取其中的网址。
-
-支持“频道名,HTTP(S)地址”格式，跳过分组标题及公告；识别 CCTV/CETV 连字符、频道名末尾高清/超清/HD/FHD，以及多线路分隔符和线路说明。仅合并现有135频道清单对应的线路，保留既定分类、频道顺序（含港澳台17台顺序）；同频道同URL去重，不同URL保留。订阅链接不变。
-
-每个文件30秒超时、12MB上限，顺序读取。任一文件下载失败、解析失败或没有有效播放地址时，整次保留上一次完整播放列表并记录失败。报告 `reports/latest.json` 的 `dsj` 字段列出各文件有效条目、新增线路、重复线路及匹配频道数。这里验证的是列表读取与合并，不保证视频在国内无代理网络能播放。
-
-上游未核实到明确的列表再分发许可或逐条直播流授权。公开链接不等于直播内容已授权；请在相应许可范围内使用。
+CCSH、Guovin、Best-fan、DSJ及用户附件的公开链接或代码许可证不等于逐条直播流已获播放、复制或再分发授权；未核实逐流授权。请遵守各上游说明及权利人限制，在相应许可范围内使用。

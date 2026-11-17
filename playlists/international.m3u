@@ -1,1 +1,313 @@
 #EXTM3U
+#EXTINF:-1 group-title="国际频道",14
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=14
+#EXTINF:-1 group-title="国际频道",4K
+http://A/ku9/js/web.js?id=https://www.gdtv.cn/tvChannelDetail/16
+#EXTINF:-1 group-title="国际频道",4K
+http://114.241.105.149:85/tsfile/live/21/1021_1.m3u8?key=txiptv
+#EXTINF:-1 group-title="国际频道",ABN TV
+https://vod2.abn.co.kr/IPHONE/abn.m3u8
+#EXTINF:-1 group-title="国际频道",ANTV
+http://antvlive.ab5c6921.cdnviet.com/antv/chunklist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch/master.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b3256000_sleng.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang Radio
+http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang Radio
+http://amdlive-ch03.ctnd.com.edgesuite.net/arirang_3ch/smil:arirang_3ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",babes
+http://A/ku9/js/web.js?id=http://oxax.tv/babes-tv.html
+#EXTINF:-1 group-title="国际频道",BBS
+http://bbstv.clouducs.com:1935/bbstv-live/livestream/chunklist_w1216149699.m3u8
+#EXTINF:-1 group-title="国际频道",BBS Buddhist Broadcasting
+http://bbstv.clouducs.com:1935/bbstv-live/livestream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",BTN
+http://btn.nowcdn.co.kr/btn/btnlive01/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",C
+http://112.175.51.214:1935/live/myStream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",CECTV-2 国际旅游
+http://A/ku9/js/web.js?id=http://play.cec-tv.com.cn/channel/cec-tv2.m3u8
+#EXTINF:-1 group-title="国际频道",CECTV-3 国际教育
+http://A/ku9/js/web.js?id=http://play.cec-tv.com.cn/channel/cec-tv3.m3u8
+#EXTINF:-1 group-title="国际频道",CECTV-4 国际健康
+http://A/ku9/js/web.js?id=http://play.cec-tv.com.cn/channel/cec-tv4.m3u8
+#EXTINF:-1 group-title="国际频道",CETV01
+http://m.061899.xyz/mg/cetv1
+#EXTINF:-1 group-title="国际频道",CETV02
+http://m.061899.xyz/mg/cetv2
+#EXTINF:-1 group-title="国际频道",CETV04
+http://m.061899.xyz/mg/cetv4
+#EXTINF:-1 group-title="国际频道",CGNTV South Korea
+https://du35ivadp6cxj.cloudfront.net/out/v1/81781d23cbbf490990b2aa9181d4ce19/CGNWebLiveKR.m3u8
+#EXTINF:-1 group-title="国际频道",CGTN-法
+http://go.bkpcp.top/mg/cgtnf
+#EXTINF:-1 group-title="国际频道",CGTN-西
+http://go.bkpcp.top/mg/cgtne
+#EXTINF:-1 group-title="国际频道",CGTN-阿
+http://go.bkpcp.top/mg/cgtna
+#EXTINF:-1 group-title="国际频道",CGTN Documentary
+http://A/ku9/js/web.js?id=https://www.cgtn.com/channel/documentary
+#EXTINF:-1 group-title="国际频道",CGTN Documentary
+http://A/ku9/js/web.js?id=https://www.yangshipin.cn/tv/home?pid=600084781
+#EXTINF:-1 group-title="国际频道",CGTN Español
+http://A/ku9/js/web.js?id=https://espanol.cgtn.com/en-directo
+#EXTINF:-1 group-title="国际频道",CGTN Español
+http://A/ku9/js/web.js?id=https://www.yangshipin.cn/tv/home?pid=600084744
+#EXTINF:-1 group-title="国际频道",CGTN Français
+http://A/ku9/js/web.js?id=https://francais.cgtn.com/channel
+#EXTINF:-1 group-title="国际频道",CGTN Français
+http://A/ku9/js/web.js?id=https://www.yangshipin.cn/tv/home?pid=600084704
+#EXTINF:-1 group-title="国际频道",CGTN Русский
+http://A/ku9/js/web.js?id=https://russian.cgtn.com/channel
+#EXTINF:-1 group-title="国际频道",CGTN Русский
+http://A/ku9/js/web.js?id=https://www.yangshipin.cn/tv/home?pid=600084758
+#EXTINF:-1 group-title="国际频道",CGTN العربية
+http://A/ku9/js/web.js?id=https://arabic.cgtn.com/channel
+#EXTINF:-1 group-title="国际频道",CGTN العربية
+http://A/ku9/js/web.js?id=https://www.yangshipin.cn/tv/home?pid=600084782
+#EXTINF:-1 group-title="国际频道",CGTN外语纪录
+http://english-livebkali.cgtn.com/live/doccgtn_0.m3u8
+#EXTINF:-1 group-title="国际频道",CGTN外语纪录
+http://175.24.134.198:1234/609006487
+#EXTINF:-1 group-title="国际频道",CGTN外语纪录
+http://mg.cttv.vip/609006487
+#EXTINF:-1 group-title="国际频道",CGTN西语
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600084744
+#EXTINF:-1 group-title="国际频道",CGTN阿语
+http://A/ku9/js/web.js?id=https://yangshipin.cn/tv/home?pid=600084782
+#EXTINF:-1 group-title="国际频道",Channel [V]
+http://116.77.33.98:44330/tsfile/live/1010_1.m3u8?key=txiptv&playlive=0&authid=0
+#EXTINF:-1 group-title="国际频道",China Plus Radio
+https://sk.cri.cn/am846.m3u8
+#EXTINF:-1 group-title="国际频道",CJB
+http://1.222.207.80:1935/live/cjbtv/chunklist_w1357270949.m3u8
+#EXTINF:-1 group-title="国际频道",CJ OnStyle
+https://live-ch1.cjonstyle.net/cjmalllive/stream2/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",CNA
+https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_5.m3u8
+#EXTINF:-1 group-title="国际频道",CNN
+https://ds2c506obo7m8.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-7zjq3tdqasbg8/51afc09f-23c7-44d8-b866-8c4669d00460/0.m3u8
+#EXTINF:-1 group-title="国际频道",CPBC
+http://onair1.cpbc.co.kr:1935/tv/smil:live.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",dsjcs.de5.net
+https://gh-proxy.org/https://github.com/bang359/dsj/raw/main/dashang.mp4
+#EXTINF:-1 group-title="国际频道",EBS+2
+http://ebsonairios.ebs.co.kr/plus2tablet500k/tablet500k/plus2tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",EBS1
+http://ebsonairios.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EBS1
+http://ebsonairios.ebs.co.kr/ebsutablet500k/tablet500k/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EBS1
+http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EBS1
+http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/groundwavetablet500k.m3u8
+#EXTINF:-1 group-title="国际频道",EBS2
+http://ebsonairios.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EBS2
+http://ebsonairios.ebs.co.kr/ebs2tablet500k/tablet500k/ebs2tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",EBS2
+http://ebsonairios.ebs.co.kr/ebs2tablet500k/tablet500k/ebs2tablet500k.index.m3u8?
+#EXTINF:-1 group-title="国际频道",EBSe
+http://ebsonairios.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EBSe
+http://ebsonairios.ebs.co.kr/plus3tablet500k/tablet500k/plus3tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",EBSi
+http://ebsonairios.ebs.co.kr/plus1tablet500k/tablet500k/plus1tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",EWTN Africa Asia
+https://cdn3.wowza.com/1/ZVBYYXFLLzE0c3NC/Qk1FMURC/hls/live/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EWTN Asia-Pacific (720p) [Not 24/7]
+https://cdn3.wowza.com/1/QmVNUVhTNTZSS3Uz/YWQ0aHpi/hls/live/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",GCN24 Korean
+http://liveko24-manminglobal3.ktcdn.co.kr/liveko24/gcnko_1300k.stream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",GoodTV
+http://mobliestream.c3tv.com:1935/live/goodtv.sdp/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Gugbang TV (1080p) [Not 24/7]
+http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",HBTV
+http://hoabinhtvlive.746b3ddb.cdnviet.com/hoabinhtv/chunklist.m3u8
+#EXTINF:-1 group-title="国际频道",HITFM国际流行音乐
+https://sk.cri.cn/887.m3u8
+#EXTINF:-1 group-title="国际频道",Home & Shopping
+https://s28.qtcdn.co.kr/media/liveM3U8/idx/518045142/enc/1860408350/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",HOY77
+http://iptv.4666888.xyz/iptv2A.php?id=35
+#EXTINF:-1 group-title="国际频道",JTV
+http://61.85.197.53:1935/jtv_live/myStream/chunklist_w1542137203.m3u8
+#EXTINF:-1 group-title="国际频道",KBS 1TV [Not 24/7]
+http://mytv.dothome.co.kr/ch/public/1.php
+#EXTINF:-1 group-title="国际频道",KBS 2TV [Not 24/7]
+http://mytv.dothome.co.kr/ch/public/3.php
+#EXTINF:-1 group-title="国际频道",KBS Drama
+http://mytv.dothome.co.kr/ch/catv/2.php
+#EXTINF:-1 group-title="国际频道",KBS Life
+http://mytv.dothome.co.kr/ch/catv/5.php
+#EXTINF:-1 group-title="国际频道",KBS LiveCam DokDo
+http://kbs-dokdo.gscdn.com/dokdo_300/dokdo_300.stream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",KBS世界
+https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist_w1306745753.m3u8
+#EXTINF:-1 group-title="国际频道",KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist_w644291506.m3u8
+#EXTINF:-1 group-title="国际频道",KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist.m3u
+#EXTINF:-1 group-title="国际频道",KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist.m3u8
+#EXTINF:-1 group-title="国际频道",KCTV 광주 CH05 (720p) [Not 24/7]
+http://119.77.96.184:1935/chn05/chn05/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Lotte OneTV
+https://onetvhlslive.lotteimall.com/lotteonetvlive/lotteonetvlive.mp4.m3u8
+#EXTINF:-1 group-title="国际频道",MBC Andong (안동 MBC) (360p) [Not 24/7]
+http://andong.webcasting.co.kr/live/mbc/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",MBC Chuncheon (춘천 MBC) (480p) [Not 24/7]
+https://stream.chmbc.co.kr/TV/myStream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",MBC Jeju (제주 MBC) (352p) [Not 24/7]
+https://wowza.jejumbc.com/live/tv_jejumbc/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",MBC Mokpo (목포 MBC) (720p) [Not 24/7]
+http://vod.mpmbc.co.kr:1935/live/encoder-tv/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",MBC Yeosu (여수 MBC) (1080p) [Not 24/7]
+https://5c3639aa99149.streamlock.net/live_TV/tv/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",MBN
+http://mytv.dothome.co.kr/ch/catv/54.php
+#EXTINF:-1 group-title="国际频道",Mytime
+https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00500-studiocitypictu-mytimeuk-xiaomi/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",NewKID2
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=878
+#EXTINF:-1 group-title="国际频道",NewKID4
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=888
+#EXTINF:-1 group-title="国际频道",NewKID4
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=872
+#EXTINF:-1 group-title="国际频道",News max
+http://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8
+#EXTINF:-1 group-title="国际频道",NHK
+https://media-tyo.hls.nhkworld.jp/hls/w/live/master.m3u8
+#EXTINF:-1 group-title="国际频道",NHTV
+http://nonghyup.flive.skcdn.com/nonghyup/_definst_/nhlive/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",playboy
+http://A/ku9/js/web.js?id=https://adult-tv-channels.com/playboy-tv-online/
+#EXTINF:-1 group-title="国际频道",RNA
+http://5ddfc48289114.streamlock.net/CHsoom/LIVE/playist.m3u8
+#EXTINF:-1 group-title="国际频道",ROCK_Action
+http://iptv.4666888.xyz/iptv2A.php?id=50
+#EXTINF:-1 group-title="国际频道",RTHK31
+http://iptv.4666888.xyz/iptv2A.php?id=23
+#EXTINF:-1 group-title="国际频道",SBS CJB (540p) [Not 24/7]
+http://1.222.207.80:1935/live/cjbtv/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",SBS JTV (406p) [Not 24/7]
+http://61.85.197.53:1935/jtv_live/myStream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Shopping NT
+https://live.shoppingntmall.com/live/10011.m3u8
+#EXTINF:-1 group-title="国际频道",SkyTennis+
+http://iptv.4666888.xyz/iptv2A.php?id=6
+#EXTINF:-1 group-title="国际频道",TV
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=595
+#EXTINF:-1 group-title="国际频道",TV1
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=743
+#EXTINF:-1 group-title="国际频道",TV3
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=630
+#EXTINF:-1 group-title="国际频道",TV4
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=644
+#EXTINF:-1 group-title="国际频道",tvchosun
+http://onair.cdn.tvchosun.com/origin1/_definst_/tvchosun_s1/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",tvchosun2
+http://onair2.cdn.tvchosun.com/origin2/_definst_/tvchosun_s3/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",tvN1
+https://d2zyqoz1zsj2mq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-i9yul1lyegl6e-ssai-prd/6d07fe2a_003a_4879_acfc_44e3c3c10f03/hls/playlist.m3u8?
+#EXTINF:-1 group-title="国际频道",tvN2
+https://d21dxaer0ypwk1.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6m2cy2rylsvo-ssai-prd/54ac8e25_eb5a_4f10_ba20_ffb254f0a16c/hls/playlist.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.service_id=KRBC32000261J
+#EXTINF:-1 group-title="国际频道",tvN3
+https://d25mdvvpht3395.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p8ea370fl7r4f-ssai-prd/82f296fd_2916_45b7_b799_525a4226957a/hls/playlist.m3u8?
+#EXTINF:-1 group-title="国际频道",wild earth
+https://wildearth-plex.amagi.tv/masterR1080p.m3u8
+#EXTINF:-1 group-title="国际频道",WionNews
+https://d7x8z4yuq42qn.cloudfront.net/index_7.m3u8
+#EXTINF:-1 group-title="国际频道",Young Hollywood
+https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00143-younghollywoodl-younghollywood-xiaomi/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",伊朗-PBCTapeshTV
+http://iptv.tapesh.tv/tapesh/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",俄罗斯今日
+https://rt-glb.rttv.com/dvr/rtnews/playlist_4500Kb.m3u8
+#EXTINF:-1 group-title="国际频道",印度NDTV
+https://ndtv24x7elemarchana.akamaized.net/hls/live/2003678/ndtv24x7/master.m3u8
+#EXTINF:-1 group-title="国际频道",安徽国际
+http://A/ku9/js/web.js?id=https://www.ahtv.cn/folder9000/folder20193?channelIndex=6
+#EXTINF:-1 group-title="国际频道",广西国际
+http://A/ku9/js/web.js?id=https://tv.gxtv.cn/channel/channelivePlay_bfa17b64157f11e999f0e41f13b60c62.html
+#EXTINF:-1 group-title="国际频道",广西国际
+http://38.75.136.137:98/gslb/dsdqpub/gxgj.m3u8?auth=testpub
+#EXTINF:-1 group-title="国际频道",朝鲜KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist_w644291506.m3u8
+#EXTINF:-1 group-title="国际频道",朝鲜中央台
+http://119.77.96.184:1935/chn05/chn05/chunklist_w644291506.m3u8
+#EXTINF:-1 group-title="国际频道",江苏国际
+http://175.24.134.198:1234/626064674
+#EXTINF:-1 group-title="国际频道",江苏国际
+http://106.52.119.159:1234/626064674
+#EXTINF:-1 group-title="国际频道",江苏国际
+http://A/ku9/js/web.js?id=https://live.jstv.com/?channelId=671
+#EXTINF:-1 group-title="国际频道",法国时尚
+http://lb.streaming.sk/fashiontv/stream/chunklist_w1702070444.m3u8
+#EXTINF:-1 group-title="国际频道",泰国ASTV
+http://news1.live14.com/stream/news1_hi.m3u8
+#EXTINF:-1 group-title="国际频道",浙江国际频道
+http://ali-xwl.cztv.com/live/channel101080Plxw.m3u8
+#EXTINF:-1 group-title="国际频道",浙江国际频道
+https://ali-xwl.cztv.com/live/channel101080Pnew.m3u8
+#EXTINF:-1 group-title="国际频道",浙江国际频道
+https://ali-xwl.cztv.com/live/channel10720Pnew.m3u8
+#EXTINF:-1 group-title="国际频道",深圳国际
+http://A/ku9/js/web.js?id=https://www.sztv.com.cn/pindao/index.html?id=7944
+#EXTINF:-1 group-title="国际频道",韩国-BBS佛教广播
+http://bbstv.clouducs.com:1935/bbstv-live/livestream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国-BBS佛教广播
+http://bbstv.clouducs.com:1935/bbstv-live/livestream/chunklist_w1403706733.m3u8
+#EXTINF:-1 group-title="国际频道",韩国-EBS1
+http://ebsonairios.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国-EBS2
+http://ebsonairios.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国-EBSe
+http://ebsonairios.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国-KCTV_HV2
+http://119.77.96.184:1935/chn05/chn05/chunklist_w1306745753.m3u8
+#EXTINF:-1 group-title="国际频道",韩国-MBC综合频道
+http://vod.mpmbc.co.kr:1935/live/encoder-tv/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|Arirang
+http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|BBS
+http://bbstv.clouducs.com:1935/bbstv-live/livestream/chunklist_w1216149699.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|CJB|SBS
+http://1.222.207.80:1935/live/cjbtv/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBS+2
+http://ebsonairios.ebs.co.kr/plus2tablet500k/tablet500k/plus2tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBS1
+http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBS1
+http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/groundwavetablet500k.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBS2
+http://ebsonairios.ebs.co.kr/ebs2tablet500k/tablet500k/ebs2tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBSe
+http://ebsonairios.ebs.co.kr/plus3tablet500k/tablet500k/plus3tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBSi
+http://ebsonairios.ebs.co.kr/plus1tablet500k/tablet500k/plus1tablet500k.index.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|KBS LIVE
+http://kbs-dokdo.gscdn.com/dokdo_300/dokdo_300.stream/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist_tvbox6.com.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|KCTV 1
+http://119.77.96.184:1935/chn21/chn21/chunklist_tvbox6.com.m3u8
+#EXTINF:-1 group-title="国际频道",韩国中央台
+http://119.77.96.184:1935/chn21/chn21/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",韩国教育台
+http://ebsonairios.ebs.co.kr/ebsutablet500k/_definst_/tablet500k/chunklist_w1965791004.m3u8
+#EXTINF:-1 group-title="国际频道",韩国新闻
+http://amdlive.ctnd.com.edgesuite.net:80/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8

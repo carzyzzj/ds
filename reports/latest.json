@@ -1,149 +1,138 @@
 {
-  "time": "2026-11-17T08:12:41.830635+00:00",
-  "source": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
+  "time": "2026-11-17T08:48:23.428950+00:00",
   "status": "published",
-  "missing": [],
-  "supplemental": {
-    "entries": 76,
-    "added": 44,
-    "duplicates": 22,
-    "unmatched": [
-      "CGTN英语",
-      "CGTN记录",
-      "CGTN法语",
-      "CGTN西语",
-      "CGTN阿语"
-    ]
-  },
-  "guovin": {
-    "url": "https://guovin.github.io/iptv-api/ipv4.m3u",
-    "entries": 277,
-    "added": 58,
-    "duplicates": 144,
-    "matched_channels": 74,
-    "unmatched": [
-      "2026-10-12 11:25:50",
-      "广东珠江",
-      "广东新闻",
-      "广州综合",
-      "浙江经济",
-      "之江纪录",
-      "湖州公共",
-      "湖州新闻综合",
-      "浙江经视",
-      "浙江休闲台",
-      "象山综合",
-      "萧山新闻综合",
-      "海宁新闻综合",
-      "普陀电视台",
-      "上海第一财经",
-      "新闻综合",
-      "欢笑剧场",
-      "法治天地",
-      "第一财经",
-      "都市剧场",
-      "重庆新闻",
-      "苏州4k",
-      "苏州文化生活",
-      "苏州生活资讯",
-      "苏州社会经济",
-      "广西新闻",
-      "广西国际",
-      "南宁影视娱乐",
-      "青川综合",
-      "福建新闻",
-      "福建经济",
-      "福建公共",
-      "福建旅游",
-      "海南文旅",
-      "海南公共",
-      "梨园",
-      "甘肃经济",
-      "甘肃都市",
-      "安徽国际",
-      "吉林乡村",
-      "云南都市",
-      "云南娱乐",
-      "七台河新闻综合",
-      "东森超视",
-      "经典电影",
-      "天津体育",
-      "音乐现场",
-      "西游记",
-      "水浒传",
-      "闯关东"
-    ]
-  },
-  "best_fan": {
-    "url": "https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8",
-    "entries": 340,
-    "added": 230,
-    "duplicates": 106,
-    "matched_channels": 53,
-    "unmatched": [
-      "金鹰卡通"
-    ]
-  },
-  "dsj": {
-    "files": [
-      {
-        "file": "dsj.txt",
-        "entries": 653
-      },
-      {
-        "file": "dsjcs.txt",
-        "entries": 1243
-      },
-      {
-        "file": "dsjcs1.txt",
-        "entries": 1246
-      },
-      {
-        "file": "iphone.txt",
-        "entries": 105
-      },
-      {
-        "file": "ku9.txt",
-        "entries": 706
-      },
-      {
-        "file": "yc.txt",
-        "entries": 634
-      }
-    ],
-    "added": 753,
-    "duplicates": 593,
-    "matched_channels": 103
-  },
-  "source_entries": 4639,
-  "requested_channels": 135,
-  "matched_channels": 135,
-  "total_lines": 3046,
+  "policy": "dsj-all-other-sources-channel-list",
+  "sources": [
+    {
+      "source": "CCSH/IPTV / live.m3u",
+      "scope": "channel-list",
+      "entries": 4640,
+      "added": 1962,
+      "duplicates": 43,
+      "invalid": 28,
+      "filtered": 2635
+    },
+    {
+      "source": "User IPv4 supplement / supplemental.m3u",
+      "scope": "channel-list",
+      "entries": 76,
+      "added": 44,
+      "duplicates": 22,
+      "invalid": 0,
+      "filtered": 10
+    },
+    {
+      "source": "Guovin IPv4 / ipv4.m3u",
+      "scope": "channel-list",
+      "entries": 277,
+      "added": 58,
+      "duplicates": 144,
+      "invalid": 0,
+      "filtered": 75
+    },
+    {
+      "source": "Best-fan IPTV / cn_all_status.m3u8",
+      "scope": "channel-list",
+      "entries": 340,
+      "added": 230,
+      "duplicates": 106,
+      "invalid": 0,
+      "filtered": 4
+    },
+    {
+      "source": "bang359/dsj / dsj.txt",
+      "scope": "all",
+      "entries": 653,
+      "added": 510,
+      "duplicates": 143,
+      "invalid": 1,
+      "filtered": 0
+    },
+    {
+      "source": "bang359/dsj / dsjcs.txt",
+      "scope": "all",
+      "entries": 1261,
+      "added": 1152,
+      "duplicates": 109,
+      "invalid": 3,
+      "filtered": 0
+    },
+    {
+      "source": "bang359/dsj / dsjcs1.txt",
+      "scope": "all",
+      "entries": 1281,
+      "added": 40,
+      "duplicates": 1241,
+      "invalid": 3,
+      "filtered": 0
+    },
+    {
+      "source": "bang359/dsj / iphone.txt",
+      "scope": "all",
+      "entries": 105,
+      "added": 97,
+      "duplicates": 8,
+      "invalid": 0,
+      "filtered": 0
+    },
+    {
+      "source": "bang359/dsj / ku9.txt",
+      "scope": "all",
+      "entries": 709,
+      "added": 705,
+      "duplicates": 4,
+      "invalid": 113,
+      "filtered": 0
+    },
+    {
+      "source": "bang359/dsj / yc.txt",
+      "scope": "all",
+      "entries": 643,
+      "added": 219,
+      "duplicates": 424,
+      "invalid": 2,
+      "filtered": 0
+    }
+  ],
+  "total_channels": 1545,
+  "new_channels": 1410,
+  "total_lines": 5017,
   "categories": {
     "cctv": {
-      "requested": 35,
-      "matched": 35,
-      "lines": 1033
+      "channels": 133,
+      "lines": 1260
+    },
+    "satellite": {
+      "channels": 53,
+      "lines": 74
     },
     "local": {
-      "requested": 68,
-      "matched": 68,
-      "lines": 1545
+      "channels": 615,
+      "lines": 2275
     },
     "hmt": {
-      "requested": 17,
-      "matched": 17,
-      "lines": 243
+      "channels": 84,
+      "lines": 338
+    },
+    "kids": {
+      "channels": 45,
+      "lines": 71
+    },
+    "sports": {
+      "channels": 32,
+      "lines": 44
+    },
+    "movies": {
+      "channels": 91,
+      "lines": 131
     },
     "international": {
-      "requested": 0,
-      "matched": 0,
-      "lines": 0
+      "channels": 125,
+      "lines": 156
     },
     "other": {
-      "requested": 15,
-      "matched": 15,
-      "lines": 225
+      "channels": 367,
+      "lines": 668
     }
   }
 }

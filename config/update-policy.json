@@ -6,14 +6,10 @@
   "preferred_order": "config/channel-order.json",
   "categories": {
     "cctv": "央视",
-    "satellite": "卫视",
     "local": "地方台",
     "hmt": "港澳台频道",
-    "kids": "少儿动漫",
-    "sports": "体育",
-    "movies": "影视综艺",
     "international": "国际频道",
-    "other": "其它"
+    "other": "其他"
   },
   "deduplicate": "normalized channel name + exact URL",
   "on_source_failure": "retain previous complete playlists"

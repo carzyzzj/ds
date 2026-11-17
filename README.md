@@ -6,7 +6,9 @@
 
 仅 bang359/dsj 的六个频道TXT全量收录有效频道；CCSH、Guovin、Best-fan和用户附件仍只收录原清单中的频道（沿用Excel及之后用户调整后的135台清单）。DSJ可补入清单外频道，包括新增港澳台频道。频道名称做保守规范化（CCTV/CETV连字符、常见清晰度后缀及少量明确别名）；同频道相同URL去重，不同URL保留多线路。无法确认同名关系时保留独立频道，避免错合并。
 
-`config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。新增频道根据名称和上游分组自动分类，并排在对应分类的原频道之后；原频道沿用原分类以兼容已有订阅。分类识别有局限，无法判断的频道归入其它；港澳台新增频道也会自动收录。
+`config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。只有匹配清单央视、地方台、港澳台名称的频道进入这三个分类，保持清单顺序。其余频道中，中国地区、港澳台地区或汉语（包括方言）频道归“其他”；其余归“国际频道”。新增港澳台频道归其他，不再加入港澳台分类。地区及语言根据名称、上游分组与可用元数据推断，可能误判；无法确认地区/语言的拉丁字母名称暂归国际频道。
+
+仅发布央视、地方台、港澳台、国际频道、其他五类及总表；旧satellite/kids/sports/movies分类文件停止发布，请改用总表或上述分类。
 
 ## 订阅直链
 
@@ -14,14 +16,10 @@
 |---|---|
 |全部|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/all.m3u|
 |央视|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/cctv.m3u|
-|卫视|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/satellite.m3u|
 |地方台|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/local.m3u|
 |港澳台频道|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/hmt.m3u|
-|少儿动漫|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/kids.m3u|
-|体育|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/sports.m3u|
-|影视综艺|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/movies.m3u|
 |国际频道|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/international.m3u|
-|其它|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/other.m3u|
+|其他|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/other.m3u|
 
 在“我要看电视”APK中刷新订阅即可获取仓库新内容，具体受APK缓存影响。总表已包含全部分类，建议只订阅总表避免重复。
 

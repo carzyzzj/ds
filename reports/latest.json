@@ -1,7 +1,7 @@
 {
-  "time": "2026-11-17T08:48:23.428950+00:00",
+  "time": "2026-11-17T09:49:19.812323+00:00",
   "status": "published",
-  "policy": "dsj-all-other-sources-channel-list",
+  "policy": "dsj-all-other-sources-channel-list-five-categories",
   "sources": [
     {
       "source": "CCSH/IPTV / live.m3u",
@@ -99,40 +99,24 @@
   "total_lines": 5017,
   "categories": {
     "cctv": {
-      "channels": 133,
-      "lines": 1260
-    },
-    "satellite": {
-      "channels": 53,
-      "lines": 74
+      "channels": 35,
+      "lines": 1055
     },
     "local": {
-      "channels": 615,
-      "lines": 2275
+      "channels": 68,
+      "lines": 1550
     },
     "hmt": {
-      "channels": 84,
-      "lines": 338
-    },
-    "kids": {
-      "channels": 45,
-      "lines": 71
-    },
-    "sports": {
-      "channels": 32,
-      "lines": 44
-    },
-    "movies": {
-      "channels": 91,
-      "lines": 131
+      "channels": 17,
+      "lines": 252
     },
     "international": {
-      "channels": 125,
-      "lines": 156
+      "channels": 115,
+      "lines": 134
     },
     "other": {
-      "channels": 367,
-      "lines": 668
+      "channels": 1310,
+      "lines": 2026
     }
   }
 }

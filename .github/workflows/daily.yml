@@ -140,6 +140,31 @@ jobs:
               if not remote['entries']: raise ValueError('No valid Best-fan source entries')
               remote['matched_channels']=len(remote['matched_channels'])
               report['best_fan']=remote
+              dsj={'files':[],'added':0,'duplicates':0,'matched_channels':[]}
+              for filename in ['dsj.txt','dsjcs.txt','dsjcs1.txt','iphone.txt','ku9.txt','yc.txt']:
+                  req=urllib.request.Request('https://raw.githubusercontent.com/bang359/dsj/main/'+filename,headers={'User-Agent':'my-tv-sources/3.2'})
+                  with urllib.request.urlopen(req,timeout=30) as response: txt=response.read(12000001)
+                  if len(txt)>12000000: raise ValueError('DSJ file exceeds 12MB')
+                  valid=0
+                  for row in txt.decode('utf-8-sig').splitlines():
+                      if ',' not in row: continue
+                      original,urls=row.split(',',1); name=original.strip()
+                      name=re.sub(r'\s*(?:高清|超清|HD|FHD)$','',name,flags=re.I)
+                      match=re.fullmatch(r'(CCTV|CETV)-?(\d+)(\+)?(?:\s+.*)?',name,re.I)
+                      if match: name=match[1].upper()+match[2]+(match[3] or '')
+                      for url in urls.split('#'):
+                          url=url.split('$',1)[0].strip()
+                          if not re.fullmatch(r'https?://[^\s]+',url): continue
+                          valid+=1
+                          if name not in wanted: continue
+                          if name not in dsj['matched_channels']: dsj['matched_channels'].append(name)
+                          if url in seen[name]: dsj['duplicates']+=1
+                          else:
+                              seen[name].add(url); found[name].append(('#EXTINF:-1',url)); dsj['added']+=1
+                  if not valid: raise ValueError('No valid DSJ entries in '+filename)
+                  dsj['files'].append({'file':filename,'entries':valid})
+              dsj['matched_channels']=len(dsj['matched_channels'])
+              report['dsj']=dsj
               rendered={}; combined=[]; counts={}; matched=0
               for group in groups:
                   records=[]

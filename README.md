@@ -1,10 +1,10 @@
 # 我的电视直播源
 
-每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）从 [CCSH/IPTV live.m3u](https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u) 提取频道。已替换此前所有采集来源和整理逻辑。
+每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）从 [CCSH/IPTV live.m3u](https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u) 提取频道，并合并下文列出的补充来源。
 
 ## 频道和顺序
 
-依据用户提供的《清单1.xlsx》各分类明细页，共198个频道：央视35、地方台68、港澳台频道80、其它15。国际频道页没有频道，故保留空列表。汇总页数字与明细不一致，以明细为准。地方台中包含卫视频道，少儿、体育等也按照附件原分类。
+依据用户提供的《清单1.xlsx》各分类明细页，原为198个频道；港澳台按用户截图精简后，当前共135个频道：央视35、地方台68、港澳台17、其它15。国际频道页没有频道，故保留空列表。汇总页数字与明细不一致，以明细为准。地方台中包含卫视频道，少儿、体育等也按照附件原分类。
 
 分类顺序及频道行顺序原样保存于 [config/channel-order.json](config/channel-order.json)。每天按完全相同的频道名匹配来源，保持清单顺序，同频道不同URL保留多线路，同频道相同URL去重，线路保持来源顺序。未匹配频道记录在 reports/latest.json，不擅自补入其它频道。
 
@@ -27,7 +27,7 @@
 
 进入 Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。工作流只在定时或手动运行时触发，不因自动提交循环运行；GITHUB_TOKEN 仅申请 contents: write。若出现写入权限错误，检查 Settings → Actions → General 的工作流权限及仓库规则。
 
-唯一来源在 .github/workflows/daily.yml 的 source 中指定，config/sources.json 每次同步记录该来源；更改频道和顺序可编辑 config/channel-order.json。输出为UTF-8标准M3U，保留来源 EXTINF 中的频道标识、台标等信息，替换为清单分类。
+来源在 .github/workflows/daily.yml 中指定，config/sources.json 每次同步记录这些来源；更改频道和顺序可编辑 config/channel-order.json。输出为UTF-8标准M3U，保留来源 EXTINF 中的频道标识、台标等信息，替换为清单分类。
 
 抓取超时30秒，最大12MB。检查M3U头、频道元信息及HTTP(S)地址格式。抓取失败、无有效条目或一个清单频道也未找到时，保留之前播放列表，并提交简短失败报告、将运行标记失败。部分频道缺失时发布其余匹配频道并列出缺失名单。报告见 [reports/latest.json](reports/latest.json)。
 
@@ -48,7 +48,7 @@ CCSH 项目说明这些链接采集自互联网，并限制为个人技术学习
 
 ## Guovin IPv4 每日补充来源
 
-每日读取 https://guovin.github.io/iptv-api/ipv4.m3u ，在 CCSH 和用户附件线路之后合并。只加入原清单198个频道中对应的频道，分类与频道顺序不变；同频道相同URL去重，不同URL保留。支持 CCTV/CETV 的连字符写法，文化精品对应央视文化精品，不能明确对应的频道写入报告 guovin.unmatched，不新增频道。各来源抓取有30秒超时、12MB上限，Guovin 抓取或格式校验失败时整次保留之前完整播放列表并记录失败，避免误丢补充线路。报告 guovin 字段显示匹配频道数、新增、重复及未匹配频道。
+每日读取 https://guovin.github.io/iptv-api/ipv4.m3u ，在 CCSH 和用户附件线路之后合并。只加入现有频道清单中对应的频道，分类与频道顺序不变；同频道相同URL去重，不同URL保留。支持 CCTV/CETV 的连字符写法，文化精品对应央视文化精品，不能明确对应的频道写入报告 guovin.unmatched，不新增频道。各来源抓取有30秒超时、12MB上限，Guovin 抓取或格式校验失败时整次保留之前完整播放列表并记录失败，避免误丢补充线路。报告 guovin 字段显示匹配频道数、新增、重复及未匹配频道。
 
 Guovin 链接是每日远程读取；config/supplemental.m3u 仍为此前附件固定副本。原 all.m3u 及分类订阅链接不变。抓取与合并成功不代表每条线路可在本地网络播放。
 
@@ -61,3 +61,14 @@ Guovin 链接是每日远程读取；config/supplemental.m3u 仍为此前附件�
 新增每日读取 https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8 ，在 CCSH、用户附件和 Guovin 之后合并。只匹配当前135频道清单（港澳台按用户图片保留17台），保持分类、顺序和多线路，相同频道相同URL去重。识别 CCTV/CETV 连字符及末尾分辨率括号；未匹配频道不新增，见 reports/latest.json 的 best_fan 字段。沿用30秒抓取超时、12MB上限；新来源失败时保留上次完整列表并记录失败。订阅地址不变。
 
 上游项目：https://github.com/best-fan/iptv-sources 。其 README 声明 MIT、仅供学习研究，要求遵守相关网站条款；这不证明所有直播流均有再分发授权，也不保证在本地网络可播放。
+
+
+## bang359/dsj 每日 TXT 补充来源
+
+每天读取 [bang359/dsj](https://github.com/bang359/dsj) 的 `dsj.txt`、`dsjcs.txt`、`dsjcs1.txt`、`iphone.txt`、`ku9.txt`、`yc.txt`，在已有来源之后合并。`sources.txt` 仅记录来源网址，不作为频道清单读取，也不会继续抓取其中的网址。
+
+支持“频道名,HTTP(S)地址”格式，跳过分组标题及公告；识别 CCTV/CETV 连字符、频道名末尾高清/超清/HD/FHD，以及多线路分隔符和线路说明。仅合并现有135频道清单对应的线路，保留既定分类、频道顺序（含港澳台17台顺序）；同频道同URL去重，不同URL保留。订阅链接不变。
+
+每个文件30秒超时、12MB上限，顺序读取。任一文件下载失败、解析失败或没有有效播放地址时，整次保留上一次完整播放列表并记录失败。报告 `reports/latest.json` 的 `dsj` 字段列出各文件有效条目、新增线路、重复线路及匹配频道数。这里验证的是列表读取与合并，不保证视频在国内无代理网络能播放。
+
+上游未核实到明确的列表再分发许可或逐条直播流授权。公开链接不等于直播内容已授权；请在相应许可范围内使用。

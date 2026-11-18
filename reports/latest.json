@@ -1,16 +1,16 @@
 {
-  "time": "2026-11-17T11:53:16.256934+00:00",
+  "time": "2026-11-18T03:44:27.443920+00:00",
   "status": "published",
   "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter",
   "sources": [
     {
       "source": "CCSH/IPTV / live.m3u",
       "scope": "channel-list",
-      "entries": 4447,
-      "added": 1869,
+      "entries": 4456,
+      "added": 1870,
       "duplicates": 41,
       "invalid": 28,
-      "filtered": 2537,
+      "filtered": 2545,
       "promo_blocked": 193
     },
     {
@@ -36,11 +36,11 @@
     {
       "source": "Best-fan IPTV / cn_all_status.m3u8",
       "scope": "channel-list",
-      "entries": 340,
-      "added": 230,
-      "duplicates": 106,
+      "entries": 448,
+      "added": 330,
+      "duplicates": 109,
       "invalid": 0,
-      "filtered": 4,
+      "filtered": 9,
       "promo_blocked": 0
     },
     {
@@ -87,8 +87,8 @@
       "source": "bang359/dsj / ku9.txt",
       "scope": "all",
       "entries": 53,
-      "added": 52,
-      "duplicates": 1,
+      "added": 53,
+      "duplicates": 0,
       "invalid": 113,
       "filtered": 0,
       "promo_blocked": 656
@@ -106,15 +106,15 @@
   ],
   "total_channels": 1105,
   "new_channels": 970,
-  "total_lines": 4110,
+  "total_lines": 4212,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 921
+      "lines": 944
     },
     "local": {
       "channels": 68,
-      "lines": 1395
+      "lines": 1474
     },
     "hmt": {
       "channels": 17,

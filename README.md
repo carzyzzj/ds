@@ -1,1 +1,48 @@
+# 我的电视直播源
 
+每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）读取下列配置来源。
+
+## 更新原则
+
+仅 bang359/dsj 的六个频道TXT全量收录有效频道；CCSH、Guovin、Best-fan和用户附件仍只收录原清单中的频道（沿用Excel及之后用户调整后的135台清单）。DSJ可补入清单外频道，包括新增港澳台频道。频道名称做保守规范化（CCTV/CETV连字符、常见清晰度后缀及少量明确别名）；同频道相同URL去重，不同URL保留多线路。无法确认同名关系时保留独立频道，避免错合并。
+
+合并时额外按内置黑名单过滤推广/跳转包装源（host 黑名单 + 路径关键字，见 `daily.yml` 中 `PROMO_BLOCK_HOSTS` / `PROMO_BLOCK_PATH_KEYWORDS`），命中条目在 `reports/latest.json` 中记为 `promo_blocked`。如需新增推广域名，直接在 workflow 里加一行即可。
+
+`config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。只有匹配清单央视、地方台、港澳台名称的频道进入这三个分类，保持清单顺序。其余频道中，中国地区、港澳台地区或汉语（包括方言）频道归“其他”；其余归“国际频道”。新增港澳台频道归其他，不再加入港澳台分类。地区及语言根据名称、上游分组与可用元数据推断，可能误判；无法确认地区/语言的拉丁字母名称暂归国际频道。
+
+仅发布央视、地方台、港澳台、国际频道、其他五类及总表；旧satellite/kids/sports/movies分类文件停止发布，请改用总表或上述分类。
+
+## 订阅直链
+
+|分类|原始文件链接|
+|---|---|
+|全部|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/all.m3u|
+|央视|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/cctv.m3u|
+|地方台|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/local.m3u|
+|港澳台频道|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/hmt.m3u|
+|国际频道|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/international.m3u|
+|其他|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/other.m3u|
+
+在“我要看电视”APK中刷新订阅即可获取仓库新内容，具体受APK缓存影响。总表已包含全部分类，建议只订阅总表避免重复。
+
+## 当前来源
+
+- CCSH/IPTV: https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u
+- User IPv4 supplement: config/supplemental.m3u
+- Guovin IPv4: https://guovin.github.io/iptv-api/ipv4.m3u
+- Best-fan IPTV: https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8
+- bang359/dsj: https://raw.githubusercontent.com/bang359/dsj/main/dsj.txt, https://raw.githubusercontent.com/bang359/dsj/main/dsjcs.txt, https://raw.githubusercontent.com/bang359/dsj/main/dsjcs1.txt, https://raw.githubusercontent.com/bang359/dsj/main/iphone.txt, https://raw.githubusercontent.com/bang359/dsj/main/ku9.txt, https://raw.githubusercontent.com/bang359/dsj/main/yc.txt
+
+来源配置在 `config/sources.json`，每日直接读取其中启用的url/urls/path；新增TXT文件需要加入配置。用户附件 `config/supplemental.m3u` 为固定副本。DSJ六个TXT按“频道名,地址”解析，跳过分组及公告，不追踪sources.txt中的二级来源。
+
+## 运行与失败处理
+
+Actions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。每个远程文件30秒超时、12MB上限，顺序抓取；检查格式和HTTP(S)/RTSP/RTMP/UDP/RTP地址，任一来源下载失败、解析失败或没有有效频道时，保留上一次完整播放列表并记录失败。全部解析、合并完成后才发布。报告见 `reports/latest.json`，列出每个来源的有效频道、新增、重复、无效条目、被推广过滤条目，以及各分类频道数和线路数。
+
+工作流只使用schedule和workflow_dispatch触发；GITHUB_TOKEN仅申请contents: write，自动提交使用[skip ci]，不会循环触发。若写入失败，请检查仓库Actions权限和分支规则。
+
+## 局限与来源限制
+
+合并成功不代表视频可播放；此任务不逐条播放探测，不依据GitHub服务器连接结果剔除线路。地域、运营商、鉴权、时效、防盗链及播放器差异可能影响国内无代理播放。
+
+CCSH、Guovin、Best-fan、DSJ及用户附件的公开链接或代码许可证不等于逐条直播流已获播放、复制或再分发授权；未核实逐流授权。请遵守各上游说明及权利人限制，在相应许可范围内使用。

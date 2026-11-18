@@ -18,7 +18,7 @@
     "concurrency": 32,
     "timeout": 6,
     "keep_unverified": true,
-    "max_lines_per_channel": 10
+    "max_lines_per_channel": 0
   },
   "on_source_failure": "retain previous complete playlists"
 }

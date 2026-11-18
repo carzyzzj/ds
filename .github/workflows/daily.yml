@@ -54,7 +54,7 @@ jobs:
           PROBE_CONCURRENCY = 32            # 探测并发数
           PROBE_TIMEOUT = 6                 # 单条线路探测超时（秒）
           KEEP_UNVERIFIED = True            # 不确定状态（forbidden / 超时 / 4xx 非致命 / 跳转未终止）是否保留为兜底
-          MAX_LINES_PER_CHANNEL = 10          # 每个频道最多保留几条线路；0 = 不限
+          MAX_LINES_PER_CHANNEL = 0          # 每个频道最多保留几条线路；0 = 不限
           UPSTREAM_FETCH_CONCURRENCY = 4    # 上游源抓取并发数
           UPSTREAM_RETRY = 1                # 上游源抓取失败重试次数
           PROBE_USER_AGENT = 'my-tv-sources/4.0'

@@ -20,17 +20,77 @@ jobs:
       - name: Merge DSJ all channels and other listed channels
         shell: python
         run: |
+          # -*- coding: utf-8 -*-
+          """
+          IPTV 源采集 / 合并 / 探测脚本（daily.yml 内嵌 Python 的独立可运行版本）。
+
+          行为：
+          1. 并发抓取 config/sources.json 中启用的上游 m3u / txt；
+          2. 频道名规范化、同频道同 URL 去重、五类分类；
+          3. 推广 / 跳转包装源按内置黑名单剔除；
+          4. （可选）并发探测每条线路连通性，剔除确认死链，可用线路按首包时间排序；
+          5. 每频道限保留 N 条，输出 playlists/*.m3u 与 reports/latest.json。
+
+          在 GitHub Actions 中由 daily.yml 调用；本地可直接运行做调试：
+              python iptv_collect.py
+          """
+
           import hashlib
           import json
           import os
           import re
+          import socket
+          import time
           import unicodedata
+          import urllib.error
+          import urllib.parse
           import urllib.request
+          from concurrent.futures import ThreadPoolExecutor, as_completed
           from datetime import datetime, timezone
           from pathlib import Path
-          
-          CATEGORIES = [('cctv', '央视'), ('local', '地方台'), ('hmt', '港澳台频道'), ('international', '国际频道'), ('other', '其他')]
-          
+
+          # ===================== 可调参数 =====================
+          PROBE_ENABLED = True              # 是否对采集到的线路做连通性探测
+          PROBE_CONCURRENCY = 32            # 探测并发数
+          PROBE_TIMEOUT = 6                 # 单条线路探测超时（秒）
+          KEEP_UNVERIFIED = True            # 不确定状态（forbidden / 超时 / 4xx 非致命 / 跳转未终止）是否保留为兜底
+          MAX_LINES_PER_CHANNEL = 10          # 每个频道最多保留几条线路；0 = 不限
+          UPSTREAM_FETCH_CONCURRENCY = 4    # 上游源抓取并发数
+          UPSTREAM_RETRY = 1                # 上游源抓取失败重试次数
+          PROBE_USER_AGENT = 'my-tv-sources/4.0'
+          # ==================================================
+
+          CATEGORIES = [('cctv', '央视'), ('local', '地方台'), ('hmt', '港澳台频道'),
+                        ('international', '国际频道'), ('other', '其他')]
+
+          # --- Promo / redirect-wrapper filter ---
+          PROMO_BLOCK_HOSTS = {
+              'a',                                 # http://A/ku9/js/web.js?... （假 host，JS 跳转壳）
+              'kkk.jjjj.jiduo.me',                 # /api.php?n=tttt&id=...&tk=... token 聚合
+              'kkk.888.3116598.xyz',               # 同一套 API 的镜像域名
+              'cdn6.bkpcp.top',                    # /tl/tuiliu.php 推流跳转脚本
+              'go.bkpcp.top',                      # /mg/ 跳转网关
+              'm.061899.xyz',                      # /mg/ 镜像网关
+              'php.jdshipin.com',                  # /TVOD/iptv.php 网页聚合站
+          }
+          PROMO_BLOCK_PATH_KEYWORDS = (
+              '/ku9/js/web.js',                    # 指向网页的 JS 壳
+              'tuiliu.php',                        # 推流跳转脚本
+          )
+
+
+          def is_promo_url(url):
+              try:
+                  u = urllib.parse.urlparse(url)
+              except Exception:
+                  return True
+              host = (u.hostname or '').lower()
+              if host in PROMO_BLOCK_HOSTS:
+                  return True
+              path = u.path or ''
+              return any(kw in path for kw in PROMO_BLOCK_PATH_KEYWORDS)
+
+
           def normalize(name):
               name = unicodedata.normalize('NFKC', name).strip()
               name = re.sub(r'\s*\((?:\d+[pi]|[248]K)\)\s*$', '', name, flags=re.I)
@@ -38,13 +98,16 @@ jobs:
               match = re.fullmatch(r'(CCTV|CETV)\s*-?\s*(\d+)(\+)?(?:\s+.*|[-—].*)?', name, re.I)
               if match:
                   name = match[1].upper() + match[2] + (match[3] or '')
-              return {'文化精品': '央视文化精品', '翡翠台': 'TVB翡翠台', '凤凰中文台': '凤凰中文', '凤凰资讯台': '凤凰资讯', '凤凰香港台': '凤凰香港'}.get(name, name)
-          
+              return {'文化精品': '央视文化精品', '翡翠台': 'TVB翡翠台', '凤凰中文台': '凤凰中文',
+                      '凤凰资讯台': '凤凰资讯', '凤凰香港台': '凤凰香港'}.get(name, name)
+
+
           def key(name):
               return re.sub(r'\s+', '', normalize(name)).casefold()
-          
+
+
           def parse(text):
-              lines = text.lstrip('\ufeff').splitlines()
+              lines = text.lstrip('﻿').splitlines()
               if lines and lines[0].strip().startswith('#EXTM3U'):
                   pending = None
                   for line in lines[1:]:
@@ -56,7 +119,8 @@ jobs:
                               meta, name = pending.rsplit(',', 1)
                               match = re.search(r'group-title="([^"]*)"', meta)
                               attrs = re.findall(r'(?:tvg-)?(country|language)="([^"]*)"', meta, re.I)
-                              hint = ' '.join([match[1] if match else '']+[k.lower()+':'+v for k,v in attrs])
+                              hint = ' '.join([match[1] if match else ''] +
+                                              [k.lower() + ':' + v for k, v in attrs])
                               yield name.strip(), line, meta, hint
                           pending = None
               else:
@@ -70,12 +134,12 @@ jobs:
                           continue
                       for url in urls.split('#'):
                           yield name.strip(), url.split('$', 1)[0].strip(), '#EXTINF:-1', group
-          
+
+
           def classify(name, hints, preferred):
               listed = preferred.get(key(name))
               if listed in {'cctv', 'local', 'hmt'}:
                   return listed
-              # Region and language are inferred from names and upstream metadata.
               h = ' '.join(hints)
               if re.search(r'CCTV|CETV|CGTN|CHC|NewTV|iHOT|TVB|ViuTV|RTHK|HOY|NowTV|翡翠|凤凰|鳳凰|无线|無線|东森|東森|民视|民視|三立|纬来|緯來|八大|靖天|靖洋|龙华|龍華|台视|台視|华视|華視|公视|公視|中视|中視|澳视|澳視', name, re.I):
                   return 'other'
@@ -86,28 +150,128 @@ jobs:
                   return 'international'
               if re.search(domestic, h, re.I):
                   return 'other'
-              if re.search(r'[\u3400-\u9fff]', name):
+              if re.search(r'[一-鿿]', name):
                   return 'other'
               return 'international'
-          
+
+
+          def fetch_target(source_name, target):
+              """抓取单个上游源，带一次重试；返回文本。失败抛异常。"""
+              last_err = None
+              for _ in range(UPSTREAM_RETRY + 1):
+                  try:
+                      if '://' in target:
+                          request = urllib.request.Request(target, headers={'User-Agent': PROBE_USER_AGENT})
+                          with urllib.request.urlopen(request, timeout=30) as response:
+                              data = response.read(12000001)
+                      else:
+                          data = Path(target).read_bytes()
+                      if len(data) > 12000000:
+                          raise ValueError('Source exceeds 12MB: ' + target)
+                      text = data.decode('utf-8-sig')
+                      if target.endswith(('.m3u', '.m3u8')) and not text.lstrip().startswith('#EXTM3U'):
+                          raise ValueError('Invalid M3U header: ' + target)
+                      return text
+                  except Exception as e:  # noqa: BLE001
+                      last_err = e
+              raise last_err
+
+
+          def probe_url(url):
+              """探测单条线路。返回状态字典；非 http(s) 标记 unsupported。"""
+              result = {'url': url, 'status': 'unknown', 'http': 0, 'ttfb_ms': -1, 'final_url': ''}
+              if not re.match(r'^https?://', url, re.I):
+                  result['status'] = 'unsupported'
+                  return result
+              req = urllib.request.Request(url, headers={'User-Agent': PROBE_USER_AGENT, 'Accept': '*/*'})
+              start = time.monotonic()
+              try:
+                  with urllib.request.urlopen(req, timeout=PROBE_TIMEOUT) as resp:
+                      result['http'] = resp.status
+                      result['final_url'] = resp.geturl()
+                      result['ttfb_ms'] = round((time.monotonic() - start) * 1000)
+                      if 200 <= resp.status < 300:
+                          result['status'] = 'alive'
+                      elif resp.status in (401, 403):
+                          result['status'] = 'forbidden'
+                      elif resp.status in (404, 410):
+                          result['status'] = 'dead'
+                      elif 500 <= resp.status < 600:
+                          result['status'] = 'dead'
+                      else:
+                          result['status'] = 'unverified'
+                      resp.close()
+              except urllib.error.HTTPError as e:
+                  result['http'] = e.code
+                  result['ttfb_ms'] = round((time.monotonic() - start) * 1000)
+                  if e.code in (401, 403):
+                      result['status'] = 'forbidden'
+                  elif e.code in (404, 410):
+                      result['status'] = 'dead'
+                  elif 500 <= e.code < 600:
+                      result['status'] = 'dead'
+                  else:
+                      result['status'] = 'unverified'
+              except urllib.error.URLError as e:
+                  reason = e.reason
+                  if isinstance(reason, socket.gaierror):
+                      result['status'] = 'dead'                       # DNS 解析失败
+                  elif isinstance(reason, (ConnectionRefusedError, ConnectionResetError, BrokenPipeError)):
+                      result['status'] = 'dead'                       # 连接被拒 / 重置
+                  elif isinstance(reason, (socket.timeout, TimeoutError)):
+                      result['status'] = 'unreachable'                # 超时：海外视角不可达，保守保留
+                  else:
+                      result['status'] = 'unreachable'
+              except (socket.timeout, TimeoutError, ConnectionResetError, BrokenPipeError):
+                  result['status'] = 'unreachable'
+              except Exception:  # noqa: BLE001
+                  result['status'] = 'dead'
+              return result
+
+
+          def probe_all(channels):
+              """对所有唯一 URL 并发探测，结果挂到频道条目上。"""
+              if not PROBE_ENABLED:
+                  return {'enabled': False}
+              urls = {url for item in channels.values() for _, url in item['lines']}
+              results = {}
+              with ThreadPoolExecutor(max_workers=PROBE_CONCURRENCY) as ex:
+                  futures = {ex.submit(probe_url, u): u for u in urls}
+                  for fut in as_completed(futures):
+                      results[futures[fut]] = fut.result()
+              for item in channels.values():
+                  item['probe'] = {url: results[url] for _, url in item['lines']}
+              summary = {'enabled': True, 'concurrency': PROBE_CONCURRENCY, 'timeout': PROBE_TIMEOUT,
+                         'total': len(urls), 'alive': 0, 'dead': 0, 'unverified': 0, 'unsupported': 0}
+              for r in results.values():
+                  summary[r['status']] = summary.get(r['status'], 0) + 1
+              return summary
+
+
           def merge(resources, groups):
-              preferred = {key(n):g['file'] for g in groups for n in g['channels']}
-              canonical = {key(n):n for g in groups for n in g['channels']}
+              preferred = {key(n): g['file'] for g in groups for n in g['channels']}
+              canonical = {key(n): n for g in groups for n in g['channels']}
               channels = {}
               stats = []
               for label, text, include_all in resources:
-                  stat = {'source':label, 'scope':'all' if include_all else 'channel-list', 'entries':0, 'added':0, 'duplicates':0, 'invalid':0, 'filtered':0}
+                  stat = {'source': label, 'scope': 'all' if include_all else 'channel-list',
+                          'entries': 0, 'added': 0, 'duplicates': 0, 'invalid': 0,
+                          'filtered': 0, 'promo_blocked': 0}
                   for original, url, meta, group in parse(text):
                       name = normalize(original)
                       if not name or not re.fullmatch(r'(?:https?|rtsp|rtmp|udp|rtp)://[^\s]+', url, re.I):
                           stat['invalid'] += 1
+                          continue
+                      if is_promo_url(url):
+                          stat['promo_blocked'] += 1
                           continue
                       stat['entries'] += 1
                       ident = key(name)
                       if not include_all and ident not in preferred:
                           stat['filtered'] += 1
                           continue
-                      item = channels.setdefault(ident, {'name':canonical.get(ident, name), 'hints':[], 'lines':[], 'seen':set()})
+                      item = channels.setdefault(ident, {'name': canonical.get(ident, name),
+                                                         'hints': [], 'lines': [], 'seen': set()})
                       if group and group not in item['hints']:
                           item['hints'].append(group)
                       if url in item['seen']:
@@ -118,77 +282,149 @@ jobs:
                           item['lines'].append((meta, url))
                           stat['added'] += 1
                   if not stat['entries']:
-                      raise ValueError('No valid entries: '+label)
+                      raise ValueError('No valid entries: ' + label)
                   stats.append(stat)
               if not channels:
                   raise ValueError('No channels; retain previous playlists')
-              rank = {key(n):i for i,n in enumerate(n for g in groups for n in g['channels'])}
-              output = {k:[] for k,_ in CATEGORIES}
-              for ident,item in channels.items():
+
+              probe_summary = probe_all(channels)
+
+              rank = {key(n): i for i, n in enumerate(n for g in groups for n in g['channels'])}
+              output = {k: [] for k, _ in CATEGORIES}
+              for ident, item in channels.items():
                   category = classify(item['name'], item['hints'], preferred)
                   output[category].append((rank.get(ident, 1000000), ident, item))
+
               rendered = {}
               counts = {}
               combined = []
-              for slug,label in CATEGORIES:
+              for slug, label in CATEGORIES:
                   records = []
-                  for _,ident,item in sorted(output[slug], key=lambda x:(x[0],x[1])):
-                      for meta,url in item['lines']:
-                          records.extend([meta+' group-title="'+label+'",'+item['name'], url])
-                  rendered[slug] = '\n'.join(['#EXTM3U']+records)+'\n'
+                  for _, ident, item in sorted(output[slug], key=lambda x: (x[0], x[1])):
+                      probe = item.get('probe', {})
+
+                      def keep_status(st):
+                          if st == 'dead':
+                              return False
+                          if st in ('alive', 'unsupported'):
+                              return True
+                          return KEEP_UNVERIFIED  # forbidden / unreachable / unverified 兜底
+
+                      # 剔除确认死链；KEEP_UNVERIFIED=False 时同时剔除待验证类
+                      kept = [ln for ln in item['lines'] if keep_status(probe.get(ln[1], {}).get('status', 'unknown'))]
+                      # 可用(alive)按首包时间在前，其余兜底在后
+                      def sort_key(ln):
+                          pr = probe.get(ln[1], {})
+                          st = pr.get('status', 'unknown')
+                          alive_rank = 0 if st == 'alive' else 1
+                          ttfb = pr.get('ttfb_ms', -1)
+                          return (alive_rank, ttfb if ttfb and ttfb > 0 else 9_999_999)
+                      kept.sort(key=sort_key)
+                      if MAX_LINES_PER_CHANNEL > 0:
+                          kept = kept[:MAX_LINES_PER_CHANNEL]
+                      item['kept'] = kept
+                      for meta, url in kept:
+                          records.extend([meta + ' group-title="' + label + '",' + item['name'], url])
+                  rendered[slug] = '\n'.join(['#EXTM3U'] + records) + '\n'
                   combined.extend(records)
-                  counts[slug] = {'channels':len(output[slug]), 'lines':len(records)//2}
-              rendered['all'] = '\n'.join(['#EXTM3U']+combined)+'\n'
-              return rendered, {'sources':stats, 'total_channels':len(channels), 'new_channels':sum(k not in preferred for k in channels), 'total_lines':len(combined)//2, 'categories':counts}
-          
+                  counts[slug] = {'channels': len(output[slug]), 'lines': len(records) // 2}
+              rendered['all'] = '\n'.join(['#EXTM3U'] + combined) + '\n'
+              return rendered, {'sources': stats, 'total_channels': len(channels),
+                                 'new_channels': sum(k not in preferred for k in channels),
+                                 'total_lines': len(combined) // 2, 'categories': counts,
+                                 'probe': probe_summary}
+
+
           def main():
-              report = {'time':datetime.now(timezone.utc).isoformat(), 'status':'retained', 'policy':'dsj-all-other-sources-channel-list-five-categories'}
-              for d in ['reports','playlists']:
+              report = {'time': datetime.now(timezone.utc).isoformat(), 'status': 'retained',
+                        'policy': 'dsj-all-other-sources-channel-list-five-categories-with-promo-filter-and-probe'}
+              for d in ['reports', 'playlists']:
                   Path(d).mkdir(exist_ok=True)
               try:
                   config = json.loads(Path('config/sources.json').read_text(encoding='utf-8'))
                   groups = json.loads(Path('config/channel-order.json').read_text(encoding='utf-8'))
                   resources = []
                   hashes = {}
+                  fetch_errors = []
+                  targets = []
                   for source in config['sources']:
                       if not source.get('enabled', True):
                           continue
-                      targets = source.get('urls') or [source.get('url') or source['path']]
-                      for target in targets:
-                          label = source['name']+' / '+target.rsplit('/',1)[-1]
-                          if '://' in target:
-                              request = urllib.request.Request(target, headers={'User-Agent':'my-tv-sources/4.0'})
-                              with urllib.request.urlopen(request, timeout=30) as response:
-                                  data = response.read(12000001)
-                          else:
-                              data = Path(target).read_bytes()
-                          if len(data)>12000000:
-                              raise ValueError('Source exceeds 12MB: '+label)
-                          text = data.decode('utf-8-sig')
-                          if target.endswith(('.m3u','.m3u8')) and not text.lstrip().startswith('#EXTM3U'):
-                              raise ValueError('Invalid M3U header: '+label)
-                          resources.append((label, text, source['name'] == 'bang359/dsj'))
-                          hashes[target] = hashlib.sha256(data).hexdigest()
+                      ts = source.get('urls') or [source.get('url') or source['path']]
+                      for t in ts:
+                          targets.append((source, t))
+                  with ThreadPoolExecutor(max_workers=UPSTREAM_FETCH_CONCURRENCY) as ex:
+                      futures = {ex.submit(fetch_target, s['name'], t): (s, t) for s, t in targets}
+                      for fut in as_completed(futures):
+                          source, target = futures[fut]
+                          label = source['name'] + ' / ' + target.rsplit('/', 1)[-1]
+                          try:
+                              text = fut.result()
+                              resources.append((label, text, source['name'] == 'bang359/dsj'))
+                              hashes[target] = hashlib.sha256(text.encode('utf-8')).hexdigest()
+                          except Exception as e:  # noqa: BLE001
+                              fetch_errors.append({'source': label, 'reason': str(e)})
+                  if fetch_errors:
+                      raise ValueError('Upstream fetch failed: ' + json.dumps(fetch_errors, ensure_ascii=False))
+
                   rendered, details = merge(resources, groups)
-                  for slug,text in rendered.items():
-                      temporary = Path('playlists/'+slug+'.m3u.tmp')
+                  for slug, text in rendered.items():
+                      temporary = Path('playlists/' + slug + '.m3u.tmp')
                       temporary.write_text(text, encoding='utf-8')
                   for slug in rendered:
-                      os.replace('playlists/'+slug+'.m3u.tmp','playlists/'+slug+'.m3u')
+                      os.replace('playlists/' + slug + '.m3u.tmp', 'playlists/' + slug + '.m3u')
                   for obsolete in ['satellite', 'kids', 'sports', 'movies']:
-                      Path('playlists/'+obsolete+'.m3u').unlink(missing_ok=True)
-                  Path('reports/source-state.json').write_text(json.dumps(hashes,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-                  Path('config/update-policy.json').write_text(json.dumps({'all_channels_sources':['bang359/dsj'],'other_sources_scope':'config/channel-order.json','preferred_order':'config/channel-order.json','categories':dict(CATEGORIES),'deduplicate':'normalized channel name + exact URL','on_source_failure':'retain previous complete playlists'},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                      Path('playlists/' + obsolete + '.m3u').unlink(missing_ok=True)
+                  Path('reports/source-state.json').write_text(
+                      json.dumps(hashes, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+                  Path('config/update-policy.json').write_text(json.dumps({
+                      'all_channels_sources': ['bang359/dsj'],
+                      'other_sources_scope': 'config/channel-order.json',
+                      'preferred_order': 'config/channel-order.json',
+                      'categories': dict(CATEGORIES),
+                      'deduplicate': 'normalized channel name + exact URL',
+                      'promo_filter': 'PROMO_BLOCK_HOSTS + PROMO_BLOCK_PATH_KEYWORDS in daily.yml',
+                      'probe': {'enabled': PROBE_ENABLED, 'concurrency': PROBE_CONCURRENCY,
+                                'timeout': PROBE_TIMEOUT, 'keep_unverified': KEEP_UNVERIFIED,
+                                'max_lines_per_channel': MAX_LINES_PER_CHANNEL},
+                      'on_source_failure': 'retain previous complete playlists',
+                  }, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
                   report.update(status='published', **details)
-                  links = '\n'.join('|'+label+'|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/'+slug+'.m3u|' for slug,label in [('all','全部')]+CATEGORIES)
-                  names = '\n'.join('- '+s['name']+': '+', '.join(s.get('urls') or [s.get('url') or s.get('path')]) for s in config['sources'] if s.get('enabled',True))
-                  Path('README.md').write_text('# 我的电视直播源\n\n每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）读取下列配置来源。\n\n## 更新原则\n\n仅 bang359/dsj 的六个频道TXT全量收录有效频道；CCSH、Guovin、Best-fan和用户附件仍只收录原清单中的频道（沿用Excel及之后用户调整后的135台清单）。DSJ可补入清单外频道，包括新增港澳台频道。频道名称做保守规范化（CCTV/CETV连字符、常见清晰度后缀及少量明确别名）；同频道相同URL去重，不同URL保留多线路。无法确认同名关系时保留独立频道，避免错合并。\n\n`config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。只有匹配清单央视、地方台、港澳台名称的频道进入这三个分类，保持清单顺序。其余频道中，中国地区、港澳台地区或汉语（包括方言）频道归“其他”；其余归“国际频道”。新增港澳台频道归其他，不再加入港澳台分类。地区及语言根据名称、上游分组与可用元数据推断，可能误判；无法确认地区/语言的拉丁字母名称暂归国际频道。\n\n仅发布央视、地方台、港澳台、国际频道、其他五类及总表；旧satellite/kids/sports/movies分类文件停止发布，请改用总表或上述分类。\n\n## 订阅直链\n\n|分类|原始文件链接|\n|---|---|\n'+links+'\n\n在“我要看电视”APK中刷新订阅即可获取仓库新内容，具体受APK缓存影响。总表已包含全部分类，建议只订阅总表避免重复。\n\n## 当前来源\n\n'+names+'\n\n来源配置在 `config/sources.json`，每日直接读取其中启用的url/urls/path；新增TXT文件需要加入配置。用户附件 `config/supplemental.m3u` 为固定副本。DSJ六个TXT按“频道名,地址”解析，跳过分组及公告，不追踪sources.txt中的二级来源。\n\n## 运行与失败处理\n\nActions → Daily IPTV → Run workflow → main → Run workflow 可手动运行。每个远程文件30秒超时、12MB上限，顺序抓取；检查格式和HTTP(S)/RTSP/RTMP/UDP/RTP地址，任一来源下载失败、解析失败或没有有效频道时，保留上一次完整播放列表并记录失败。全部解析、合并完成后才发布。报告见 `reports/latest.json`，列出每个来源的有效条目、新增、重复及无效条目，以及各分类频道数和线路数。\n\n工作流只使用schedule和workflow_dispatch触发；GITHUB_TOKEN仅申请contents: write，自动提交使用[skip ci]，不会循环触发。若写入失败，请检查仓库Actions权限和分支规则。\n\n## 局限与来源限制\n\n合并成功不代表视频可播放；此任务不逐条播放探测，不依据GitHub服务器连接结果剔除线路。地域、运营商、鉴权、时效、防盗链及播放器差异可能影响国内无代理播放。\n\nCCSH、Guovin、Best-fan、DSJ及用户附件的公开链接或代码许可证不等于逐条直播流已获播放、复制或再分发授权；未核实逐流授权。请遵守各上游说明及权利人限制，在相应许可范围内使用。\n', encoding='utf-8')
-              except Exception as error:
+                  links = '\n'.join('|' + label + '|https://raw.githubusercontent.com/nut7nan/my-tv-sources/main/playlists/' + slug + '.m3u|'
+                                    for slug, label in [('all', '全部')] + CATEGORIES)
+                  names = '\n'.join('- ' + s['name'] + ': ' + ', '.join(s.get('urls') or [s.get('url') or s.get('path')])
+                                    for s in config['sources'] if s.get('enabled', True))
+                  Path('README.md').write_text(
+                      '# 我的电视直播源\n\n每天北京时间 **06:23**（UTC cron `23 22 * * *`，GitHub 可能延迟）读取下列配置来源。\n\n'
+                      '## 更新原则\n\n'
+                      '仅 bang359/dsj 的六个频道TXT全量收录有效频道；CCSH、Guovin、Best-fan和用户附件仍只收录原清单中的频道（沿用Excel及之后用户调整后的135台清单）。'
+                      'DSJ可补入清单外频道，包括新增港澳台频道。频道名称做保守规范化（CCTV/CETV连字符、常见清晰度后缀及少量明确别名）；同频道相同URL去重，不同URL保留多线路。\n\n'
+                      '合并时先按内置黑名单过滤推广/跳转包装源；随后并发探测线路连通性：确认死链（DNS失败、连接拒绝、404/410、5xx）剔除，'
+                      '超时/401/403/跳转未终止等不确定状态保留为兜底；可用线路按首包时间排序，每频道默认最多保留 5 条（见 daily.yml 顶部参数）。\n\n'
+                      '注意：探测在 GitHub Actions 海外机房执行，国内运营商内网源可能被误判为不可达，因此超时类线路未直接剔除；本地播放器实际播放效果以你所在网络为准。\n\n'
+                      '`config/channel-order.json` 是非DSJ来源的频道允许名单，同时用于所有来源的原频道优先排序及分类。'
+                      '只有匹配清单央视、地方台、港澳台名称的频道进入这三个分类，保持清单顺序。其余频道中，中国地区、港澳台地区或汉语（包括方言）频道归“其他”；其余归“国际频道”。\n\n'
+                      '仅发布央视、地方台、港澳台、国际频道、其他五类及总表；旧satellite/kids/sports/movies分类文件停止发布。\n\n'
+                      '## 订阅直链\n\n|分类|原始文件链接|\n|---|---|\n' + links + '\n\n'
+                      '在“我要看电视”APK中刷新订阅即可获取仓库新内容。总表已包含全部分类，建议只订阅总表避免重复。\n\n'
+                      '## 当前来源\n\n' + names + '\n\n'
+                      '来源配置在 `config/sources.json`，每日直接读取其中启用的url/urls/path；用户附件 `config/supplemental.m3u` 为固定副本。\n\n'
+                      '## 运行与失败处理\n\n'
+                      'Actions → Daily IPTV → Run workflow 可手动运行。每个远程文件30秒超时、12MB上限；任一来源下载失败、解析失败或没有有效频道时，保留上一次完整播放列表并记录失败。'
+                      '报告见 `reports/latest.json`，列出每个来源的有效条目、新增、重复、无效、被推广过滤条目，以及探测存活/死链/待验证数量和各分类频道数、线路数。\n\n'
+                      '工作流只使用schedule和workflow_dispatch触发；GITHUB_TOKEN仅申请contents: write，自动提交使用[skip ci]，不会循环触发。\n\n'
+                      '## 局限与来源限制\n\n'
+                      '探测成功不代表视频可长期播放；地域、运营商、鉴权、时效、防盗链及播放器差异可能影响国内无代理播放。\n\n'
+                      'CCSH、Guovin、Best-fan、DSJ及用户附件的公开链接或代码许可证不等于逐条直播流已获播放、复制或再分发授权；未核实逐流授权。请遵守各上游说明及权利人限制。\n',
+                      encoding='utf-8')
+              except Exception as error:  # noqa: BLE001
                   report['reason'] = str(error)
-              Path('reports/latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-              Path('reports/outcome.txt').write_text('success' if report['status']=='published' else 'failure')
-              print(json.dumps(report,ensure_ascii=False))
-          
+              Path('reports/latest.json').write_text(
+                  json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              Path('reports/outcome.txt').write_text('success' if report['status'] == 'published' else 'failure')
+              print(json.dumps(report, ensure_ascii=False))
+
+
           if __name__ == '__main__':
               main()
       - name: Publish playlists and report
@@ -202,5 +438,3 @@ jobs:
             git push
           fi
           test "$(cat reports/outcome.txt)" = success
-
-

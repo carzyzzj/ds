@@ -26,6 +26,12 @@
       "rights_status": "Public playlist; broadcast rights not certified"
     },
     {
+      "name": "hina-hk-mo-tw-live",
+      "url": "https://raw.githubusercontent.com/jamsluuuuu/iptv/refs/heads/main/china-hk-mo-tw-live.m3u",
+      "enabled": true,
+      "rights_status": "Public playlist; broadcast rights not certified"
+    },
+    {
       "name": "bang359/dsj",
       "urls": [
         "https://raw.githubusercontent.com/bang359/dsj/main/dsj.txt",

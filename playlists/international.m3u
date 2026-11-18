@@ -8,15 +8,15 @@ https://vod2.abn.co.kr/IPHONE/abn.m3u8
 #EXTINF:-1 group-title="国际频道",ANTV
 http://antvlive.ab5c6921.cdnviet.com/antv/chunklist.m3u8
 #EXTINF:-1 group-title="国际频道",Arirang
-http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
-#EXTINF:-1 group-title="国际频道",Arirang
-http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",Arirang
 http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist.m3u8
 #EXTINF:-1 group-title="国际频道",Arirang
 http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch/master.m3u8
 #EXTINF:-1 group-title="国际频道",Arirang
 https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",Arirang
+http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
 #EXTINF:-1 group-title="国际频道",Arirang
 https://amdlive-ch01-ctnd-com.akamaized.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b3256000_sleng.m3u8
 #EXTINF:-1 group-title="国际频道",Arirang Radio
@@ -37,10 +37,6 @@ https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
 http://btn.nowcdn.co.kr/btn/btnlive01/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",C
 http://112.175.51.214:1935/live/myStream/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",CGNTV South Korea
-https://du35ivadp6cxj.cloudfront.net/out/v1/81781d23cbbf490990b2aa9181d4ce19/CGNWebLiveKR.m3u8
-#EXTINF:-1 group-title="国际频道",Channel [V]
-http://116.77.33.98:44330/tsfile/live/1010_1.m3u8?key=txiptv&playlive=0&authid=0
 #EXTINF:-1 group-title="国际频道",CJB
 http://1.222.207.80:1935/live/cjbtv/chunklist_w1357270949.m3u8
 #EXTINF:-1 group-title="国际频道",CJ OnStyle
@@ -58,13 +54,13 @@ http://ebsonairios.ebs.co.kr/plus2tablet500k/tablet500k/plus2tablet500k.index.m3
 #EXTINF:-1 group-title="国际频道",EBS-KIDS
 http://ebsonairios.ebs.co.kr/ebsutablet500k/_definst_/tablet500k/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",EBS1
-http://ebsonairios.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",EBS1
 http://ebsonairios.ebs.co.kr/ebsutablet500k/tablet500k/playlist.m3u8
+#EXTINF:-1 group-title="国际频道",EBS1
+http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/groundwavetablet500k.m3u8
 #EXTINF:-1 group-title="国际频道",EBS1
 http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",EBS1
-http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/groundwavetablet500k.m3u8
+http://ebsonairios.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",EBS2
 http://ebsonairios.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",EBS2
@@ -89,8 +85,6 @@ http://liveko24-manminglobal3.ktcdn.co.kr/liveko24/gcnko_1300k.stream/playlist.m
 http://mobliestream.c3tv.com:1935/live/goodtv.sdp/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",Gugbang TV (1080p) [Not 24/7]
 http://mediaworks.dema.mil.kr:1935/live_edge/cudo.sdp/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",HBTV
-http://hoabinhtvlive.746b3ddb.cdnviet.com/hoabinhtv/chunklist.m3u8
 #EXTINF:-1 group-title="国际频道",Home & Shopping
 https://s28.qtcdn.co.kr/media/liveM3U8/idx/518045142/enc/1860408350/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",JTV
@@ -105,16 +99,14 @@ http://mytv.dothome.co.kr/ch/catv/2.php
 http://mytv.dothome.co.kr/ch/catv/5.php
 #EXTINF:-1 group-title="国际频道",KBS LiveCam DokDo
 http://kbs-dokdo.gscdn.com/dokdo_300/dokdo_300.stream/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",KBS世界
-https://wms4-kortv.akamaized.net/a_live/63719963/smil:20ch011.smil/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",KCTV
 http://119.77.96.184:1935/chn05/chn05/chunklist_w1306745753.m3u8
-#EXTINF:-1 group-title="国际频道",KCTV
-http://119.77.96.184:1935/chn05/chn05/chunklist_w644291506.m3u8
 #EXTINF:-1 group-title="国际频道",KCTV
 http://119.77.96.184:1935/chn05/chn05/chunklist.m3u
 #EXTINF:-1 group-title="国际频道",KCTV
 http://119.77.96.184:1935/chn05/chn05/chunklist.m3u8
+#EXTINF:-1 group-title="国际频道",KCTV
+http://119.77.96.184:1935/chn05/chn05/chunklist_w644291506.m3u8
 #EXTINF:-1 group-title="国际频道",KCTV 광주 CH05 (720p) [Not 24/7]
 http://119.77.96.184:1935/chn05/chn05/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",Lotte OneTV
@@ -185,8 +177,6 @@ http://onair2.cdn.tvchosun.com/origin2/_definst_/tvchosun_s3/playlist.m3u8
 https://d2zyqoz1zsj2mq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-i9yul1lyegl6e-ssai-prd/6d07fe2a_003a_4879_acfc_44e3c3c10f03/hls/playlist.m3u8?
 #EXTINF:-1 group-title="国际频道",tvN2
 https://d21dxaer0ypwk1.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6m2cy2rylsvo-ssai-prd/54ac8e25_eb5a_4f10_ba20_ffb254f0a16c/hls/playlist.m3u8?ads.device_did=%7BPSID%7D&ads.device_dnt=%7BTARGETOPT%7D&ads.app_domain=%7BAPP_DOMAIN%7D&ads.app_name=%7BAPP_NAME%7D&ads.service_id=KRBC32000261J
-#EXTINF:-1 group-title="国际频道",tvN3
-https://d25mdvvpht3395.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-p8ea370fl7r4f-ssai-prd/82f296fd_2916_45b7_b799_525a4226957a/hls/playlist.m3u8?
 #EXTINF:-1 group-title="国际频道",wild earth
 https://wildearth-plex.amagi.tv/masterR1080p.m3u8
 #EXTINF:-1 group-title="国际频道",WionNews
@@ -234,9 +224,9 @@ http://1.222.207.80:1935/live/cjbtv/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",韩国|EBS+2
 http://ebsonairios.ebs.co.kr/plus2tablet500k/tablet500k/plus2tablet500k.index.m3u8
 #EXTINF:-1 group-title="国际频道",韩国|EBS1
-http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/playlist.m3u8
-#EXTINF:-1 group-title="国际频道",韩国|EBS1
 http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/groundwavetablet500k.m3u8
+#EXTINF:-1 group-title="国际频道",韩国|EBS1
+http://ebsonairios.ebs.co.kr/groundwavetablet500k/tablet500k/playlist.m3u8
 #EXTINF:-1 group-title="国际频道",韩国|EBS2
 http://ebsonairios.ebs.co.kr/ebs2tablet500k/tablet500k/ebs2tablet500k.index.m3u8
 #EXTINF:-1 group-title="国际频道",韩国|EBSe

@@ -13,5 +13,12 @@
   },
   "deduplicate": "normalized channel name + exact URL",
   "promo_filter": "PROMO_BLOCK_HOSTS + PROMO_BLOCK_PATH_KEYWORDS in daily.yml",
+  "probe": {
+    "enabled": true,
+    "concurrency": 32,
+    "timeout": 6,
+    "keep_unverified": true,
+    "max_lines_per_channel": 10
+  },
   "on_source_failure": "retain previous complete playlists"
 }

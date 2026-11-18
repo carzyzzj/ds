@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-18T03:44:27.443920+00:00",
+  "time": "2026-11-18T08:25:27.544608+00:00",
   "status": "published",
   "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter",
   "sources": [
@@ -44,6 +44,16 @@
       "promo_blocked": 0
     },
     {
+      "source": "hina-hk-mo-tw-live / china-hk-mo-tw-live.m3u",
+      "scope": "channel-list",
+      "entries": 225,
+      "added": 49,
+      "duplicates": 10,
+      "invalid": 0,
+      "filtered": 166,
+      "promo_blocked": 8
+    },
+    {
       "source": "bang359/dsj / dsj.txt",
       "scope": "all",
       "entries": 492,
@@ -57,8 +67,8 @@
       "source": "bang359/dsj / dsjcs.txt",
       "scope": "all",
       "entries": 1261,
-      "added": 1152,
-      "duplicates": 109,
+      "added": 1151,
+      "duplicates": 110,
       "invalid": 3,
       "filtered": 0,
       "promo_blocked": 0
@@ -106,15 +116,15 @@
   ],
   "total_channels": 1105,
   "new_channels": 970,
-  "total_lines": 4212,
+  "total_lines": 4260,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 944
+      "lines": 960
     },
     "local": {
       "channels": 68,
-      "lines": 1474
+      "lines": 1504
     },
     "hmt": {
       "channels": 17,
@@ -126,7 +136,7 @@
     },
     "other": {
       "channels": 872,
-      "lines": 1439
+      "lines": 1441
     }
   }
 }

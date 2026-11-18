@@ -411,7 +411,7 @@ http://iptv12k.com:35461/live/8032022060101/452381/5204.m3u8
 http://iptv12k.com:35461/live/test167/12345/5204.m3u8
 #EXTINF:-1  tvg-name="民视" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/民视.png" group-title="港澳台频道",民视
 http://74.91.26.218:82/live/ftv.m3u8
-#EXTINF:-1 group-title="港澳台频道",民视
+#EXTINF:-1 tvg-name="民视" tvg-id="456503" tvg-logo="https://cdn.jsdelivr.net/gh/jamsluuuuu/iptv@main/logos/%E6%B0%91%E8%A7%86.png" group-title="港澳台频道",民视
 http://211.72.174.95:8115/0.ts
 #EXTINF:-1 group-title="港澳台频道",民视
 rtmp://f13h.mine.nu/sat/tv051

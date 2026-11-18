@@ -31,6 +31,7 @@
 - User IPv4 supplement: config/supplemental.m3u
 - Guovin IPv4: https://guovin.github.io/iptv-api/ipv4.m3u
 - Best-fan IPTV: https://raw.githubusercontent.com/best-fan/iptv-sources/main/cn_all_status.m3u8
+- hina-hk-mo-tw-live: https://raw.githubusercontent.com/jamsluuuuu/iptv/refs/heads/main/china-hk-mo-tw-live.m3u
 - bang359/dsj: https://raw.githubusercontent.com/bang359/dsj/main/dsj.txt, https://raw.githubusercontent.com/bang359/dsj/main/dsjcs.txt, https://raw.githubusercontent.com/bang359/dsj/main/dsjcs1.txt, https://raw.githubusercontent.com/bang359/dsj/main/iphone.txt, https://raw.githubusercontent.com/bang359/dsj/main/ku9.txt, https://raw.githubusercontent.com/bang359/dsj/main/yc.txt
 
 来源配置在 `config/sources.json`，每日直接读取其中启用的url/urls/path；新增TXT文件需要加入配置。用户附件 `config/supplemental.m3u` 为固定副本。DSJ六个TXT按“频道名,地址”解析，跳过分组及公告，不追踪sources.txt中的二级来源。

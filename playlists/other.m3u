@@ -33,6 +33,8 @@ http://xch819.cn:7788/923287154
 http://hlsztemgsplive.miguvideo.com:8080/migu/kailu/cetv1/50/20240709/index.m3u8?msisdn=2026111806030356a80cf9468d42b3b4773930c0ed961e&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20261118060303&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=171.8.79.254&SecurityKey=20261118060303&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&encrypt=240cbfe7420d8e5147f6609b3b81b24c
 #EXTINF:-1  tvg-name="CETV1" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CETV1.png" group-title="其他",CETV1
 http://gslbmgsplive.miguvideo.com/migu/kailu/cetv1/50/20240709/index.m3u8?msisdn=2026111711224894d1ebfc256f48febb96120badc5d0bb&mdspid=&spid=699004&netType=0&sid=5910022150&pid=2028597139&timestamp=20261117112248&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=923287154&ParentNodeID=-99&assertID=5910022150&client_ip=2409:8a00:6031:3541:dccb:1e8c:be33:59d3&SecurityKey=20261117112248&promotionId=&mvid=5900006636&mcid=500020&playurlVersion=WX-A1-9.11.1-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=5bf5de407f438e049a024871899f97d6&ddCalcu=65dbe7f1953fd09e9480177f8443280ea094
+#EXTINF:-1 tvg-name="CETV1" tvg-id="545953" tvg-logo="https://cdn.jsdelivr.net/gh/jamsluuuuu/iptv@main/logos/CETV1.png" group-title="其他",CETV1
+https://mobilelive-cnc-cdn.ysp.cctv.cn/ysp/22F19B5CEA58FF904A76A1124397B8BFD6BAA41322A3C0BF36F0E4CE7F528369B687953AA6D38D2C3BFC3CDE482026B608CCC191E981C3FDA5A6009E5A1BE397B2276BCFC43CD42163F31A0995D6829CD5EF1329B62B1CD11D8EEF2D2A188BCB84C13C5BC0080AD05C3A898EBF1B9131BF46607D92C0F2D7141E682FB5A6EF37B03A67F9AEE3AEFD69AE2F58D579700C89008636509B7820F29C4B242FCD88DB/2022823801_fhd.m3u8?svrtime=1794987267&pid=600171827&m3u8_with_time_tag=2&cdn=5203
 #EXTINF:-1 group-title="其他",CETV1
 http://k.061899.xyz/k.php?id=cetv1
 #EXTINF:-1 group-title="其他",CETV1
@@ -247,6 +249,8 @@ https://tv.zhuhongxuan.cn/952383261
 http://gslbmgsplive.miguvideo.com/migu/kailu/chcymdy/50/20250415/index.m3u8?msisdn=2026111305224505b902833f2847ab93320de076cea7ab&mdspid=&spid=699004&netType=0&sid=5910022176&pid=2028597139&timestamp=20261113052245&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=952383261&ParentNodeID=-99&assertID=5910022176&client_ip=2409:8a00:6040:4f61:b82a:52a:b373:b251&SecurityKey=20261113052245&promotionId=&mvid=5900006704&mcid=500020&playurlVersion=WX-A1-9.10.1-SNAPSHOT&userid=&jmhm=&videocodec=h264&appCode=miguvideo_android&bean=mgspad&tid=android&conFee=0&puData=9c17df7481318e96f40648d38a8152e8&ddCalcu=89ece2115721d08fa78438d18341680e49f6
 #EXTINF:-1  tvg-name="CHC影迷电影" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CHC影迷电影.png" group-title="其他",CHC影迷电影
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=chchd
+#EXTINF:-1 tvg-name="CHC 影迷电影" tvg-id="CHC高清电影" tvg-logo="https://cdn.jsdelivr.net/gh/jamsluuuuu/iptv@main/logos/CHC_%E5%BD%B1%E8%BF%B7%E7%94%B5%E5%BD%B1.png" group-title="其他",CHC影迷电影
+http://dassby.qqff.top:99/live/CHC高清/index.m3u8
 #EXTINF:-1 group-title="其他",CHC影迷电影
 http://k.061899.xyz/k.php?id=ymdy
 #EXTINF:-1 group-title="其他",CHC影迷电影

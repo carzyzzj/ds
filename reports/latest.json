@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-19T03:39:43.302286+00:00",
+  "time": "2026-11-20T03:30:05.726075+00:00",
   "status": "published",
   "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter-and-probe",
   "sources": [
@@ -34,74 +34,44 @@
       "promo_blocked": 0
     },
     {
-      "source": "CCSH/IPTV / live.m3u",
-      "scope": "channel-list",
-      "entries": 4456,
-      "added": 1697,
-      "duplicates": 215,
-      "invalid": 28,
-      "filtered": 2544,
-      "promo_blocked": 193
-    },
-    {
       "source": "hina-hk-mo-tw-live / china-hk-mo-tw-live.m3u",
       "scope": "channel-list",
-      "entries": 225,
-      "added": 50,
-      "duplicates": 9,
+      "entries": 222,
+      "added": 56,
+      "duplicates": 2,
       "invalid": 0,
-      "filtered": 166,
+      "filtered": 164,
       "promo_blocked": 8
     },
     {
-      "source": "bang359/dsj / dsj.txt",
-      "scope": "all",
-      "entries": 492,
-      "added": 352,
-      "duplicates": 140,
-      "invalid": 1,
-      "filtered": 0,
-      "promo_blocked": 161
+      "source": "CCSH/IPTV / live.m3u",
+      "scope": "channel-list",
+      "entries": 4475,
+      "added": 1652,
+      "duplicates": 287,
+      "invalid": 32,
+      "filtered": 2536,
+      "promo_blocked": 38
     },
     {
       "source": "bang359/dsj / dsjcs.txt",
       "scope": "all",
       "entries": 1261,
-      "added": 1152,
-      "duplicates": 109,
+      "added": 1153,
+      "duplicates": 108,
       "invalid": 3,
       "filtered": 0,
       "promo_blocked": 0
     },
     {
-      "source": "bang359/dsj / iphone.txt",
+      "source": "bang359/dsj / dsj.txt",
       "scope": "all",
-      "entries": 105,
-      "added": 97,
-      "duplicates": 8,
-      "invalid": 0,
+      "entries": 492,
+      "added": 347,
+      "duplicates": 145,
+      "invalid": 1,
       "filtered": 0,
-      "promo_blocked": 0
-    },
-    {
-      "source": "bang359/dsj / ku9.txt",
-      "scope": "all",
-      "entries": 53,
-      "added": 53,
-      "duplicates": 0,
-      "invalid": 113,
-      "filtered": 0,
-      "promo_blocked": 656
-    },
-    {
-      "source": "bang359/dsj / yc.txt",
-      "scope": "all",
-      "entries": 640,
-      "added": 219,
-      "duplicates": 421,
-      "invalid": 2,
-      "filtered": 0,
-      "promo_blocked": 3
+      "promo_blocked": 161
     },
     {
       "source": "bang359/dsj / dsjcs1.txt",
@@ -112,23 +82,53 @@
       "invalid": 3,
       "filtered": 0,
       "promo_blocked": 0
+    },
+    {
+      "source": "bang359/dsj / iphone.txt",
+      "scope": "all",
+      "entries": 105,
+      "added": 96,
+      "duplicates": 9,
+      "invalid": 0,
+      "filtered": 0,
+      "promo_blocked": 0
+    },
+    {
+      "source": "bang359/dsj / yc.txt",
+      "scope": "all",
+      "entries": 640,
+      "added": 218,
+      "duplicates": 422,
+      "invalid": 2,
+      "filtered": 0,
+      "promo_blocked": 3
+    },
+    {
+      "source": "bang359/dsj / ku9.txt",
+      "scope": "all",
+      "entries": 53,
+      "added": 53,
+      "duplicates": 0,
+      "invalid": 113,
+      "filtered": 0,
+      "promo_blocked": 656
     }
   ],
   "total_channels": 1105,
   "new_channels": 970,
-  "total_lines": 3821,
+  "total_lines": 3751,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 865
+      "lines": 873
     },
     "local": {
       "channels": 68,
-      "lines": 1352
+      "lines": 1308
     },
     "hmt": {
       "channels": 17,
-      "lines": 191
+      "lines": 189
     },
     "international": {
       "channels": 113,
@@ -136,19 +136,19 @@
     },
     "other": {
       "channels": 872,
-      "lines": 1287
+      "lines": 1255
     }
   },
   "probe": {
     "enabled": true,
     "concurrency": 32,
     "timeout": 6,
-    "total": 3992,
-    "alive": 2709,
-    "dead": 290,
-    "unverified": 21,
+    "total": 3939,
+    "alive": 2648,
+    "dead": 314,
+    "unverified": 15,
     "unsupported": 38,
-    "forbidden": 315,
-    "unreachable": 619
+    "unreachable": 619,
+    "forbidden": 305
   }
 }

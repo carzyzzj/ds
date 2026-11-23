@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-22T02:20:10.398290+00:00",
+  "time": "2026-11-23T02:54:10.289797+00:00",
   "status": "published",
   "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter-and-probe",
   "sources": [
@@ -14,74 +14,54 @@
       "promo_blocked": 0
     },
     {
-      "source": "Best-fan IPTV / cn_all_status.m3u8",
-      "scope": "channel-list",
-      "entries": 254,
-      "added": 237,
-      "duplicates": 17,
-      "invalid": 0,
-      "filtered": 0,
-      "promo_blocked": 0
-    },
-    {
       "source": "Guovin IPv4 / ipv4.m3u",
       "scope": "channel-list",
       "entries": 277,
-      "added": 167,
-      "duplicates": 35,
+      "added": 188,
+      "duplicates": 14,
       "invalid": 0,
       "filtered": 75,
+      "promo_blocked": 0
+    },
+    {
+      "source": "Best-fan IPTV / cn_all_status.m3u8",
+      "scope": "channel-list",
+      "entries": 254,
+      "added": 216,
+      "duplicates": 38,
+      "invalid": 0,
+      "filtered": 0,
       "promo_blocked": 0
     },
     {
       "source": "hina-hk-mo-tw-live / china-hk-mo-tw-live.m3u",
       "scope": "channel-list",
       "entries": 227,
-      "added": 57,
+      "added": 55,
       "duplicates": 1,
       "invalid": 0,
-      "filtered": 169,
+      "filtered": 171,
       "promo_blocked": 2
-    },
-    {
-      "source": "CCSH/IPTV / live.m3u",
-      "scope": "channel-list",
-      "entries": 4550,
-      "added": 1650,
-      "duplicates": 306,
-      "invalid": 32,
-      "filtered": 2594,
-      "promo_blocked": 38
-    },
-    {
-      "source": "bang359/dsj / dsj.txt",
-      "scope": "all",
-      "entries": 492,
-      "added": 352,
-      "duplicates": 140,
-      "invalid": 1,
-      "filtered": 0,
-      "promo_blocked": 161
     },
     {
       "source": "bang359/dsj / dsjcs.txt",
       "scope": "all",
       "entries": 1261,
-      "added": 1147,
-      "duplicates": 114,
+      "added": 1197,
+      "duplicates": 64,
       "invalid": 3,
       "filtered": 0,
       "promo_blocked": 0
     },
     {
-      "source": "bang359/dsj / iphone.txt",
+      "source": "bang359/dsj / dsj.txt",
       "scope": "all",
-      "entries": 105,
-      "added": 96,
-      "duplicates": 9,
-      "invalid": 0,
+      "entries": 492,
+      "added": 426,
+      "duplicates": 66,
+      "invalid": 1,
       "filtered": 0,
-      "promo_blocked": 0
+      "promo_blocked": 161
     },
     {
       "source": "bang359/dsj / dsjcs1.txt",
@@ -90,6 +70,26 @@
       "added": 40,
       "duplicates": 1241,
       "invalid": 3,
+      "filtered": 0,
+      "promo_blocked": 0
+    },
+    {
+      "source": "CCSH/IPTV / live.m3u",
+      "scope": "channel-list",
+      "entries": 4521,
+      "added": 1528,
+      "duplicates": 429,
+      "invalid": 32,
+      "filtered": 2564,
+      "promo_blocked": 38
+    },
+    {
+      "source": "bang359/dsj / iphone.txt",
+      "scope": "all",
+      "entries": 105,
+      "added": 96,
+      "duplicates": 9,
+      "invalid": 0,
       "filtered": 0,
       "promo_blocked": 0
     },
@@ -116,19 +116,19 @@
   ],
   "total_channels": 1105,
   "new_channels": 970,
-  "total_lines": 3709,
+  "total_lines": 3813,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 847
+      "lines": 861
     },
     "local": {
       "channels": 68,
-      "lines": 1290
+      "lines": 1333
     },
     "hmt": {
       "channels": 17,
-      "lines": 193
+      "lines": 194
     },
     "international": {
       "channels": 113,
@@ -136,19 +136,19 @@
     },
     "other": {
       "channels": 872,
-      "lines": 1253
+      "lines": 1299
     }
   },
   "probe": {
     "enabled": true,
     "concurrency": 32,
     "timeout": 6,
-    "total": 3950,
-    "alive": 2561,
-    "dead": 362,
-    "unverified": 32,
+    "total": 3949,
+    "alive": 2638,
+    "dead": 261,
+    "unverified": 42,
     "unsupported": 38,
-    "unreachable": 636,
-    "forbidden": 321
+    "unreachable": 639,
+    "forbidden": 331
   }
 }

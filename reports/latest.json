@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-26T04:12:34.426878+00:00",
+  "time": "2026-11-27T04:19:44.308378+00:00",
   "status": "published",
   "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter-and-probe",
   "sources": [
@@ -16,69 +16,49 @@
     {
       "source": "Best-fan IPTV / cn_all_status.m3u8",
       "scope": "channel-list",
-      "entries": 447,
-      "added": 422,
-      "duplicates": 21,
+      "entries": 411,
+      "added": 398,
+      "duplicates": 11,
       "invalid": 0,
-      "filtered": 4,
+      "filtered": 2,
       "promo_blocked": 0
     },
     {
       "source": "Guovin IPv4 / ipv4.m3u",
       "scope": "channel-list",
       "entries": 277,
-      "added": 165,
-      "duplicates": 37,
+      "added": 161,
+      "duplicates": 41,
       "invalid": 0,
       "filtered": 75,
       "promo_blocked": 0
     },
     {
-      "source": "CCSH/IPTV / live.m3u",
-      "scope": "channel-list",
-      "entries": 4921,
-      "added": 1732,
-      "duplicates": 307,
-      "invalid": 32,
-      "filtered": 2882,
-      "promo_blocked": 38
-    },
-    {
       "source": "hina-hk-mo-tw-live / china-hk-mo-tw-live.m3u",
       "scope": "channel-list",
       "entries": 221,
-      "added": 51,
-      "duplicates": 5,
+      "added": 54,
+      "duplicates": 2,
       "invalid": 0,
       "filtered": 165,
       "promo_blocked": 2
     },
     {
-      "source": "bang359/dsj / dsjcs.txt",
-      "scope": "all",
-      "entries": 1260,
-      "added": 1178,
-      "duplicates": 82,
-      "invalid": 3,
-      "filtered": 0,
-      "promo_blocked": 0
-    },
-    {
-      "source": "bang359/dsj / iphone.txt",
-      "scope": "all",
-      "entries": 105,
-      "added": 98,
-      "duplicates": 7,
-      "invalid": 0,
-      "filtered": 0,
-      "promo_blocked": 0
+      "source": "CCSH/IPTV / live.m3u",
+      "scope": "channel-list",
+      "entries": 4921,
+      "added": 1729,
+      "duplicates": 310,
+      "invalid": 32,
+      "filtered": 2882,
+      "promo_blocked": 38
     },
     {
       "source": "bang359/dsj / dsj.txt",
       "scope": "all",
       "entries": 492,
-      "added": 345,
-      "duplicates": 147,
+      "added": 351,
+      "duplicates": 141,
       "invalid": 1,
       "filtered": 0,
       "promo_blocked": 161
@@ -87,8 +67,28 @@
       "source": "bang359/dsj / dsjcs1.txt",
       "scope": "all",
       "entries": 1315,
-      "added": 95,
-      "duplicates": 1220,
+      "added": 1230,
+      "duplicates": 85,
+      "invalid": 3,
+      "filtered": 0,
+      "promo_blocked": 0
+    },
+    {
+      "source": "bang359/dsj / iphone.txt",
+      "scope": "all",
+      "entries": 105,
+      "added": 96,
+      "duplicates": 9,
+      "invalid": 0,
+      "filtered": 0,
+      "promo_blocked": 0
+    },
+    {
+      "source": "bang359/dsj / dsjcs.txt",
+      "scope": "all",
+      "entries": 1260,
+      "added": 39,
+      "duplicates": 1221,
       "invalid": 3,
       "filtered": 0,
       "promo_blocked": 0
@@ -107,8 +107,8 @@
       "source": "bang359/dsj / yc.txt",
       "scope": "all",
       "entries": 640,
-      "added": 221,
-      "duplicates": 419,
+      "added": 222,
+      "duplicates": 418,
       "invalid": 2,
       "filtered": 0,
       "promo_blocked": 3
@@ -116,19 +116,19 @@
   ],
   "total_channels": 1126,
   "new_channels": 991,
-  "total_lines": 4122,
+  "total_lines": 4094,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 916
+      "lines": 905
     },
     "local": {
       "channels": 68,
-      "lines": 1491
+      "lines": 1452
     },
     "hmt": {
       "channels": 17,
-      "lines": 214
+      "lines": 229
     },
     "international": {
       "channels": 113,
@@ -136,19 +136,19 @@
     },
     "other": {
       "channels": 893,
-      "lines": 1375
+      "lines": 1382
     }
   },
   "probe": {
     "enabled": true,
     "concurrency": 32,
     "timeout": 6,
-    "total": 4304,
-    "alive": 2991,
-    "dead": 297,
-    "unverified": 20,
+    "total": 4277,
+    "alive": 2970,
+    "dead": 299,
+    "unverified": 23,
     "unsupported": 38,
-    "unreachable": 711,
-    "forbidden": 247
+    "unreachable": 689,
+    "forbidden": 258
   }
 }

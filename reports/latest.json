@@ -1,5 +1,5 @@
 {
-  "time": "2026-11-27T04:19:44.308378+00:00",
+  "time": "2026-11-28T03:59:03.617704+00:00",
   "status": "published",
   "policy": "dsj-all-other-sources-channel-list-five-categories-with-promo-filter-and-probe",
   "sources": [
@@ -24,16 +24,6 @@
       "promo_blocked": 0
     },
     {
-      "source": "Guovin IPv4 / ipv4.m3u",
-      "scope": "channel-list",
-      "entries": 277,
-      "added": 161,
-      "duplicates": 41,
-      "invalid": 0,
-      "filtered": 75,
-      "promo_blocked": 0
-    },
-    {
       "source": "hina-hk-mo-tw-live / china-hk-mo-tw-live.m3u",
       "scope": "channel-list",
       "entries": 221,
@@ -46,29 +36,39 @@
     {
       "source": "CCSH/IPTV / live.m3u",
       "scope": "channel-list",
-      "entries": 4921,
-      "added": 1729,
-      "duplicates": 310,
-      "invalid": 32,
-      "filtered": 2882,
-      "promo_blocked": 38
+      "entries": 4090,
+      "added": 1497,
+      "duplicates": 147,
+      "invalid": 28,
+      "filtered": 2446,
+      "promo_blocked": 417
     },
     {
       "source": "bang359/dsj / dsj.txt",
       "scope": "all",
       "entries": 492,
-      "added": 351,
-      "duplicates": 141,
+      "added": 366,
+      "duplicates": 126,
       "invalid": 1,
       "filtered": 0,
       "promo_blocked": 161
     },
     {
+      "source": "Guovin IPv4 / ipv4.m3u",
+      "scope": "channel-list",
+      "entries": 277,
+      "added": 35,
+      "duplicates": 167,
+      "invalid": 0,
+      "filtered": 75,
+      "promo_blocked": 0
+    },
+    {
       "source": "bang359/dsj / dsjcs1.txt",
       "scope": "all",
       "entries": 1315,
-      "added": 1230,
-      "duplicates": 85,
+      "added": 1232,
+      "duplicates": 83,
       "invalid": 3,
       "filtered": 0,
       "promo_blocked": 0
@@ -77,8 +77,8 @@
       "source": "bang359/dsj / iphone.txt",
       "scope": "all",
       "entries": 105,
-      "added": 96,
-      "duplicates": 9,
+      "added": 97,
+      "duplicates": 8,
       "invalid": 0,
       "filtered": 0,
       "promo_blocked": 0
@@ -116,19 +116,19 @@
   ],
   "total_channels": 1126,
   "new_channels": 991,
-  "total_lines": 4094,
+  "total_lines": 3762,
   "categories": {
     "cctv": {
       "channels": 35,
-      "lines": 905
+      "lines": 787
     },
     "local": {
       "channels": 68,
-      "lines": 1452
+      "lines": 1274
     },
     "hmt": {
       "channels": 17,
-      "lines": 229
+      "lines": 217
     },
     "international": {
       "channels": 113,
@@ -136,19 +136,19 @@
     },
     "other": {
       "channels": 893,
-      "lines": 1382
+      "lines": 1358
     }
   },
   "probe": {
     "enabled": true,
     "concurrency": 32,
     "timeout": 6,
-    "total": 4277,
-    "alive": 2970,
-    "dead": 299,
-    "unverified": 23,
+    "total": 3947,
+    "alive": 2761,
+    "dead": 294,
+    "unverified": 15,
     "unsupported": 38,
-    "unreachable": 689,
-    "forbidden": 258
+    "unreachable": 612,
+    "forbidden": 227
   }
 }
